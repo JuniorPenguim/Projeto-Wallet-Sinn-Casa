@@ -17,7 +17,7 @@ const TopLevelNavigator = createStackNavigator({
     //Loading: {screen: Loader},
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Splash',
     headerMode:'none'
     //transitionConfig: () => fromLeft(1000),
   }

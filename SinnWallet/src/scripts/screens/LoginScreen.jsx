@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container} from 'native-base';
-import {View} from 'react-native';
+import {View,Text} from 'react-native';
 import * as colorClass from '../constants/ColorClass';
 import * as styleClass from '../constants/StyleClass';
 import {Button, Input, Image} from 'react-native-elements';
@@ -32,7 +32,7 @@ export default class LoginScreen extends Component {
           style={{width: '100%', height: '100%'}}
           resizeMode="cover"
           source={require('../../imagens/splash-2.png')}>
-          <KeyboardAvoidingView
+          {/*  <KeyboardAvoidingView
             style={{flex: 1, marginLeft: wp('10%'), marginRight: wp('10%')}}
             behavior="padding"
             enabled>
@@ -62,14 +62,23 @@ export default class LoginScreen extends Component {
                   borderBottomWidth: 0,
                 }}
               />
-            </View>
+            </View> 
 
             {/*<TouchableOpacity hitSlop={{top: 10, bottom: 10, left: 5, right: 10}} onPress={()=>console.log('Esqueci a senha')} style={{marginLeft:'60%'}} >
               <Text style = {{alignSelf:'flex-end',fontSize:12}}> {constantClass.texts.esqueciSenha}</Text>
-            </TouchableOpacity>*/}
-          </KeyboardAvoidingView>
+            </TouchableOpacity>
+          </KeyboardAvoidingView> */}                 
+                 
 
-          <View style={{flex: 1}}>
+          <View style={{flex:1}}>
+
+            <Image style={{
+              alignSelf:'center',
+              resizeMode:'contain',
+               width:'80%',height:'50%'
+
+              }} source ={require('../../imagens/logo-icon-login.png')}/>
+
             <Button
               title="Entrar"
               //color = {constantClass.colors.blue}

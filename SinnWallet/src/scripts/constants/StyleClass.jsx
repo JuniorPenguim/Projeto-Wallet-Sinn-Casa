@@ -28,7 +28,7 @@ export const loginStyles = {
         //marginRight: 110,
         height: 45,
     },
-    enterButton:{
+    enterButton:{       
         marginLeft: '10%',
         marginRight: '8%',
         marginTop: '1%',
