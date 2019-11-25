@@ -13,7 +13,7 @@ export default class SplashScreen extends Component {
   async componentDidMount() {
     setTimeout(function() {
       NavigationService.simpleNavigate('Login');
-    }, 25000);
+    }, 6000);
   }
 
   render() {
