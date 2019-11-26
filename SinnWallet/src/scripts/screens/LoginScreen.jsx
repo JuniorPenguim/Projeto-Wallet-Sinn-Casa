@@ -3,7 +3,7 @@ import { Container } from 'native-base';
 import { View } from 'react-native';
 import * as colorClass from '../constants/ColorClass'
 import * as styleClass from '../constants/StyleClass'
-import { Button,Input,Image,} from 'react-native-elements';
+import { Button,Input,Image, Text} from 'react-native-elements';
 import {KeyboardAvoidingView,Keyboard,TouchableOpacity} from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Biometrics from 'react-native-biometrics'
@@ -24,80 +24,136 @@ export default class LoginScreen extends Component {
     }
 
   render() {
-    return(
-        <Container style = {styleClass.loginStyles.loginContainer}>
-        
+    return(        
+
         <ImageBackground
-          style={{width: '100%', height: '100%'}}
-          resizeMode="cover"
-          source={require('../../imagens/splash-2.png')}>
+           style={{width: '100%', height: '100%'}}
+           resizeMode="cover"
+           source={require('../../imagens/splash-2.png')}>
 
-          <KeyboardAvoidingView  style = {{flex:1, marginLeft: wp('10%'),marginRight: wp('10%')}} behavior = "padding" enabled>
-            <View style={styleClass.loginStyles.inputView}>
+          <View style={{flex:1,justifyContent: 'space-between'}}>
 
-              <Input //input do email
-                placeholder = 'email'
-                overflow = "hidden"
-                autoCapitalize = 'none'
-                //onChangeText = {this.changeOrgState}
+            <View style={{marginLeft:'20%', marginTop:'20%', position: "absolute"}}>
+              <Image style={{              
+                width: wp('60%'),
+                height: hp('25%'),
+                resizeMode:'cover',        
+              }} source ={require('../../imagens/logo-icon-login.png')}/>
 
-                inputStyle = {styleClass.loginStyles.inputStyle}
-
-                inputContainerStyle = {{
-                  borderBottomWidth:0          
-                }}           
-              />
             </View>
 
-            <View style={styleClass.loginStyles.inputView}>
+            <View style={{ marginLeft: '30%', marginTop:'79%',position: "absolute"}}>
 
-            <Input style = {{flex:1 }} //input da senha
-              placeholder = 'senha'
-              autoCapitalize = 'none'
-              //onChangeText = {this.changePassState}
-              secureTextEntry = {true}
-
-              inputStyle = {styleClass.loginStyles.inputStyle}
-
-              inputContainerStyle = {{
-                borderBottomWidth:0
-                }}  
-            />
-          </View>
-
-            {/*<TouchableOpacity hitSlop={{top: 10, bottom: 10, left: 5, right: 10}} onPress={()=>console.log('Esqueci a senha')} style={{marginLeft:'60%'}} >
-              <Text style = {{alignSelf:'flex-end',fontSize:12}}> {constantClass.texts.esqueciSenha}</Text>
-            </TouchableOpacity>*/}
-
-          </KeyboardAvoidingView >
-          
-          <View style = {{flex:1}}>
-            <Button
-              title = 'entrar'
-              //color = {constantClass.colors.blue}
-              onPress={()=>NavigationService.simpleNavigate('Perfil')}
+              <Text style={{color:'gray', fontWeight:'bold', }}>ENTRE COM SEUS DADOS</Text>
               
-              containerStyle = {styleClass.loginStyles.enterButton}
-              buttonStyle = {{
-                //backgroundColor: constantClass.colors.enterBtnBlue,
-                borderRadius: 10  
-              }}
-            />
+            </View>
+
+            <View style={{marginLeft: '19%',marginTop:'83%',position: "absolute"}}>
+
+              <Text style={{color:'gray', fontWeight:'bold'}}>PARA EFETURAR SEU LOGIN DE ACESSO:</Text>
+              
+            </View>
+
+            <View style={{marginLeft: '14%',marginTop:'95%',position: "absolute"}}>
+              
+              <Image style={{               
+                  width: wp('73%'),
+                  height: hp('6.5%'),
+                  resizeMode:'cover',        
+                }} source ={require('../../imagens/bt-branco.png')}/>           
+              
+            </View> 
+
+            <View style={{marginLeft: '19%',marginTop:'98.5%',position: "absolute"}}>
+              
+              <Image style={{
+                width: wp('5.5%'),
+                height: hp('3.1%'),
+                resizeMode:'cover',        
+              }} source ={require('../../imagens/ico-email.png')}/>                       
+              
+            </View>
+
+            <View style={{marginLeft: '25%',marginTop:'97.5%',position: "absolute"}}>
+
+               <Input 
+                 placeholder = 'Entre com seu e-mail'
+                 placeholderTextColor='#000'                 
+                 overflow = "hidden"
+                 autoCapitalize = 'none'
+                 //onChangeText = {this.changeOrgState}                 
+
+                 inputContainerStyle = {{
+                   borderBottomWidth:0          
+                 }}           
+               />
+            </View>
+
+            <View style={{marginLeft: '14%',marginTop:'113%',position: "absolute"}}>
+              
+              <Image style={{               
+                  width: wp('73%'),
+                  height: hp('6.5%'),
+                  resizeMode:'cover',        
+              }} source ={require('../../imagens/bt-branco.png')}/>                       
+              
+            </View>
+
+            <View style={{marginLeft: '20%',marginTop:'117.5%',position: "absolute"}}>
+              
+              <Image style={{
+                width: wp('3.5%'),
+                height: hp('2%'),
+                resizeMode:'cover',        
+              }} source ={require('../../imagens/ico-password.png')}/>                       
+              
+            </View>
+
+            <View style={{marginLeft: '25%',marginTop:'120.5%',position: "absolute"}}>
+
+               <Input 
+                 placeholder = 'Digite a sua senha'
+                 placeholderTextColor='#000'
+                 overflow = "hidden"
+                 autoCapitalize = 'none'
+                 //onChangeText = {this.changeOrgState}                 
+
+                 inputContainerStyle = {{
+                   borderBottomWidth:0          
+                 }}           
+               />
+            </View>
+
+            <View style={{marginLeft: '8%',marginTop:'131%',position: "absolute"}}>
+              
+            <Button
+               title = 'ENTRAR'
+               //color = {constantClass.colors.blue}
+               onPress={()=>NavigationService.simpleNavigate('Perfil')}              
+               containerStyle = {styleClass.loginStyles.enterButton}
+               buttonStyle = {{
+                 backgroundColor: colorClass.colors.gray,
+                 width: '120%',
+                 height: '110%',                 
+                 borderRadius: 25  
+               }}
+             />           
+              
+            </View>
             
-            <Button
-              title = 'entrar com a digital'
-              //color = {constantClass.colors.blue}
-              onPress={()=>this._idSignIn()}//chamando popup para utilizar digital
-              
-              containerStyle = {styleClass.loginStyles.enterButton}
-              buttonStyle = {{
-                //backgroundColor: constantClass.colors.enterBtnBlue,
-                borderRadius: 10  
-              }}
-            />
+            <View style={{ marginLeft: '42%', marginRight: '15%', marginTop: '171%' ,position: "absolute"}}>
+
+                  <Image style={{              
+                  width: wp('18%'),
+                  height: hp('9%'),
+                  resizeMode:'cover',        
+                  }} source ={require('../../imagens/logo-sinn-selo.png')}/>  
+                  
+            </View>
+
           </View>
-          </ImageBackground>
-        </Container>
+
+        </ImageBackground>
     );
   }
 }

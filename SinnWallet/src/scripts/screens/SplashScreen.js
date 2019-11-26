@@ -29,12 +29,12 @@ export default class SplashScreen extends Component {
 
               <View style={{ marginLeft: '40%', marginRight: '15%', marginTop: '-45%',  position: "absolute"}}>
 
-              <Image style={{              
+                  <Image style={{              
                   width: wp('18%'),
                   height: hp('9%'),
                   resizeMode:'cover',        
                   }} source ={require('../../imagens/logo-sinn-selo.png')}/>  
-            </View>
+              </View>
             
 
               <View style={{ marginLeft: '15%', marginRight: '15%',  position: "absolute"}}>
@@ -86,3 +86,5 @@ export default class SplashScreen extends Component {
     );
   }
 }
+
+
