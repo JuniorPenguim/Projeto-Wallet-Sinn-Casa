@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { Container } from 'native-base';
-import { View } from 'react-native';
+import { Container} from 'native-base';
 import * as colorClass from '../constants/ColorClass'
 import * as styleClass from '../constants/StyleClass'
 import { Button,Input,Image, Text} from 'react-native-elements';
-import {KeyboardAvoidingView,Keyboard,TouchableOpacity} from 'react-native'
+import {KeyboardAvoidingView,Keyboard,TouchableOpacity, ImageBackground, View} from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Biometrics from 'react-native-biometrics'
 import NavigationService from '../../../NavigationService'
-import {ImageBackground} from 'react-native';
+
 
 export default class LoginScreen extends Component {
 
@@ -74,20 +73,7 @@ export default class LoginScreen extends Component {
               
             </View>
 
-            <View style={{marginLeft: '25%',marginTop:'97.5%',position: "absolute"}}>
-
-               <Input 
-                 placeholder = 'Entre com seu e-mail'
-                 placeholderTextColor='#000'                 
-                 overflow = "hidden"
-                 autoCapitalize = 'none'
-                 //onChangeText = {this.changeOrgState}                 
-
-                 inputContainerStyle = {{
-                   borderBottomWidth:0          
-                 }}           
-               />
-            </View>
+            
 
             <View style={{marginLeft: '14%',marginTop:'113%',position: "absolute"}}>
               
@@ -109,26 +95,44 @@ export default class LoginScreen extends Component {
               
             </View>
 
-            <View style={{marginLeft: '25%',marginTop:'120.5%',position: "absolute"}}>
+            <View style={{marginLeft: '25%',marginTop:'102%',position: "relative"}}>
 
                <Input 
-                 placeholder = 'Digite a sua senha'
-                 placeholderTextColor='#000'
+                 placeholder = 'Entre com seu e-mail'
+                 placeholderTextColor='#000'                 
                  overflow = "hidden"
-                 autoCapitalize = 'none'
-                 //onChangeText = {this.changeOrgState}                 
+                 autoCapitalize = 'none'                                  
 
                  inputContainerStyle = {{
                    borderBottomWidth:0          
                  }}           
-               />
+                />
+
+                <View style={{marginTop:'15.5%', position:"relative"}}>
+
+                  <Input 
+                  placeholder = 'Digite a sua senha'
+                  placeholderTextColor='#000'
+                  overflow = "hidden"
+                  autoCapitalize = 'none'                                   
+
+                  inputContainerStyle = {{
+                    borderBottomWidth:0          
+                  }}           
+                />
+
+                </View>
+
+                
+
             </View>
+            
 
             <View style={{marginLeft: '8%',marginTop:'131%',position: "absolute"}}>
               
             <Button
                title = 'ENTRAR'
-               //color = {constantClass.colors.blue}
+               
                onPress={()=>NavigationService.simpleNavigate('Perfil')}              
                containerStyle = {styleClass.loginStyles.enterButton}
                buttonStyle = {{
