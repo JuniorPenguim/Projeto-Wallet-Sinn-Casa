@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View, ImageBackground, TouchableWithoutFeedback, Switch} from 'react-native';
+import { View, ImageBackground, TouchableWithoutFeedback, Switch, TouchableOpacity} from 'react-native';
 import { Container } from 'native-base';
 import * as styleClass from '../constants/StyleClass'
 import { Button,Text,Avatar,Image, Input} from 'react-native-elements';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import NavigationService from '../../../NavigationService'
+import NavigationService from '../../../NavigationService';
+import {createDrawerNavigator} from 'react-navigation'
 
 // import { Container } from './styles';
 
@@ -14,12 +15,12 @@ export default class ProfileScreen extends Component {
     };  
 
     _handleToggleSwitch = () => this.setState(state =>({switchValue: !state.switchValue}));
+    
+
+    
 
 render() {
     return (
-
-
-
        
         <ImageBackground
            style={{width: '100%', height: '100%'}}
@@ -27,6 +28,16 @@ render() {
            source={require('../../imagens/bg-internas.png')}>
 
             <View style={{flex:1,justifyContent: 'space-between'}}>
+
+                <View style={{marginLeft:'85%', marginTop:'6%', position: "absolute"}}>
+
+                    <Image style={{              
+                                width: wp('7.5%'),
+                                height: hp('3%'),
+                                resizeMode:'cover',        
+                            }} source ={require('../../imagens/ico-menu-abrir.png')}/>
+
+                </View>
 
                 <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Login')}>
 
@@ -152,6 +163,8 @@ render() {
 
         </ImageBackground>
 
+
     );
   }
 }
+

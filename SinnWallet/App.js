@@ -6,8 +6,9 @@ import SplashScreen from './src/scripts/screens/SplashScreen';
 import LoginScreen from './src/scripts/screens/LoginScreen';
 import ProfileScreen from './src/scripts/screens/ProfileScreen';
 //import Loader from './src/scripts/Loading';
-import { Container } from 'native-base';
+import { Container, View } from 'native-base';
 import FlashMessage from "react-native-flash-message";
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const TopLevelNavigator = createStackNavigator({
@@ -40,3 +41,4 @@ export default class SManager extends React.Component{
     );
   }
 }
+
