@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ImageBackground, TouchableWithoutFeedback} from 'react-native';
+import { View, ImageBackground, TouchableWithoutFeedback, Switch} from 'react-native';
 import { Container } from 'native-base';
 import * as styleClass from '../constants/StyleClass'
 import { Button,Text,Avatar,Image, Input} from 'react-native-elements';
@@ -9,8 +9,16 @@ import NavigationService from '../../../NavigationService'
 // import { Container } from './styles';
 
 export default class ProfileScreen extends Component {
-  render() {
+    state ={
+        switchValue: true
+    };  
+
+    _handleToggleSwitch = () => this.setState(state =>({switchValue: !state.switchValue}));
+
+render() {
     return (
+
+
 
        
         <ImageBackground
@@ -108,25 +116,17 @@ export default class ProfileScreen extends Component {
 
                 </View>
 
-                <View style={{marginLeft: '25%',marginTop:'122%',position: "absolute"}}>
+                <View style={{marginLeft: '17%',marginTop:'123%',position: "absolute"}}>
               
-                   <Image style={{               
-                       width: wp('17%'),
-                       height: hp('4%'),
-                       resizeMode:'cover',        
-                    }} source ={require('../../imagens/seletor-off.png')}/>           
-              
-                </View>
-
-                <View style={{marginLeft: '25%',marginTop:'122%',position: "absolute"}}>
-              
-                   <Image style={{               
-                       width: wp('17%'),
-                       height: hp('4%'),
-                       resizeMode:'cover',        
-                    }} source ={require('../../imagens/seletor-off.png')}/>           
+                    <Switch
+                    onValueChange={this._handleToggleSwitch}
+                    value={this.state.switchValue}
+                    style={{transform: [{scaleX: 1.5}, {scaleY: 1.5}]}}
+                    />
+           
               
                 </View>
+                
 
                 <View style={{marginLeft: '46%',marginTop:'99%',position: "absolute"}}>
               

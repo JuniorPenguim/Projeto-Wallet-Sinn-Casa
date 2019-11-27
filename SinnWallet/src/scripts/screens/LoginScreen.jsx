@@ -30,7 +30,7 @@ export default class LoginScreen extends Component {
            resizeMode="cover"
            source={require('../../imagens/splash-2.png')}>
 
-          <View style={{flex:1,justifyContent: 'space-between'}}>
+          <View style={{flex:1}}>
 
             <View style={{marginLeft:'20%', marginTop:'20%', position: "absolute"}}>
               <Image style={{              
@@ -71,7 +71,7 @@ export default class LoginScreen extends Component {
                 resizeMode:'cover',        
               }} source ={require('../../imagens/ico-email.png')}/>                       
               
-            </View>
+            </View> 
 
             
 
