@@ -18,8 +18,11 @@ import {
 } from 'react-native-responsive-screen';
 import NavigationService from '../../../NavigationService';
 import {DrawerNavigator} from 'react-navigation-drawer';
+import { createDrawerNavigator,DrawerActions } from 'react-navigation-drawer';
+import {createAppContainer} from 'react-navigation';
 
-// import { Container } from './styles';
+
+
 
 export default class ProfileScreen extends Component {
   state = {
@@ -29,7 +32,17 @@ export default class ProfileScreen extends Component {
   _handleToggleSwitch = () =>
     this.setState(state => ({switchValue: !state.switchValue}));
 
-  
+    static navigationOptions = {
+      drawerLabel: 'Home',
+      drawerIcon: ({ tintColor }) => (
+        <Image
+          source={require('../../imagens/ico-password.png')}
+          style={[styles.icon, { tintColor: tintColor }]}
+        />
+      ),
+     
+    };
+
 
   render() {
     return (
@@ -39,20 +52,24 @@ export default class ProfileScreen extends Component {
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
           <View style={{flex: 1, justifyContent: 'space-between'}}>
+            {console.log(this.props.navigation.navigate('Notifications'))}
             <View
               style={{
                 marginLeft: '85%',
                 marginTop: '6%',
                 position: 'absolute',
               }}>
-              <Image
-                style={{
-                  width: wp('7.5%'),
-                  height: hp('3%'),
-                  resizeMode: 'cover',
-                }}
-                source={require('../../imagens/ico-menu-abrir.png')}
-              />
+              
+                
+                <Image
+                  style={{
+                    width: wp('7.5%'),
+                    height: hp('3%'),
+                    resizeMode: 'cover',
+                  }}
+                  source={require('../../imagens/ico-menu-abrir.png')}
+                />
+              
             </View>
 
             <TouchableWithoutFeedback
@@ -252,3 +269,54 @@ export default class ProfileScreen extends Component {
     );
   }
 }
+
+class MyNotificationsScreen extends React.Component {
+  static navigationOptions = {
+    drawerLabel: 'Notifications',
+    drawerIcon: ({ tintColor }) => (
+      <Image
+        source={require('../../imagens/ico-password.png')}
+        style={[styles.icon, { tintColor: tintColor }]}
+      />
+    ),    
+  };
+
+
+  render() {
+    return (
+      <Button
+        onPress={() => this.props.navigation.goBack()}
+        title="Go back home"
+      />
+    );
+  }
+
+}
+
+const CustomDrawerContentComponent = props => (
+  <ScrollView>
+    <SafeAreaView
+      style={styles.container}
+      forceInset={{ top: 'always', horizontal: 'never' }}
+    >
+      <DrawerItems {...props} />
+    </SafeAreaView>
+  </ScrollView>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
+const MyDrawerNavigator = createDrawerNavigator({
+  Home: {
+    screen: ProfileScreen,
+  },
+  Notifications: {
+    screen: MyNotificationsScreen,
+  },
+});
+
+const MyApp = createAppContainer(MyDrawerNavigator);
