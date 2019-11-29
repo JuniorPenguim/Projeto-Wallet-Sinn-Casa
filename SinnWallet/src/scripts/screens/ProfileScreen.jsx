@@ -2,19 +2,22 @@ import React, {Component} from 'react';
 import {
   View,
   ImageBackground,
+  Image,
+  Text,
+  StyleSheet,
   TouchableWithoutFeedback,
   Switch,
   TouchableOpacity,
 } from 'react-native';
 import {Container} from 'native-base';
 import * as styleClass from '../constants/StyleClass';
-import {Button, Text, Avatar, Image, Input} from 'react-native-elements';
+import {Button, Avatar, Input} from 'react-native-elements';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import NavigationService from '../../../NavigationService';
-import {createDrawerNavigator} from 'react-navigation';
+import {DrawerNavigator} from 'react-navigation-drawer';
 
 // import { Container } from './styles';
 
@@ -25,6 +28,8 @@ export default class ProfileScreen extends Component {
 
   _handleToggleSwitch = () =>
     this.setState(state => ({switchValue: !state.switchValue}));
+
+  
 
   render() {
     return (

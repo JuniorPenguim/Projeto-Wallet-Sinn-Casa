@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {View} from 'react-native';
 import {Text} from 'react-native-elements';
 import {Image} from 'react-native-elements';
-//import AsyncStorage from '@react-native-community/async-storage';
 import {Container} from 'native-base';
 import NavigationService from '../../../NavigationService';
 import {ImageBackground} from 'react-native';
@@ -14,7 +13,7 @@ import {
 export default class SplashScreen extends Component {
   async componentDidMount() {
     setTimeout(function() {
-      NavigationService.simpleNavigate('Login');
+      NavigationService.simpleNavigate('LoginRedes');
     }, 3000);
   }
 

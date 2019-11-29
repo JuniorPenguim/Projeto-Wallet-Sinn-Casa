@@ -138,35 +138,7 @@ export default class LoginScreen extends Component {
                 source={require('../../imagens/ico-password.png')}
               />
             </View>
-
-            {/* <View
-              style={{
-                marginLeft: '25%',
-                marginTop: '102%',
-                position: 'relative',
-              }}>
-              <Input
-                placeholder="Entre com seu e-mail"
-                placeholderTextColor="#000"
-                overflow="hidden"
-                autoCapitalize="none"
-                inputContainerStyle={{
-                  borderBottomWidth: 0,
-                }}
-              />
-
-              <View style={{marginTop: '15.5%', position: 'relative'}}>
-                <Input
-                  placeholder="Digite a sua senha"
-                  placeholderTextColor="#000"
-                  overflow="hidden"
-                  autoCapitalize="none"
-                  inputContainerStyle={{
-                    borderBottomWidth: 0,
-                  }}
-                />
-              </View>
-            </View> */}
+            
 
             <View
               style={{
