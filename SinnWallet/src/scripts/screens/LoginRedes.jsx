@@ -5,27 +5,30 @@ import {
   TouchableWithoutFeedback,
   Switch,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
-import {Container} from 'native-base';
+import {
+  Container,
+  Header,
+  Title,
+  Left,
+  Icon,
+  Right,
+  Button,
+  Body,
+  Content,
+  Text,
+  Card,
+  CardItem,
+} from 'native-base';
 import * as styleClass from '../constants/StyleClass';
-import {Button, Text, Avatar, Image, Input} from 'react-native-elements';
+import {Avatar, Image, Input} from 'react-native-elements';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import NavigationService from '../../../NavigationService';
-import {createDrawerNavigator} from 'react-navigation';
 import Biometrics from 'react-native-biometrics';
-
-
-
-
-
-
-
-
-
-
 
 export default class LoginScreen extends Component {
   _idSignIn() {
@@ -51,7 +54,7 @@ export default class LoginScreen extends Component {
               style={{
                 marginLeft: '20%',
                 marginTop: '20%',
-                position: 'absolute',
+                position: 'relative',
               }}>
               <Image
                 style={{
@@ -74,8 +77,6 @@ export default class LoginScreen extends Component {
               </Text>
             </View>
 
-            
-
             <View
               style={{
                 marginLeft: '14%',
@@ -92,7 +93,6 @@ export default class LoginScreen extends Component {
               />
             </View>
 
-            
             <View
               style={{
                 marginLeft: '14%',
@@ -107,33 +107,26 @@ export default class LoginScreen extends Component {
                 }}
                 source={require('../../imagens/bt-login-gmail.png')}
               />
-            </View>            
+            </View>
 
-            
-            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Login')}>
-                
-                    <View
-                    style={{
-                        marginLeft: '15%',
-                        marginTop: '131%',
-                        position: 'absolute',
-                    }}>
-                    
-                        <Image
-                            style={{
-                            width: wp('73%'),
-                            height: hp('6.5%'),
-                            resizeMode: 'cover',
-                            }}
-                            source={require('../../imagens/bt-login-email.png')}
-                        />
-
-                    </View>
-                
+            <TouchableWithoutFeedback
+              onPress={() => NavigationService.simpleNavigate('Login')}>
+              <View
+                style={{
+                  marginLeft: '15%',
+                  marginTop: '131%',
+                  position: 'absolute',
+                }}>
+                <Image
+                  style={{
+                    width: wp('73%'),
+                    height: hp('6.5%'),
+                    resizeMode: 'cover',
+                  }}
+                  source={require('../../imagens/bt-login-email.png')}
+                />
+              </View>
             </TouchableWithoutFeedback>
-
-
-            
 
             <View
               style={{
@@ -151,8 +144,6 @@ export default class LoginScreen extends Component {
                 source={require('../../imagens/logo-sinn-selo.png')}
               />
             </View>
-
-           
           </View>
         </ImageBackground>
       </Container>
