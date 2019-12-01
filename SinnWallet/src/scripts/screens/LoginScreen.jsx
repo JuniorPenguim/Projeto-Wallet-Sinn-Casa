@@ -3,13 +3,7 @@ import {Container} from 'native-base';
 import * as colorClass from '../constants/ColorClass';
 import * as styleClass from '../constants/StyleClass';
 import {Button, Input, Image, Text} from 'react-native-elements';
-import {
-  KeyboardAvoidingView,
-  Keyboard,
-  TouchableOpacity,
-  ImageBackground,
-  View,
-} from 'react-native';
+import {ImageBackground, View} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -45,9 +39,8 @@ export default class LoginScreen extends Component {
               }}>
               <Image
                 style={{
-                  width: wp('60%'),
-                  height: hp('25%'),
-                  resizeMode: 'cover',
+                  width: 255,
+                  height: 210,
                 }}
                 source={require('../../imagens/logo-icon-login.png')}
               />
@@ -99,9 +92,8 @@ export default class LoginScreen extends Component {
               }}>
               <Image
                 style={{
-                  width: wp('5.5%'),
-                  height: hp('3.1%'),
-                  resizeMode: 'cover',
+                  width: 20,
+                  height: 23,
                 }}
                 source={require('../../imagens/ico-email.png')}
               />
@@ -117,7 +109,6 @@ export default class LoginScreen extends Component {
                 style={{
                   width: wp('73%'),
                   height: hp('6.5%'),
-                  resizeMode: 'cover',
                 }}
                 source={require('../../imagens/bt-branco.png')}
               />
@@ -133,12 +124,10 @@ export default class LoginScreen extends Component {
                 style={{
                   width: wp('3.5%'),
                   height: hp('2%'),
-                  resizeMode: 'cover',
                 }}
                 source={require('../../imagens/ico-password.png')}
               />
             </View>
-            
 
             <View
               style={{
@@ -161,16 +150,15 @@ export default class LoginScreen extends Component {
 
             <View
               style={{
-                marginLeft: '42%',
-                marginRight: '15%',
-                marginTop: '171%',
+                marginLeft: wp('43%'),
+                marginRight: wp('15%'),
+                marginTop: hp('87%'),
                 position: 'absolute',
               }}>
               <Image
                 style={{
-                  width: wp('18%'),
-                  height: hp('9%'),
-                  resizeMode: 'cover',
+                  width: 60,
+                  height: 60,
                 }}
                 source={require('../../imagens/logo-sinn-selo.png')}
               />
@@ -196,6 +184,7 @@ export default class LoginScreen extends Component {
                 autoCapitalize="none"
                 marginTop="6%"
                 marginLeft="25%"
+                secureTextEntry={true}
                 inputContainerStyle={{
                   borderBottomWidth: 0,
                 }}

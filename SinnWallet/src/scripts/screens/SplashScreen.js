@@ -4,7 +4,7 @@ import {Text} from 'react-native-elements';
 import {Image} from 'react-native-elements';
 import {Container} from 'native-base';
 import NavigationService from '../../../NavigationService';
-import {ImageBackground} from 'react-native';
+import {ImageBackground, Dimensions} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -14,34 +14,30 @@ export default class SplashScreen extends Component {
   async componentDidMount() {
     setTimeout(function() {
       NavigationService.simpleNavigate('LoginRedes');
-    }, 3000);
+    }, 5000);
   }
 
   render() {
     return (
       <Container>
         <ImageBackground
-          style={{width: '100%', height: '100%'}}
+          style={{width: windowW, height: windowH}}
           resizeMode="cover"
           source={require('../../imagens/splash.png')}>
           <View
             style={{
               flex: 1,
-              justifyContent: 'space-between',
-              marginTop: '50%',
+              flexDirection: 'column',
             }}>
             <View
               style={{
-                marginLeft: '40%',
-                marginRight: '15%',
-                marginTop: '-45%',
-                position: 'absolute',
+                marginLeft: wp('42%'),
+                marginTop: hp('3%'),
               }}>
               <Image
                 style={{
-                  width: wp('18%'),
-                  height: hp('9%'),
-                  resizeMode: 'cover',
+                  width: 65,
+                  height: 65,
                 }}
                 source={require('../../imagens/logo-sinn-selo.png')}
               />
@@ -49,15 +45,13 @@ export default class SplashScreen extends Component {
 
             <View
               style={{
-                marginLeft: '15%',
-                marginRight: '15%',
-                position: 'absolute',
+                marginLeft: wp('15%'),
+                marginTop: hp('15%'),
               }}>
               <Image
                 style={{
                   width: 300,
                   height: 50,
-                  resizeMode: 'contain',
                 }}
                 source={require('../../imagens/logo-splash.png')}
               />
@@ -65,16 +59,13 @@ export default class SplashScreen extends Component {
 
             <View
               style={{
-                marginRight: '10%',
-                marginLeft: '15%',
-                marginTop: '17%',
-                position: 'absolute',
+                marginLeft: wp('20%'),
+                marginTop: hp('2.5%'),
               }}>
               <Image
                 style={{
-                  width: 300,
-                  height: 200,
-                  resizeMode: 'cover',
+                  width: 250,
+                  height: 150,
                 }}
                 source={require('../../imagens/icon-splash.png')}
               />
@@ -82,32 +73,34 @@ export default class SplashScreen extends Component {
 
             <View
               style={{
-                marginLeft: '17.5%',
-                marginTop: '72%',
-                position: 'absolute',
+                marginLeft: wp('10.5%'),
+                marginTop: hp('8%'),
               }}>
-              <Text style={{color: '#FFFF', fontWeight: 'bold'}}>
+              <Text style={{color: '#FFFF', fontWeight: 'bold', fontSize: 17}}>
                 FISCALIZAÇÃO DO SISTEMA EDUCACIONAL
               </Text>
             </View>
 
             <View
               style={{
-                marginLeft: '25%',
-                marginTop: '77%',
-                position: 'absolute',
+                marginLeft: wp('21%'),
               }}>
-              <Text style={{color: '#FFFF', fontWeight: 'bold'}}>
+              <Text style={{color: '#FFFF', fontWeight: 'bold', fontSize: 17}}>
                 PREFEITURA DO RIO DE JANEIRO
               </Text>
             </View>
 
-            <View style={{marginTop: '120%', position: 'absolute'}}>
+            <View
+              style={{
+                flex: 1,
+                justifyContent: 'flex-end',
+                marginBottom: hp('3.3%'),
+              }}>
               <Image
                 style={{
-                  width: wp('100%'),
-                  height: hp('12%'),
-                  resizeMode: 'cover',
+                  width: 410,
+                  height: 105,
+                  resizeMode: 'stretch',
                 }}
                 source={require('../../imagens/imagem-rodape-ilustracao-splash.png')}
               />
@@ -118,3 +111,6 @@ export default class SplashScreen extends Component {
     );
   }
 }
+
+const windowW = Dimensions.get('window').width;
+const windowH = Dimensions.get('window').height;

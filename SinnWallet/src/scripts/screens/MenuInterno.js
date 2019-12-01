@@ -5,7 +5,9 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import NavigationService from '../../../NavigationService';
+import * as profileScreen from '../screens/ProfileScreen';
+//import {Avatar} from 'react-native-elements';
+//import NavigationService from '../../../NavigationService';
 
 export default class MenuInterno extends Component {
   render() {
@@ -20,10 +22,10 @@ export default class MenuInterno extends Component {
             <TouchableWithoutFeedback>
               <Image
                 style={{
-                  marginTop: '6%',
-                  marginRight: '5%',
-                  width: wp('7%'),
-                  height: hp('3%'),
+                  marginTop: hp('3%'),
+                  marginRight: wp('6%'),
+                  width: 25,
+                  height: 25,
                 }}
                 source={require('../../imagens/ico-menu-fechar.png')}
               />
@@ -31,22 +33,32 @@ export default class MenuInterno extends Component {
           </View>
           <View
             style={{
-              marginLeft: '6%',
-              marginTop: '10%',
+              marginLeft: wp('6%'),
+              marginTop: hp('3%'),
               flexDirection: 'row',
             }}>
             <Image
               style={{
-                width: wp('16%'),
-                height: hp('9.5%'),
+                width: 60,
+                height: 70,
               }}
               source={require('../../imagens/mascara-foto-usuario-interna-menu.png')}
             />
+            <Text
+              style={{
+                fontSize: 50,
+                color: 'white',
+                marginLeft: wp('3%'),
+                position: 'absolute',
+              }}>
+              N
+            </Text>
+
             <View style={{flexDirection: 'column'}}>
               <Text
                 style={{
-                  marginLeft: '15%',
-                  marginTop: '3%',
+                  marginLeft: wp('7%'),
+                  marginTop: hp('1%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -55,8 +67,8 @@ export default class MenuInterno extends Component {
 
               <Text
                 style={{
-                  marginLeft: '15%',
-                  marginTop: '5%',
+                  marginLeft: wp('7%'),
+                  marginTop: hp('1%'),
                   fontSize: 17,
                   color: 'gray',
                 }}>
@@ -67,10 +79,10 @@ export default class MenuInterno extends Component {
 
           <Image
             style={{
-              marginLeft: '5%',
-              marginTop: '10%',
-              width: wp('72%'),
-              height: hp('0.1%'),
+              marginLeft: wp('5%'),
+              marginTop: hp('4%'),
+              width: 290,
+              height: 1,
             }}
             source={require('../../imagens/line-div-menu.png')}
           />
@@ -78,27 +90,26 @@ export default class MenuInterno extends Component {
           <View
             style={{
               flexDirection: 'column',
-              //alignItems: 'stretch',
             }}>
             <View
               style={{
-                marginLeft: '6%',
-                marginTop: '10%',
+                marginLeft: wp('6%'),
+                marginTop: hp('5%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '1%',
-                  width: wp('11.5%'),
-                  height: hp('4.5%'),
+                  marginLeft: wp('1%'),
+                  width: 38,
+                  height: 28,
                 }}
                 source={require('../../imagens/ico-menu-carteira.png')}
               />
 
               <Text
                 style={{
-                  marginLeft: '7%',
-                  marginTop: '3%',
+                  marginLeft: wp('5%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -108,23 +119,23 @@ export default class MenuInterno extends Component {
 
             <View
               style={{
-                marginLeft: '6%',
-                marginTop: '6%',
+                marginLeft: wp('6%'),
+                marginTop: hp('3%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '2%',
-                  width: wp('9.7%'),
-                  height: hp('4.5%'),
+                  marginLeft: wp('1.5%'),
+                  width: 32.88,
+                  height: 30,
                 }}
                 source={require('../../imagens/ico-menu-conta.png')}
               />
 
               <Text
                 style={{
-                  marginLeft: '9%',
-                  marginTop: '3%',
+                  marginLeft: wp('6%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -134,23 +145,23 @@ export default class MenuInterno extends Component {
 
             <View
               style={{
-                marginLeft: '6%',
-                marginTop: '6%',
+                marginLeft: wp('5%'),
+                marginTop: hp('3%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '4%',
-                  width: wp('7%'),
-                  height: hp('4.5%'),
+                  marginLeft: wp('4%'),
+                  width: 24.58,
+                  height: 31,
                 }}
                 source={require('../../imagens/ico-menu-politica-privacidade.png')}
               />
 
               <Text
                 style={{
-                  marginLeft: '11%',
-                  marginTop: '3%',
+                  marginLeft: wp('7%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -160,23 +171,23 @@ export default class MenuInterno extends Component {
 
             <View
               style={{
-                marginLeft: '6%',
-                marginTop: '6%',
+                marginLeft: wp('5%'),
+                marginTop: hp('3%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '3%',
-                  width: wp('9.5%'),
-                  height: hp('4.7%'),
+                  marginLeft: wp('3%'),
+                  width: 32.88,
+                  height: 31.5,
                 }}
                 source={require('../../imagens/ico-menu-termo-responsabilidade.png')}
               />
 
               <Text
                 style={{
-                  marginLeft: '9%',
-                  marginTop: '3%',
+                  marginLeft: wp('6.4%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -186,25 +197,23 @@ export default class MenuInterno extends Component {
 
             <View
               style={{
-                flex: 1,
-                marginLeft: '6%',
-                marginTop: '6%',
+                marginLeft: wp('5%'),
+                marginTop: hp('3%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '2%',
-                  width: wp('10%'),
-                  height: hp('5%'),
-                  resizeMode: 'cover',
+                  marginLeft: wp('3%'),
+                  width: 33.84,
+                  height: 33.5,
                 }}
                 source={require('../../imagens/ico-menu-sobre.png')}
               />
 
               <Text
                 style={{
-                  marginLeft: '10%',
-                  marginTop: '3%',
+                  marginLeft: wp('6.5%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
@@ -214,15 +223,15 @@ export default class MenuInterno extends Component {
 
             <View
               style={{
-                marginLeft: '6%',
-                marginTop: '6%',
+                marginLeft: wp('5%'),
+                marginTop: hp('3%'),
                 flexDirection: 'row',
               }}>
               <Image
                 style={{
-                  marginLeft: '3%',
-                  width: wp('9.5%'),
-                  height: hp('4.9%'),
+                  marginLeft: wp('4%'),
+                  width: 29.37,
+                  height: 29,
                   resizeMode: 'cover',
                 }}
                 source={require('../../imagens/ico-menu-suporte.png')}
@@ -230,8 +239,8 @@ export default class MenuInterno extends Component {
 
               <Text
                 style={{
-                  marginLeft: '10%',
-                  marginTop: '3%',
+                  marginLeft: wp('7%'),
+                  marginTop: hp('0.5%'),
                   fontSize: 17,
                   color: 'white',
                 }}>
