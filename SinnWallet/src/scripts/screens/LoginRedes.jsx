@@ -6,6 +6,7 @@ import {
   Switch,
   TouchableOpacity,
   StatusBar,
+  Dimensions,
 } from 'react-native';
 import {
   Container,
@@ -46,12 +47,13 @@ export default class LoginScreen extends Component {
     return (
       <Container>
         <ImageBackground
-          style={{width: '100%', height: '100%'}}
+          style={{width: windowW, height: windowH}}
           resizeMode="cover"
           source={require('../../imagens/splash-2.png')}>
           <View style={{flex: 1}}>
             <View
               style={{
+                flex: 1,
                 marginLeft: '20%',
                 marginTop: '20%',
                 position: 'relative',
@@ -68,6 +70,7 @@ export default class LoginScreen extends Component {
 
             <View
               style={{
+                flex: 1,
                 marginLeft: '21%',
                 marginTop: '83%',
                 position: 'absolute',
@@ -79,6 +82,7 @@ export default class LoginScreen extends Component {
 
             <View
               style={{
+                flex: 1,
                 marginLeft: '14%',
                 marginTop: '95%',
                 position: 'absolute',
@@ -95,6 +99,7 @@ export default class LoginScreen extends Component {
 
             <View
               style={{
+                flex: 1,
                 marginLeft: '14%',
                 marginTop: '113%',
                 position: 'absolute',
@@ -113,6 +118,7 @@ export default class LoginScreen extends Component {
               onPress={() => NavigationService.simpleNavigate('Login')}>
               <View
                 style={{
+                  flex: 1,
                   marginLeft: '15%',
                   marginTop: '131%',
                   position: 'absolute',
@@ -130,6 +136,7 @@ export default class LoginScreen extends Component {
 
             <View
               style={{
+                flex: 1,
                 marginLeft: '42%',
                 marginRight: '15%',
                 marginTop: '171%',
@@ -150,3 +157,6 @@ export default class LoginScreen extends Component {
     );
   }
 }
+
+const windowW = Dimensions.get('window').width;
+const windowH = Dimensions.get('window').height;
