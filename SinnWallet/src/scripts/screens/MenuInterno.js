@@ -5,11 +5,15 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import * as profileScreen from '../screens/ProfileScreen';
+import NavigationService from '../../../NavigationService';
+import ProfileScreen, * as profileScreen from '../screens/ProfileScreen';
+
+
 //import {Avatar} from 'react-native-elements';
 //import NavigationService from '../../../NavigationService';
 
-export default class MenuInterno extends Component {
+export default class MenuInterno extends Component { 
+
   render() {
     return (
       <Content style={{backgroundColor: '#252525'}}>
@@ -19,7 +23,8 @@ export default class MenuInterno extends Component {
             flexDirection: 'column',
           }}>
           <View style={{alignItems: 'flex-end'}}>
-            <TouchableWithoutFeedback>
+            
+            <TouchableWithoutFeedback onPress={() => this.props.closeDrawer()}>
               <Image
                 style={{
                   marginTop: hp('3%'),
@@ -91,32 +96,35 @@ export default class MenuInterno extends Component {
             style={{
               flexDirection: 'column',
             }}>
-            <View
-              style={{
-                marginLeft: wp('6%'),
-                marginTop: hp('5%'),
-                flexDirection: 'row',
-              }}>
-              <Image
+            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Carteira')}>
+              <View
                 style={{
-                  marginLeft: wp('1%'),
-                  width: 38,
-                  height: 28,
-                }}
-                source={require('../../imagens/ico-menu-carteira.png')}
-              />
-
-              <Text
-                style={{
-                  marginLeft: wp('5%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
+                  marginLeft: wp('6%'),
+                  marginTop: hp('5%'),
+                  flexDirection: 'row',
                 }}>
-                Carteira
-              </Text>
-            </View>
+                
+                
+                <Image
+                    style={{
+                      marginLeft: wp('1%'),
+                      width: 38,
+                      height: 28,
+                    }}
+                    source={require('../../imagens/ico-menu-carteira.png')}
+                />
 
+                <Text
+                  style={{
+                    marginLeft: wp('5%'),
+                    marginTop: hp('0.5%'),
+                    fontSize: 17,
+                    color: 'white',
+                  }}>
+                  Carteira
+                </Text>
+              </View>
+            </TouchableWithoutFeedback>
             <View
               style={{
                 marginLeft: wp('6%'),

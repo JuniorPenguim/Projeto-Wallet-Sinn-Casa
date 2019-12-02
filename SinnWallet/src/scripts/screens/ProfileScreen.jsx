@@ -23,6 +23,7 @@ export default class ProfileScreen extends Component {
     this.setState(state => ({switchValue: !state.switchValue}));
 
   closeDrawer() {
+    
     this._drawer._root.close();
   }
 
@@ -36,7 +37,7 @@ export default class ProfileScreen extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={<SideBar navigator={this._navigator} closeDrawer={this.closeDrawer}/>}
         onClose={() => this.closeDrawer()}>
         <Container>
           <ImageBackground

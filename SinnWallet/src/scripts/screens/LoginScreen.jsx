@@ -137,7 +137,7 @@ export default class LoginScreen extends Component {
               }}>
               <Button
                 title="ENTRAR"
-                onPress={() => NavigationService.simpleNavigate('Perfil')}
+                onPress={() => NavigationService.simpleNavigate('Iniciar')}
                 containerStyle={styleClass.loginStyles.enterButton}
                 buttonStyle={{
                   backgroundColor: colorClass.colors.gray,
