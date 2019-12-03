@@ -7,6 +7,7 @@ import LoginScreen from './src/scripts/screens/LoginScreen';
 import LoginRedes from './src/scripts/screens/LoginRedes';
 import ProfileScreen from './src/scripts/screens/ProfileScreen';
 import CarteiraScreen from './src/scripts/screens/CarteiraScreen';
+import CapturaScreen from './src/scripts/screens/CapturaScreen';
 import MenuIniciar from './src/scripts/screens/MenuIniciar'
 import {Container} from 'native-base';
 import FlashMessage from 'react-native-flash-message';
@@ -19,6 +20,7 @@ const TopLevelNavigator = createStackNavigator(
     Iniciar: {screen: MenuIniciar},
     Perfil: {screen: ProfileScreen}, 
     Carteira: {screen: CarteiraScreen},
+    Captura: {screen: CapturaScreen},
   },
   {
     initialRouteName: 'Splash',

@@ -13,6 +13,7 @@
     "react": "16.8.1",
     "react-native": "0.61.2",
     "react-native-biometrics": "^1.6.1",
+    "react-native-camera": "^3.13.1",
     "react-native-elements": "^1.2.7",
     "react-native-flash-message": "^0.1.15",
     "react-native-gesture-handler": "^1.5.1",

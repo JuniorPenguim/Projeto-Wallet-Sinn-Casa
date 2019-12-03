@@ -14,6 +14,9 @@ import ProfileScreen, * as profileScreen from '../screens/ProfileScreen';
 
 export default class MenuInterno extends Component { 
 
+
+  
+
   render() {
     return (
       <Content style={{backgroundColor: '#252525'}}>
@@ -24,7 +27,7 @@ export default class MenuInterno extends Component {
           }}>
           <View style={{alignItems: 'flex-end'}}>
             
-            <TouchableWithoutFeedback onPress={() => this.props.closeDrawer()}>
+            <TouchableWithoutFeedback onPress={() => this.closeDrawer()}>
               <Image
                 style={{
                   marginTop: hp('3%'),

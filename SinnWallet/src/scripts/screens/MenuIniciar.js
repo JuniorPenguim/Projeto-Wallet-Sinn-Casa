@@ -116,7 +116,7 @@ export default class ProfileScreen extends Component {
               <View
                 style={{
                   flex: 1,
-                  flexDirection: 'column',
+                  flexDirection: 'row',
                 }}>
                 
 
@@ -145,6 +145,9 @@ export default class ProfileScreen extends Component {
                     </TouchableWithoutFeedback>
 
                 </View>
+
+                <Text>oi</Text>
+                <Text>oi</Text>
 
               </View>
             </View>

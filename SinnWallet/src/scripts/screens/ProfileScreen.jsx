@@ -16,7 +16,7 @@ import SideBar from './MenuInterno';
 
 export default class ProfileScreen extends Component {
   state = {
-    switchValue: true,
+    switchValue: false,
   };
 
   _handleToggleSwitch = () =>
@@ -37,7 +37,7 @@ export default class ProfileScreen extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} closeDrawer={this.closeDrawer}/>}
+        content={<SideBar navigator={this._navigator}/>}
         onClose={() => this.closeDrawer()}>
         <Container>
           <ImageBackground

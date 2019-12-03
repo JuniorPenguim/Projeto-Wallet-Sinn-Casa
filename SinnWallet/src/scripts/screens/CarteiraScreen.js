@@ -126,20 +126,21 @@ export default class SplashScreen extends Component {
                     marginLeft: wp('6%'),
                     marginRight: wp('8%'),
                     marginTop: hp('53%'),
-                    }}>Adicione um novo documento digital à sua wallet
+                    }}>Adicione um novo documento digital à sua <Text style={{fontWeight: 'bold'}}>wallet</Text>
                 </Text>
 
-                <Image
-                  style={{
-                    marginTop:hp('5%'),
-                    marginLeft: wp('13%'),
-                    width: 300,
-                    height: 60,
-                    
-                  }}
-                  source={require('../../imagens/bt-novo-documento.png')}
-                />
-
+                <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Captura')}>
+                  <Image
+                    style={{
+                      marginTop:hp('5%'),
+                      marginLeft: wp('13%'),
+                      width: 300,
+                      height: 60,
+                      
+                    }}
+                    source={require('../../imagens/bt-novo-documento.png')}
+                  />
+                </TouchableWithoutFeedback>
                 
 
               </View>
