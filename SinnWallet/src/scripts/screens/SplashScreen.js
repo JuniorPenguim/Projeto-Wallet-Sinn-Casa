@@ -1,113 +1,65 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
-import {Text} from 'react-native-elements';
-import {Image} from 'react-native-elements';
-import {Container} from 'native-base';
 import NavigationService from '../../../NavigationService';
-import {ImageBackground, Dimensions} from 'react-native';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import {ImageBackground, Dimensions, Image, Text, View} from 'react-native';
+import * as styleClass from '../constants/StyleClass';
 
 export default class SplashScreen extends Component {
-  async componentDidMount() {
-    setTimeout(function() {
-      NavigationService.simpleNavigate('LoginRedes');
-    }, 5000);
-  }
+   async componentDidMount() {
+     setTimeout(function() {
+       NavigationService.simpleNavigate('LoginRedes');
+     }, 5000);
+   }
 
   render() {
     return (
-      <Container>
+      
         <ImageBackground
           style={{width: windowW, height: windowH}}
           resizeMode="cover"
           source={require('../../imagens/splash.png')}>
-          <View
-            style={{
-              flex: 1,
-              flexDirection: 'column',
-            }}>
-            <View
-              style={{
-                marginLeft: wp('42%'),
-                marginTop: hp('3%'),
-              }}>
+          <View style={styleClass.splashStyles.viewMaior}>
+            <View style={styleClass.splashStyles.viewSelo}>
               <Image
-                style={{
-                  width: 65,
-                  height: 65,
-                }}
+                style={styleClass.splashStyles.imagemSelo}
                 source={require('../../imagens/logo-sinn-selo.png')}
               />
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('15%'),
-                marginTop: hp('15%'),
-              }}>
+            <View style={styleClass.splashStyles.viewLogo}>
               <Image
-                style={{
-                  width: 300,
-                  height: 50,
-                }}
+                style={styleClass.splashStyles.imagemLogo}
                 source={require('../../imagens/logo-splash.png')}
               />
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('20%'),
-                marginTop: hp('2.5%'),
-              }}>
+            <View style={styleClass.splashStyles.viewIcone}>
               <Image
-                style={{
-                  width: 250,
-                  height: 150,
-                }}
+                style={styleClass.splashStyles.imagemIcone}
                 source={require('../../imagens/icon-splash.png')}
               />
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('10.5%'),
-                marginTop: hp('8%'),
-              }}>
-              <Text style={{color: '#FFFF', fontWeight: 'bold', fontSize: 17}}>
+            <View style={styleClass.splashStyles.viewTextoUm}>
+              <Text style={styleClass.splashStyles.texto}>
                 FISCALIZAÇÃO DO SISTEMA EDUCACIONAL
               </Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('21%'),
-              }}>
-              <Text style={{color: '#FFFF', fontWeight: 'bold', fontSize: 17}}>
+            <View style={styleClass.splashStyles.viewTextoDois}>
+              <Text style={styleClass.splashStyles.texto}>
                 PREFEITURA DO RIO DE JANEIRO
               </Text>
             </View>
 
-            <View
-              style={{
-                flex: 1,
-                justifyContent: 'flex-end',
-                marginBottom: hp('3.3%'),
-              }}>
+            <View style={styleClass.splashStyles.viewRodape}>
               <Image
-                style={{
-                  width: 410,
-                  height: 105,
-                  resizeMode: 'stretch',
-                }}
+                style={styleClass.splashStyles.imagemRodape}
                 source={require('../../imagens/imagem-rodape-ilustracao-splash.png')}
               />
             </View>
           </View>
         </ImageBackground>
-      </Container>
+      
     );
   }
 }

@@ -133,11 +133,11 @@ export default class SplashScreen extends Component {
             
             
 
-            <View style={{flex: 1}}>
+            <View style={{flex: 1, marginTop:hp('1%')}}>
                 
                 <RNCamera
-                    width={500}
-                    height={500}
+                    width={415}
+                    height={415}
                     ref={camera => { this.camera = camera }}
                     style = {styles.preview}
                     type={RNCamera.Constants.Type.back}

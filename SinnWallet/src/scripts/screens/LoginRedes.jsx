@@ -4,15 +4,13 @@ import {
   ImageBackground,
   TouchableWithoutFeedback,
   Dimensions,
+  Text,
+  Image
 } from 'react-native';
-import {Container, Text, Card, CardItem} from 'native-base';
-import {Image} from 'react-native-elements';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+
 import NavigationService from '../../../NavigationService';
 import Biometrics from 'react-native-biometrics';
+import * as styleClass from '../constants/StyleClass';
 
 export default class LoginScreen extends Component {
   _idSignIn() {
@@ -27,98 +25,58 @@ export default class LoginScreen extends Component {
   }
 
   render() {
-    return (
-      <Container>
+    return (      
         <ImageBackground
           style={{width: windowW, height: windowH}}
           resizeMode="cover"
           source={require('../../imagens/splash-2.png')}>
-          <View style={{flex: 1, flexDirection: 'column'}}>
-            <View
-              style={{
-                marginLeft: wp('20%'),
-                marginTop: hp('10%'),
-              }}>
+          <View style={styleClass.loginRedesStyles.viewMaior}>
+            <View style={styleClass.loginRedesStyles.viewLogo}>
               <Image
-                style={{
-                  width: 260,
-                  height: 210,
-                }}
+                style={styleClass.loginRedesStyles.imagemLogo}
                 source={require('../../imagens/logo-icon-login.png')}
               />
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('21%'),
-                marginTop: hp('8%'),
-              }}>
-              <Text style={{color: 'gray', fontWeight: 'bold', fontSize: 15}}>
+            <View style={styleClass.loginRedesStyles.viewTexto}>
+              <Text style={styleClass.loginRedesStyles.mensagemTexto}>
                 OLÁ, EFETUE SEU LOGIN DE ACESSO:
               </Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('17%'),
-                marginTop: hp('4%'),
-              }}>
+            <View style={styleClass.loginRedesStyles.viewBotaoFace}>
               <Image
-                style={{
-                  width: 285,
-                  height: 50,
-                }}
+                style={styleClass.loginRedesStyles.imagemBotao}
                 source={require('../../imagens/bt-login-facebook.png')}
               />
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('17%'),
-                marginTop: hp('2%'),
-              }}>
+            <View style={styleClass.loginRedesStyles.viewBotaoGmail}>
               <Image
-                style={{
-                  width: 285,
-                  height: 50,
-                }}
+                style={styleClass.loginRedesStyles.imagemBotao}
                 source={require('../../imagens/bt-login-gmail.png')}
               />
             </View>
 
             <TouchableWithoutFeedback
               onPress={() => NavigationService.simpleNavigate('Login')}>
-              <View
-                style={{
-                  marginLeft: wp('17%'),
-                  marginTop: hp('2%'),
-                }}>
+              <View style={styleClass.loginRedesStyles.viewBotaoEmail}>
                 <Image
-                  style={{
-                    width: 285,
-                    height: 50,
-                  }}
+                  style={styleClass.loginRedesStyles.imagemBotao}
                   source={require('../../imagens/bt-login-email.png')}
                 />
               </View>
             </TouchableWithoutFeedback>
 
-            <View
-              style={{
-                marginLeft: wp('44%'),
-                marginTop: hp('10%'),
-              }}>
+            <View style={styleClass.loginRedesStyles.viewSelo}>
               <Image
-                style={{
-                  width: 60,
-                  height: 60,
-                }}
+                style={styleClass.loginRedesStyles.imagemSelo}
                 source={require('../../imagens/logo-sinn-selo.png')}
               />
             </View>
           </View>
         </ImageBackground>
-      </Container>
+     
     );
   }
 }
