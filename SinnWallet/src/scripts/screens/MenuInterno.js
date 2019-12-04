@@ -6,257 +6,101 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import NavigationService from '../../../NavigationService';
-import ProfileScreen, * as profileScreen from '../screens/ProfileScreen';
+import * as styleClass from '../constants/StyleClass';
 
-
+//import ProfileScreen, * as profileScreen from '../screens/ProfileScreen';
 //import {Avatar} from 'react-native-elements';
 //import NavigationService from '../../../NavigationService';
 
-export default class MenuInterno extends Component { 
-
-
-  
-
+export default class MenuInterno extends Component {
   render() {
     return (
-      <Content style={{backgroundColor: '#252525'}}>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-          }}>
-          <View style={{alignItems: 'flex-end'}}>
-            
+      <Content style={styleClass.menuInterno.container}>
+        <View style={styleClass.menuInterno.viewMaior}>
+          <View style={styleClass.menuInterno.viewBotao}>
             <TouchableWithoutFeedback onPress={() => this.closeDrawer()}>
               <Image
-                style={{
-                  marginTop: hp('3%'),
-                  marginRight: wp('6%'),
-                  width: 25,
-                  height: 25,
-                }}
+                style={styleClass.menuInterno.imagemBotao}
                 source={require('../../imagens/ico-menu-fechar.png')}
               />
             </TouchableWithoutFeedback>
           </View>
-          <View
-            style={{
-              marginLeft: wp('6%'),
-              marginTop: hp('3%'),
-              flexDirection: 'row',
-            }}>
+          <View style={styleClass.menuInterno.viewHead}>
             <Image
-              style={{
-                width: 60,
-                height: 70,
-              }}
+              style={styleClass.menuInterno.imagemMascara}
               source={require('../../imagens/mascara-foto-usuario-interna-menu.png')}
             />
-            <Text
-              style={{
-                fontSize: 50,
-                color: 'white',
-                marginLeft: wp('3%'),
-                position: 'absolute',
-              }}>
-              N
-            </Text>
-
-            <View style={{flexDirection: 'column'}}>
-              <Text
-                style={{
-                  marginLeft: wp('7%'),
-                  marginTop: hp('1%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
+            <Text style={styleClass.menuInterno.textoMascara}>N</Text>
+            <View style={styleClass.menuInterno.viewTextos}>
+              <Text style={styleClass.menuInterno.textoNome}>
                 Nome Sobrenome
               </Text>
-
-              <Text
-                style={{
-                  marginLeft: wp('7%'),
-                  marginTop: hp('1%'),
-                  fontSize: 17,
-                  color: 'gray',
-                }}>
+              <Text style={styleClass.menuInterno.textoCpf}>
                 000.000.000-00
               </Text>
             </View>
           </View>
 
           <Image
-            style={{
-              marginLeft: wp('5%'),
-              marginTop: hp('4%'),
-              width: 290,
-              height: 1,
-            }}
+            style={styleClass.menuInterno.imagemLinha}
             source={require('../../imagens/line-div-menu.png')}
           />
 
-          <View
-            style={{
-              flexDirection: 'column',
-            }}>
-            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Carteira')}>
-              <View
-                style={{
-                  marginLeft: wp('6%'),
-                  marginTop: hp('5%'),
-                  flexDirection: 'row',
-                }}>
-                
-                
+          <View style={styleClass.menuInterno.viewBody}>
+            <TouchableWithoutFeedback
+              onPress={() => NavigationService.simpleNavigate('Carteira')}>
+              <View style={styleClass.menuInterno.viewCarteira}>
                 <Image
-                    style={{
-                      marginLeft: wp('1%'),
-                      width: 38,
-                      height: 28,
-                    }}
-                    source={require('../../imagens/ico-menu-carteira.png')}
+                  style={styleClass.menuInterno.imagemCarteira}
+                  source={require('../../imagens/ico-menu-carteira.png')}
                 />
-
-                <Text
-                  style={{
-                    marginLeft: wp('5%'),
-                    marginTop: hp('0.5%'),
-                    fontSize: 17,
-                    color: 'white',
-                  }}>
+                <Text style={styleClass.menuInterno.textoCarteira}>
                   Carteira
                 </Text>
               </View>
             </TouchableWithoutFeedback>
-            <View
-              style={{
-                marginLeft: wp('6%'),
-                marginTop: hp('3%'),
-                flexDirection: 'row',
-              }}>
+            <View style={styleClass.menuInterno.viewConta}>
               <Image
-                style={{
-                  marginLeft: wp('1.5%'),
-                  width: 32.88,
-                  height: 30,
-                }}
+                style={styleClass.menuInterno.imagemConta}
                 source={require('../../imagens/ico-menu-conta.png')}
               />
-
-              <Text
-                style={{
-                  marginLeft: wp('6%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
-                Conta
-              </Text>
+              <Text style={styleClass.menuInterno.textoConta}>Conta</Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('5%'),
-                marginTop: hp('3%'),
-                flexDirection: 'row',
-              }}>
+            <View style={styleClass.menuInterno.viewPolitica}>
               <Image
-                style={{
-                  marginLeft: wp('4%'),
-                  width: 24.58,
-                  height: 31,
-                }}
+                style={styleClass.menuInterno.imagemPolitica}
                 source={require('../../imagens/ico-menu-politica-privacidade.png')}
               />
-
-              <Text
-                style={{
-                  marginLeft: wp('7%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
+              <Text style={styleClass.menuInterno.textoPolitica}>
                 Política de Privacidade
               </Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('5%'),
-                marginTop: hp('3%'),
-                flexDirection: 'row',
-              }}>
+            <View style={styleClass.menuInterno.viewTermo}>
               <Image
-                style={{
-                  marginLeft: wp('3%'),
-                  width: 32.88,
-                  height: 31.5,
-                }}
+                style={styleClass.menuInterno.imagemTermo}
                 source={require('../../imagens/ico-menu-termo-responsabilidade.png')}
               />
-
-              <Text
-                style={{
-                  marginLeft: wp('6.4%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
+              <Text style={styleClass.menuInterno.textoTermo}>
                 Termo de Responsabilidade
               </Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('5%'),
-                marginTop: hp('3%'),
-                flexDirection: 'row',
-              }}>
+            <View style={styleClass.menuInterno.viewSobre}>
               <Image
-                style={{
-                  marginLeft: wp('3%'),
-                  width: 33.84,
-                  height: 33.5,
-                }}
+                style={styleClass.menuInterno.imagemSobre}
                 source={require('../../imagens/ico-menu-sobre.png')}
               />
-
-              <Text
-                style={{
-                  marginLeft: wp('6.5%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
-                Sobre
-              </Text>
+              <Text style={styleClass.menuInterno.textoSobre}>Sobre</Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: wp('5%'),
-                marginTop: hp('3%'),
-                flexDirection: 'row',
-              }}>
+            <View style={styleClass.menuInterno.viewSuporte}>
               <Image
-                style={{
-                  marginLeft: wp('4%'),
-                  width: 29.37,
-                  height: 29,
-                  resizeMode: 'cover',
-                }}
+                style={styleClass.menuInterno.imagemSuporte}
                 source={require('../../imagens/ico-menu-suporte.png')}
               />
-
-              <Text
-                style={{
-                  marginLeft: wp('7%'),
-                  marginTop: hp('0.5%'),
-                  fontSize: 17,
-                  color: 'white',
-                }}>
-                Suporte
-              </Text>
+              <Text style={styleClass.menuInterno.textoSuporte}>Suporte</Text>
             </View>
           </View>
         </View>
