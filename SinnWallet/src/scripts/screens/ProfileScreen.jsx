@@ -51,17 +51,7 @@ export default class ProfileScreen extends Component {
                   source={require('../../imagens/ico-menu-abrir.png')}
                 />
               </View>
-            </TouchableWithoutFeedback>
-
-            <TouchableWithoutFeedback
-              onPress={() => NavigationService.simpleNavigate('LoginRedes')}>
-              <View style={styleClass.profileStyles.viewSeta}>
-                <Image
-                  style={styleClass.profileStyles.imagemSeta}
-                  source={require('../../imagens/seta-voltar.png')}
-                />
-              </View>
-            </TouchableWithoutFeedback>
+            </TouchableWithoutFeedback>            
 
             <View style={styleClass.profileStyles.viewLogo}>
               <Image

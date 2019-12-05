@@ -79,6 +79,12 @@ export default class LoginScreen extends Component {
      
     );
   }
+
+  // componentDidMount(){
+
+  //   this._idSignIn();
+
+  // }
 }
 
 const windowW = Dimensions.get('window').width;

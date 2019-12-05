@@ -37,16 +37,7 @@ export default class ProfileScreen extends Component {
             style={{width: '100%', height: '100%'}}
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
-            <View style={styleClass.menuIniciarStyles.viewHead}>
-              <TouchableWithoutFeedback
-                onPress={() => NavigationService.simpleNavigate('LoginRedes')}>
-                <View style={styleClass.menuIniciarStyles.viewSeta}>
-                  <Image
-                    style={styleClass.menuIniciarStyles.imagemSeta}
-                    source={require('../../imagens/seta-voltar.png')}
-                  />
-                </View>
-              </TouchableWithoutFeedback>
+            <View style={styleClass.menuIniciarStyles.viewHead}>              
 
               <View style={styleClass.menuIniciarStyles.viewLogo}>
                 <Image

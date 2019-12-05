@@ -46,7 +46,7 @@ export default class SplashScreen extends Component {
             source={require('../../imagens/bg-internas.png')}>
             
 
-            <View style={{flex: 0.7, flexDirection:'column'}}>
+            <View style={{flex: 1, flexDirection:'column'}}>
 
                 <View style={{flexDirection:'row'}}>
 
@@ -133,13 +133,14 @@ export default class SplashScreen extends Component {
             
             
 
-            <View style={{flex: 1, marginTop:hp('1%')}}>
+            <View style={{flex: 1, marginTop:hp('1%'), backgroundColor:'#FFFF00'}}>
                 
                 <RNCamera
-                    width={415}
-                    height={415}
+                    //width={418}
+                    //height={10}
                     ref={camera => { this.camera = camera }}
-                    style = {styles.preview}
+                    style = {{width:wp('100%'), height:hp('32%')}}
+                    resizeMode="contain"
                     type={RNCamera.Constants.Type.back}
                     autoFocus={RNCamera.Constants.AutoFocus.on}
                     flashMode={RNCamera.Constants.FlashMode.off}
@@ -156,8 +157,7 @@ export default class SplashScreen extends Component {
                   flex:1,
                   alignItems:'center',
                   justifyContent:'flex-end'            
-                  //marginLeft: wp('15%'),
-                  //marginTop: hp('4%'),
+                  
                 }}>
                 <Image
                   style={{
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     },
     preview: {
       flex: 1,
-      justifyContent: "flex-end",
+      justifyContent: "flex-start",
       alignItems: "center"
     },
     buttonContainer: {

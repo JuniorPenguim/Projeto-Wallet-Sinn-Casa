@@ -237,17 +237,7 @@ export const menuIniciarStyles = {
 
   viewHead: {
     flexDirection: 'row',
-  },
-
-  viewSeta: {
-    marginLeft: wp('2.5%'),
-    marginTop: hp('5%'),
-  },
-
-  imagemSeta: {
-    width: 13,
-    height: 18,
-  },
+  },  
 
   viewLogo: {
     marginLeft: wp('5%'),
@@ -395,18 +385,7 @@ export const profileStyles = {
     height: 30,
     resizeMode: 'cover',
   },
-
-  viewSeta: {
-    marginLeft: wp('2.5%'),
-    marginTop: hp('5%'),
-    position: 'absolute',
-  },
-
-  imagemSeta: {
-    width: 13,
-    height: 18,
-  },
-
+  
   viewLogo: {
     marginLeft: wp('10%'),
     marginTop: hp('4.8%'),
