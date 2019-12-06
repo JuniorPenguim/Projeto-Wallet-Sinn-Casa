@@ -18,7 +18,7 @@ export default class MenuInterno extends Component {
       <Content style={styleClass.menuInterno.container}>
         <View style={styleClass.menuInterno.viewMaior}>
           <View style={styleClass.menuInterno.viewBotao}>
-            <TouchableWithoutFeedback onPress={() => this.closeDrawer()}>
+            <TouchableWithoutFeedback>
               <Image
                 style={styleClass.menuInterno.imagemBotao}
                 source={require('../../imagens/ico-menu-fechar.png')}
@@ -65,6 +65,22 @@ export default class MenuInterno extends Component {
                 source={require('../../imagens/ico-menu-conta.png')}
               />
               <Text style={styleClass.menuInterno.textoConta}>Conta</Text>
+            </View>
+
+            <View style={styleClass.menuInterno.viewContratos}>
+              <Image
+                  style={styleClass.menuInterno.imagemContratos}
+                  source={require('../../imagens/ico-menu-contratos.png')}
+              />
+              <Text style={styleClass.menuInterno.textoContratos}>Contratos</Text>
+            </View>
+
+            <View style={styleClass.menuInterno.viewColecionaveis}>
+              <Image
+                  style={styleClass.menuInterno.imagemColecionaveis}
+                  source={require('../../imagens/ico-menu-colecionaveis.png')}
+              />
+              <Text style={styleClass.menuInterno.textoColecionaveis}>Colecionáveis</Text>
             </View>
 
             <View style={styleClass.menuInterno.viewPolitica}>

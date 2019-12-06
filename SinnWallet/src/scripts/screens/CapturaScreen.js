@@ -46,7 +46,7 @@ export default class SplashScreen extends Component {
             source={require('../../imagens/bg-internas.png')}>
             
 
-            <View style={{flex: 1, flexDirection:'column'}}>
+            <View style={{flex: 1.1, flexDirection:'column'}}>
 
                 <View style={{flexDirection:'row'}}>
 
@@ -118,28 +118,19 @@ export default class SplashScreen extends Component {
                   }}
                   source={require('../../imagens/line-div-header.png')}
                 />
-                </View>
-
-                <Text
-                    style={{
-                    fontSize: 20,
-                    color: 'gray',                    
-                    marginLeft: wp('6%'),
-                    marginTop: hp('1.5%'),
-                    
-                    }}>Adicionar documento</Text>
+                </View>                
 
             </View>
             
             
 
-            <View style={{flex: 1, marginTop:hp('1%'), backgroundColor:'#FFFF00'}}>
+            <View style={{flex: 1, marginTop:hp('1%')}}>
                 
                 <RNCamera
-                    //width={418}
-                    //height={10}
+                    width={wp('100%')}
+                    height={hp('32%')}
                     ref={camera => { this.camera = camera }}
-                    style = {{width:wp('100%'), height:hp('32%')}}
+                    //style = {{width:wp('100%'), height:hp('32%')}}
                     resizeMode="contain"
                     type={RNCamera.Constants.Type.back}
                     autoFocus={RNCamera.Constants.AutoFocus.on}
@@ -149,6 +140,19 @@ export default class SplashScreen extends Component {
                 />    
                     
 
+            </View>
+
+            <View style={{position:'absolute', marginLeft:wp('2%'), marginTop:hp('19%')}}>
+
+              <Image
+                    style={{
+                      width: wp('95%'),
+                      height: hp('65%'),
+                      
+                      
+                    }}
+                    source={require('../../imagens/mascara-captura-foto-documento.png')}
+              />
             </View>
 
             <View

@@ -609,6 +609,42 @@ export const menuInterno = {
     color: 'white',
   },
 
+  viewContratos: {    
+    flexDirection: 'row',
+  },
+
+  imagemContratos: {
+    width:28,
+    height: 33,
+    marginLeft: wp('8%'),
+    marginTop:hp('3%'),
+  },
+
+  textoContratos: {
+    marginLeft: wp('6.5%'),
+    marginTop: hp('4%'),
+    fontSize: 17,
+    color: 'white',
+  },
+
+  viewColecionaveis: {    
+    flexDirection: 'row',
+  },
+
+  imagemColecionaveis: {
+    width:28,
+    height: 28,
+    marginLeft: wp('8%'),
+    marginTop:hp('3%'),
+  },
+
+  textoColecionaveis: {
+    marginLeft: wp('6.5%'),
+    marginTop: hp('3.5%'),
+    fontSize: 17,
+    color: 'white',
+  },
+
   viewPolitica: {
     marginLeft: wp('5%'),
     marginTop: hp('3%'),
@@ -616,7 +652,7 @@ export const menuInterno = {
   },
 
   imagemPolitica: {
-    marginLeft: wp('4%'),
+    marginLeft: wp('3.5%'),
     width: 24.58,
     height: 31,
   },
@@ -641,7 +677,7 @@ export const menuInterno = {
   },
 
   textoTermo: {
-    marginLeft: wp('6.4%'),
+    marginLeft: wp('6.2%'),
     marginTop: hp('0.5%'),
     fontSize: 17,
     color: 'white',
