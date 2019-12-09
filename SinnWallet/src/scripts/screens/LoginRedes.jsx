@@ -59,7 +59,7 @@ export default class LoginScreen extends Component {
           </View>
 
           <TouchableWithoutFeedback
-            onPress={() => NavigationService.simpleNavigate('ScanScanner')}>
+            onPress={() => NavigationService.simpleNavigate('Login')}>
             <View style={styleClass.loginRedesStyles.viewBotaoEmail}>
               <Image
                 style={styleClass.loginRedesStyles.imagemBotao}

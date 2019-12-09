@@ -33,7 +33,7 @@ export default class MenuInterno extends Component {
             <Text style={styleClass.menuInterno.textoMascara}>N</Text>
             <View style={styleClass.menuInterno.viewTextos}>
               <Text style={styleClass.menuInterno.textoNome}>
-                Nome Sobrenome Muito Grande
+                Nome Sobrenome Muito Grande 
               </Text>
               <Text style={styleClass.menuInterno.textoCpf}>
                 000.000.000-00
@@ -66,16 +66,17 @@ export default class MenuInterno extends Component {
               />
               <Text style={styleClass.menuInterno.textoConta}>Conta</Text>
             </View>
-
-            <View style={styleClass.menuInterno.viewContratos}>
-              <Image
-                style={styleClass.menuInterno.imagemContratos}
-                source={require('../../imagens/ico-menu-contratos.png')}
-              />
-              <Text style={styleClass.menuInterno.textoContratos}>
-                Contratos
-              </Text>
-            </View>
+            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('ScanScanner')}>
+              <View style={styleClass.menuInterno.viewContratos}>
+                <Image
+                  style={styleClass.menuInterno.imagemContratos}
+                  source={require('../../imagens/ico-menu-contratos.png')}
+                />
+                <Text style={styleClass.menuInterno.textoContratos}>
+                  Contratos
+                </Text>
+              </View>
+            </TouchableWithoutFeedback>
 
             <View style={styleClass.menuInterno.viewColecionaveis}>
               <Image

@@ -148,21 +148,23 @@ export default class SplashScreen extends Component {
                 source={require('../../imagens/mascara-captura-foto-documento.png')}
               />
             </View>
-
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-              }}>
-              <Image
+            
+            <TouchableWithoutFeedback onPress={this.takePicture} style={styles.capture}>
+              <View
                 style={{
-                  width: 300,
-                  height: 60,
-                }}
-                source={require('../../imagens/bt-capturar-documento.png')}
-              />
-            </View>
+                  flex: 1,
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                }}>
+                <Image
+                  style={{
+                    width: 300,
+                    height: 60,
+                  }}
+                  source={require('../../imagens/bt-capturar-documento.png')}
+                />
+              </View>
+            </TouchableWithoutFeedback>
           </ImageBackground>
         </View>
       </Drawer>

@@ -529,8 +529,7 @@ export const menuInterno = {
 
   viewHead: {
     marginLeft: wp('6%'),
-    marginTop: hp('3%'),
-    flexDirection: 'row',
+    marginTop: hp('3%'),    
   },
 
   imagemMascara: {
@@ -547,6 +546,8 @@ export const menuInterno = {
 
   viewTextos: {
     flexDirection: 'column',
+    position:'absolute',
+    marginLeft:wp('13%'),    
   },
 
   textoNome: {
@@ -554,6 +555,7 @@ export const menuInterno = {
     marginTop: hp('1%'),
     fontSize: 17,
     color: 'white',
+    
   },
 
   textoCpf: {
