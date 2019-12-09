@@ -51,7 +51,7 @@ export default class ProfileScreen extends Component {
                   source={require('../../imagens/ico-menu-abrir.png')}
                 />
               </View>
-            </TouchableWithoutFeedback>            
+            </TouchableWithoutFeedback>
 
             <View style={styleClass.profileStyles.viewLogo}>
               <Image
@@ -78,7 +78,7 @@ export default class ProfileScreen extends Component {
 
               <View style={styleClass.profileStyles.viewTexto}>
                 <Text style={styleClass.profileStyles.textoNome}>
-                  Nome Sobrenome
+                  Nome Extremamente Grande Para Teste de centragem
                 </Text>
                 <Text style={styleClass.profileStyles.textoCpf}>
                   000.000.000-00

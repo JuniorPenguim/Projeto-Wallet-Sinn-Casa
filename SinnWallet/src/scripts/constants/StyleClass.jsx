@@ -237,7 +237,7 @@ export const menuIniciarStyles = {
 
   viewHead: {
     flexDirection: 'row',
-  },  
+  },
 
   viewLogo: {
     marginLeft: wp('5%'),
@@ -385,7 +385,7 @@ export const profileStyles = {
     height: 30,
     resizeMode: 'cover',
   },
-  
+
   viewLogo: {
     marginLeft: wp('10%'),
     marginTop: hp('4.8%'),
@@ -414,8 +414,8 @@ export const profileStyles = {
   },
 
   viewMascara: {
-    marginLeft: wp('38%'),
     marginTop: hp('15%'),
+    alignItems: 'center',
   },
 
   imagemMascara: {
@@ -426,8 +426,8 @@ export const profileStyles = {
   textoMascara: {
     fontSize: 90,
     color: 'white',
-    marginLeft: wp('5.5%'),
     position: 'absolute',
+    textAlign: 'center',
   },
 
   viewTexto: {
@@ -439,7 +439,9 @@ export const profileStyles = {
     color: 'white',
     marginTop: hp('2%'),
     marginLeft: wp('5%'),
+    marginRight: wp('5%'),
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 
   textoCpf: {
@@ -447,6 +449,7 @@ export const profileStyles = {
     color: 'gray',
     fontWeight: 'bold',
     marginLeft: wp('4%'),
+    textAlign: 'center',
   },
 
   viewChavePublica: {
@@ -609,15 +612,15 @@ export const menuInterno = {
     color: 'white',
   },
 
-  viewContratos: {    
+  viewContratos: {
     flexDirection: 'row',
   },
 
   imagemContratos: {
-    width:28,
+    width: 28,
     height: 33,
     marginLeft: wp('8%'),
-    marginTop:hp('3%'),
+    marginTop: hp('3%'),
   },
 
   textoContratos: {
@@ -627,15 +630,15 @@ export const menuInterno = {
     color: 'white',
   },
 
-  viewColecionaveis: {    
+  viewColecionaveis: {
     flexDirection: 'row',
   },
 
   imagemColecionaveis: {
-    width:28,
+    width: 28,
     height: 28,
     marginLeft: wp('8%'),
-    marginTop:hp('3%'),
+    marginTop: hp('3%'),
   },
 
   textoColecionaveis: {

@@ -33,7 +33,7 @@ export default class MenuInterno extends Component {
             <Text style={styleClass.menuInterno.textoMascara}>N</Text>
             <View style={styleClass.menuInterno.viewTextos}>
               <Text style={styleClass.menuInterno.textoNome}>
-                Nome Sobrenome
+                Nome Sobrenome Muito Grande
               </Text>
               <Text style={styleClass.menuInterno.textoCpf}>
                 000.000.000-00
@@ -69,18 +69,22 @@ export default class MenuInterno extends Component {
 
             <View style={styleClass.menuInterno.viewContratos}>
               <Image
-                  style={styleClass.menuInterno.imagemContratos}
-                  source={require('../../imagens/ico-menu-contratos.png')}
+                style={styleClass.menuInterno.imagemContratos}
+                source={require('../../imagens/ico-menu-contratos.png')}
               />
-              <Text style={styleClass.menuInterno.textoContratos}>Contratos</Text>
+              <Text style={styleClass.menuInterno.textoContratos}>
+                Contratos
+              </Text>
             </View>
 
             <View style={styleClass.menuInterno.viewColecionaveis}>
               <Image
-                  style={styleClass.menuInterno.imagemColecionaveis}
-                  source={require('../../imagens/ico-menu-colecionaveis.png')}
+                style={styleClass.menuInterno.imagemColecionaveis}
+                source={require('../../imagens/ico-menu-colecionaveis.png')}
               />
-              <Text style={styleClass.menuInterno.textoColecionaveis}>Colecionáveis</Text>
+              <Text style={styleClass.menuInterno.textoColecionaveis}>
+                Colecionáveis
+              </Text>
             </View>
 
             <View style={styleClass.menuInterno.viewPolitica}>
