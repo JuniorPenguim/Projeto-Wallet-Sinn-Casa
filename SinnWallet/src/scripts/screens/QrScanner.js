@@ -20,7 +20,6 @@ import {
 import NavigationService from '../../../NavigationService';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
-
 export default class QRCodeScreen extends Component {
   state = {
     modalVisible: false,
@@ -54,7 +53,6 @@ export default class QRCodeScreen extends Component {
 
   render() {
     return (
-      
       <Drawer
         ref={ref => {
           this._drawer = ref;
@@ -130,23 +128,52 @@ export default class QRCodeScreen extends Component {
                 />
               </View>
 
-              <Text style={{marginTop:hp('2%'), marginLeft:wp('4%'), color: 'gray',fontWeight: 'bold',fontSize: 25,}}>Minha Sinn.id</Text>
+              <Text
+                style={{
+                  marginTop: hp('2%'),
+                  marginLeft: wp('4%'),
+                  color: 'gray',
+                  fontWeight: 'bold',
+                  fontSize: 25,
+                }}>
+                Minha Sinn.id
+              </Text>
 
-              <Text style={{marginTop:hp('1%'), marginLeft:wp('4%'), fontSize:18, color:'white'}}>Esta é a sua <Text style={{fontSize:18,fontWeight:'bold'}}>CHAVE PRIVADA, </Text>não a</Text>
-              <Text style={{marginLeft:wp('4%'), fontSize:18, color:'white'}}>entregue ou mostre para desconhecidos</Text>
-              <Text style={{marginLeft:wp('4%'), fontSize:18, color:'white'}}>e em ambientes cuja rede não seja</Text>
-              <Text style={{marginLeft:wp('4%'), fontSize:18, color:'white'}}>segura.</Text>
+              <Text
+                style={{
+                  marginTop: hp('1%'),
+                  marginLeft: wp('4%'),
+                  fontSize: 18,
+                  color: 'white',
+                }}>
+                Esta é a sua{' '}
+                <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+                  CHAVE PRIVADA,{' '}
+                </Text>
+                não a
+              </Text>
+              <Text
+                style={{marginLeft: wp('4%'), fontSize: 18, color: 'white'}}>
+                entregue ou mostre para desconhecidos
+              </Text>
+              <Text
+                style={{marginLeft: wp('4%'), fontSize: 18, color: 'white'}}>
+                e em ambientes cuja rede não seja
+              </Text>
+              <Text
+                style={{marginLeft: wp('4%'), fontSize: 18, color: 'white'}}>
+                segura.
+              </Text>
               <QRCodeScanner
-                onRead={(e) => alert(e.data)}
+                onRead={e => alert(e.data)}
                 showMarker={true}
                 checkAndroid6Permissions={true}
                 ref={elem => {
                   this.scanner = elem;
                 }}
-                cameraStyle={styles.cameraContainer}                
-              />             
-
-            </View>            
+                cameraStyle={styles.cameraContainer}
+              />
+            </View>
           </ImageBackground>
         </View>
       </Drawer>

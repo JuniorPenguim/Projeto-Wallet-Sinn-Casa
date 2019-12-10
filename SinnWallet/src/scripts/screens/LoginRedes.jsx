@@ -44,29 +44,25 @@ export default class LoginScreen extends Component {
             </Text>
           </View>
 
-          <View style={styleClass.loginRedesStyles.viewBotaoFace}>
+          <View style={styleClass.loginRedesStyles.viewBotao}>
             <Image
               style={styleClass.loginRedesStyles.imagemBotao}
               source={require('../../imagens/bt-login-facebook.png')}
             />
-          </View>
 
-          <View style={styleClass.loginRedesStyles.viewBotaoGmail}>
             <Image
-              style={styleClass.loginRedesStyles.imagemBotao}
+              style={styleClass.loginRedesStyles.imagemBotaoDois}
               source={require('../../imagens/bt-login-gmail.png')}
             />
-          </View>
 
-          <TouchableWithoutFeedback
-            onPress={() => NavigationService.simpleNavigate('Login')}>
-            <View style={styleClass.loginRedesStyles.viewBotaoEmail}>
+            <TouchableWithoutFeedback
+              onPress={() => NavigationService.simpleNavigate('Login')}>
               <Image
-                style={styleClass.loginRedesStyles.imagemBotao}
+                style={styleClass.loginRedesStyles.imagemBotaoTres}
                 source={require('../../imagens/bt-login-email.png')}
               />
-            </View>
-          </TouchableWithoutFeedback>
+            </TouchableWithoutFeedback>
+          </View>
 
           <View style={styleClass.loginRedesStyles.viewSelo}>
             <Image

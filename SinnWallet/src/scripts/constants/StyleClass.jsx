@@ -7,63 +7,65 @@ export const splashStyles = {
   viewMaior: {
     flex: 1,
     flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   viewSelo: {
-    marginLeft: wp('42%'),
-    marginTop: hp('3%'),
+    flex: 0.5,
   },
 
   imagemSelo: {
+    marginTop: hp('4%'),
     width: 65,
     height: 65,
   },
 
   viewLogo: {
-    marginLeft: wp('15%'),
-    marginTop: hp('15%'),
+    flex: 2,
+    alignItems: 'center',
   },
 
   imagemLogo: {
+    marginTop: hp('15%'),
     width: 300,
     height: 50,
   },
 
-  viewIcone: {
-    marginLeft: wp('20%'),
-    marginTop: hp('2.5%'),
-  },
-
   imagemIcone: {
+    marginTop: hp('3%'),
     width: 250,
     height: 150,
   },
 
-  viewTextoUm: {
-    marginLeft: wp('10.5%'),
-    marginTop: hp('8%'),
+  viewTextos: {
+    flex: 0.5,
+    alignItems: 'center',
   },
 
-  texto: {
+  textoUm: {
+    marginTop: hp('5%'),
     color: '#FFFF',
     fontWeight: 'bold',
     fontSize: 17,
   },
 
-  viewTextoDois: {
-    marginLeft: wp('21%'),
+  textoDois: {
+    color: '#FFFF',
+    fontWeight: 'bold',
+    fontSize: 17,
   },
 
   viewRodape: {
     flex: 1,
-    justifyContent: 'flex-end',
-    marginBottom: hp('3.3%'),
+    justifyContent: 'space-evenly',
+    //justifyContent: 'flex-end',
+    alignItems: 'center',
   },
 
   imagemRodape: {
     width: 410,
     height: 105,
-    resizeMode: 'stretch',
   },
 };
 
@@ -71,21 +73,25 @@ export const loginRedesStyles = {
   viewMaior: {
     flex: 1,
     flexDirection: 'column',
+    justifyContent: 'center',
   },
 
   viewLogo: {
-    marginLeft: wp('20%'),
-    marginTop: hp('10%'),
+    flex: 1.5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   imagemLogo: {
     width: 260,
     height: 210,
+    // width: '70%',
+    // height: '70%',
   },
 
   viewTexto: {
-    marginLeft: wp('21%'),
-    marginTop: hp('8%'),
+    flex: 0.2,
+    alignItems: 'center',
   },
 
   mensagemTexto: {
@@ -94,9 +100,9 @@ export const loginRedesStyles = {
     fontSize: 15,
   },
 
-  viewBotaoFace: {
-    marginLeft: wp('17%'),
-    marginTop: hp('4%'),
+  viewBotao: {
+    flex: 1,
+    alignItems: 'center',
   },
 
   imagemBotao: {
@@ -104,19 +110,21 @@ export const loginRedesStyles = {
     height: 50,
   },
 
-  viewBotaoGmail: {
-    marginLeft: wp('17%'),
+  imagemBotaoDois: {
     marginTop: hp('2%'),
+    width: 285,
+    height: 50,
   },
 
-  viewBotaoEmail: {
-    marginLeft: wp('17%'),
+  imagemBotaoTres: {
     marginTop: hp('2%'),
+    width: 285,
+    height: 50,
   },
 
   viewSelo: {
-    marginLeft: wp('44%'),
-    marginTop: hp('10%'),
+    flex: 0.5,
+    alignItems: 'center',
   },
 
   imagemSelo: {
@@ -529,7 +537,7 @@ export const menuInterno = {
 
   viewHead: {
     marginLeft: wp('6%'),
-    marginTop: hp('3%'),    
+    marginTop: hp('3%'),
   },
 
   imagemMascara: {
@@ -546,8 +554,8 @@ export const menuInterno = {
 
   viewTextos: {
     flexDirection: 'column',
-    position:'absolute',
-    marginLeft:wp('13%'),    
+    position: 'absolute',
+    marginLeft: wp('13%'),
   },
 
   textoNome: {
@@ -555,7 +563,6 @@ export const menuInterno = {
     marginTop: hp('1%'),
     fontSize: 17,
     color: 'white',
-    
   },
 
   textoCpf: {
