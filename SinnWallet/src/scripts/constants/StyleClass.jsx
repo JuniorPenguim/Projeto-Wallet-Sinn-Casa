@@ -3,6 +3,12 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import {Dimensions} from 'react-native';
+
+const windowW = Dimensions.get('window').width;
+const windowH = Dimensions.get('window').height;
+
+
 export const splashStyles = {
   viewMaior: {
     flex: 1,
@@ -12,13 +18,14 @@ export const splashStyles = {
   },
 
   viewSelo: {
-    flex: 0.5,
+    flex: 0.5,    
   },
 
   imagemSelo: {
-    marginTop: hp('4%'),
-    width: 65,
-    height: 65,
+    resizeMode:'contain',    
+    marginTop: hp('4%'),    
+    width: wp('18%'),
+    height: hp('10%'),
   },
 
   viewLogo: {
@@ -27,15 +34,16 @@ export const splashStyles = {
   },
 
   imagemLogo: {
-    marginTop: hp('15%'),
-    width: 300,
-    height: 50,
+    resizeMode:'contain',
+    marginTop: hp('10%'),
+    width: wp('75%'),
+    height: hp('10%'),
   },
 
   imagemIcone: {
     marginTop: hp('3%'),
-    width: 250,
-    height: 150,
+    width: wp('45%'),
+    height: hp('25%'),
   },
 
   viewTextos: {
@@ -44,28 +52,29 @@ export const splashStyles = {
   },
 
   textoUm: {
+    
     marginTop: hp('5%'),
     color: '#FFFF',
     fontWeight: 'bold',
-    fontSize: 17,
+    fontSize: 0.02*windowH,
   },
 
   textoDois: {
     color: '#FFFF',
     fontWeight: 'bold',
-    fontSize: 17,
+    fontSize: 0.02*windowH,
   },
 
   viewRodape: {
-    flex: 1,
-    justifyContent: 'space-evenly',
-    //justifyContent: 'flex-end',
-    alignItems: 'center',
+    flex: 1,         
+    flexDirection:'column',
+    justifyContent:'flex-end',   
   },
 
-  imagemRodape: {
-    width: 410,
-    height: 105,
+  imagemRodape: {    
+    resizeMode:'contain',
+    width: wp('100%'),
+    height: hp('25%'),
   },
 };
 
@@ -77,16 +86,15 @@ export const loginRedesStyles = {
   },
 
   viewLogo: {
-    flex: 1.5,
+    flex: 1.4,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   imagemLogo: {
-    width: 260,
-    height: 210,
-    // width: '70%',
-    // height: '70%',
+    resizeMode:'contain',
+    width: wp('65%'),
+    height: hp('65%'),    
   },
 
   viewTexto: {
@@ -97,39 +105,44 @@ export const loginRedesStyles = {
   mensagemTexto: {
     color: 'gray',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
   },
 
   viewBotao: {
-    flex: 1,
+    flex: 0.8,
     alignItems: 'center',
   },
 
   imagemBotao: {
-    width: 285,
-    height: 50,
+    resizeMode:'contain',
+    width: wp('70%'),
+    height: hp('7%'),
   },
 
   imagemBotaoDois: {
     marginTop: hp('2%'),
-    width: 285,
-    height: 50,
+    resizeMode:'contain',
+    width: wp('70%'),
+    height: hp('7%'),
   },
 
   imagemBotaoTres: {
     marginTop: hp('2%'),
-    width: 285,
-    height: 50,
+    resizeMode:'contain',
+    width: wp('70%'),
+    height: hp('7%'),
   },
 
   viewSelo: {
-    flex: 0.5,
-    alignItems: 'center',
+    flex: 0.4,
+    alignItems: 'center',  
+    
   },
 
   imagemSelo: {
-    width: 60,
-    height: 60,
+    resizeMode:'contain',
+    width: wp('18%'),
+    height: hp('10%'),
   },
 };
 
@@ -145,6 +158,7 @@ export const loginStyles = {
   },
 
   imagemLogoIcone: {
+    resizeMode: 'contain',
     width: 255,
     height: 210,
   },
@@ -240,7 +254,13 @@ export const loginStyles = {
 
 export const menuIniciarStyles = {
   viewMaior: {
-    flexDirection: 'column',
+    flex: 1,
+    flexDirection: 'column',    
+  },
+
+  viewHeadM:{
+    flex: 1,
+    flexDirection:'column',
   },
 
   viewHead: {
@@ -253,56 +273,67 @@ export const menuIniciarStyles = {
   },
 
   imagemLogo: {
+    marginTop: hp('5%'),
+    marginLeft: wp('4%'),
+    resizeMode:'contain',
     width: 140,
     height: 21,
   },
 
-  viewMenu: {
+  viewMenu: {    
     marginLeft: wp('40%'),
     marginTop: hp('4%'),
   },
 
   imagemMenu: {
+    resizeMode:'contain',
     width: 35,
     height: 30,
-  },
-
-  viewLinha: {
-    marginTop: hp('3%'),
-    marginLeft: wp('3%'),
-  },
+  },  
 
   imagemLinha: {
+    marginTop: hp('3%'),
+    resizeMode:'contain',
     width: 390,
     height: 1,
   },
 
   viewApresentacao: {
+    flex: 5,       
     flexDirection: 'row',
   },
 
   imagemApresentacao: {
-    marginTop: hp('3%'),
+    resizeMode:'contain',    
     marginLeft: wp('5%'),
-    width: 220,
-    height: 340,
+    width: wp('50%'),
+    height: hp('50%'),
+  },
+
+  viewBotao:{
+    flex: 3,
+    flexDirection:'column',
+    alignItems: 'center',
+    
   },
 
   imagemBotao: {
-    marginLeft: wp('14%'),
+    resizeMode:'contain',    
     marginTop: hp('20%'),
-    width: 300,
-    height: 60,
+    width: wp('80%'),
+    height: hp('10%'),
   },
 
   viewTextos: {
+    
     position: 'absolute',
+        
   },
 
   textoUm: {
     marginTop: hp('18%'),
     marginLeft: wp('57%'),
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -310,7 +341,7 @@ export const menuIniciarStyles = {
   textoDois: {
     textAlign: 'right',
     marginLeft: wp('57%'),
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -320,59 +351,61 @@ export const menuIniciarStyles = {
     textAlign: 'right',
     marginTop: hp('2%'),
     marginLeft: wp('57%'),
-    fontSize: 16,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoTresUm: {
     fontWeight: 'bold',
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoBlocoDois: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoCincoUm: {
     fontWeight: 'bold',
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoDez: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoBlocoTres: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoQuatorze: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoQuinze: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 
   textoDezesseis: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 15,
+    fontSize: 0.02*windowH,
     color: 'white',
   },
 };
@@ -389,9 +422,9 @@ export const profileStyles = {
   },
 
   imagemBarra: {
+    resizeMode:'contain',
     width: 35,
-    height: 30,
-    resizeMode: 'cover',
+    height: 30,    
   },
 
   viewLogo: {
@@ -401,6 +434,7 @@ export const profileStyles = {
   },
 
   imagemLogo: {
+    resizeMode:'contain',
     width: 140,
     height: 21,
   },
@@ -412,6 +446,7 @@ export const profileStyles = {
   },
 
   imagemLinha: {
+    resizeMode:'contain',
     width: 390,
     height: 1,
   },
@@ -427,6 +462,7 @@ export const profileStyles = {
   },
 
   imagemMascara: {
+    resizeMode:'contain',
     width: 110,
     height: 127,
   },
@@ -466,6 +502,7 @@ export const profileStyles = {
   },
 
   imagemBotoes: {
+    resizeMode:'contain',
     width: 300,
     height: 60,
   },

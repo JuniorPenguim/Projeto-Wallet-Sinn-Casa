@@ -25,7 +25,7 @@ const TopLevelNavigator = createStackNavigator(
     ScanScanner: {screen: ScanScanner},
   },
   {
-    initialRouteName: 'Splash',
+    initialRouteName: 'Perfil',
     headerMode: 'none',
     //transitionConfig: () => fromLeft(1000),
   },

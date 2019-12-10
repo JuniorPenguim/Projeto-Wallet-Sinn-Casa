@@ -4,11 +4,11 @@ import {ImageBackground, Dimensions, Image, Text, View} from 'react-native';
 import * as styleClass from '../constants/StyleClass';
 
 export default class SplashScreen extends Component {
-  async componentDidMount() {
-    setTimeout(function() {
-      NavigationService.simpleNavigate('LoginRedes');
-    }, 5000);
-  }
+    async componentDidMount() {
+      setTimeout(function() {
+        NavigationService.simpleNavigate('LoginRedes');
+      }, 5000);
+    }
 
   render() {
     return (
@@ -34,10 +34,10 @@ export default class SplashScreen extends Component {
             />
           </View>
           <View style={styleClass.splashStyles.viewTextos}>
-            <Text style={styleClass.splashStyles.textoUm}>
+            <Text adjustsFontSizeToFit style={styleClass.splashStyles.textoUm}>
               FISCALIZAÇÃO DO SISTEMA EDUCACIONAL
             </Text>
-            <Text style={styleClass.splashStyles.textoDois}>
+            <Text adjustsFontSizeToFit style={styleClass.splashStyles.textoDois}>
               PREFEITURA DO RIO DE JANEIRO
             </Text>
           </View>

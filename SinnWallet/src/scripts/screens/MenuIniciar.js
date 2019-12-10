@@ -37,46 +37,44 @@ export default class ProfileScreen extends Component {
             style={{width: '100%', height: '100%'}}
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
-            <View style={styleClass.menuIniciarStyles.viewHead}>              
+            <View style={styleClass.menuIniciarStyles.viewHeadM}>
+              <View style={styleClass.menuIniciarStyles.viewHead}>         
 
-              <View style={styleClass.menuIniciarStyles.viewLogo}>
                 <Image
                   style={styleClass.menuIniciarStyles.imagemLogo}
                   source={require('../../imagens/logo-internas-header.png')}
-                />
+                />              
+                <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                  <View style={styleClass.menuIniciarStyles.viewMenu}>
+                    <Image
+                      style={styleClass.menuIniciarStyles.imagemMenu}
+                      source={require('../../imagens/ico-menu-abrir.png')}
+                    />
+                  </View>
+                </TouchableWithoutFeedback> 
               </View>
 
-              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                <View style={styleClass.menuIniciarStyles.viewMenu}>
-                  <Image
-                    style={styleClass.menuIniciarStyles.imagemMenu}
-                    source={require('../../imagens/ico-menu-abrir.png')}
-                  />
-                </View>
-              </TouchableWithoutFeedback>
-            </View>
-
-            <View style={styleClass.menuIniciarStyles.viewLinha}>
               <Image
-                style={styleClass.menuIniciarStyles.imagemLinha}
-                source={require('../../imagens/line-div-header.png')}
+                  style={styleClass.menuIniciarStyles.imagemLinha}
+                  source={require('../../imagens/line-div-header.png')}
               />
             </View>
-
+              
             <View style={styleClass.menuIniciarStyles.viewApresentacao}>
               <Image
                 style={styleClass.menuIniciarStyles.imagemApresentacao}
                 source={require('../../imagens/imagem-apresentacao.png')}
               />
             </View>
-
-            <TouchableWithoutFeedback
-              onPress={() => NavigationService.simpleNavigate('Perfil')}>
-              <Image
-                style={styleClass.menuIniciarStyles.imagemBotao}
-                source={require('../../imagens/bt-iniciar.png')}
-              />
-            </TouchableWithoutFeedback>
+            <View style={styleClass.menuIniciarStyles.viewBotao}>
+              <TouchableWithoutFeedback
+                onPress={() => NavigationService.simpleNavigate('Perfil')}>
+                <Image
+                  style={styleClass.menuIniciarStyles.imagemBotao}
+                  source={require('../../imagens/bt-iniciar.png')}
+                />
+              </TouchableWithoutFeedback>
+            </View>
 
             <View style={styleClass.menuIniciarStyles.viewTextos}>
               <Text style={styleClass.menuIniciarStyles.textoUm}>
@@ -134,7 +132,7 @@ export default class ProfileScreen extends Component {
               <Text style={styleClass.menuIniciarStyles.textoDezesseis}>
                 Vamos começar?
               </Text>
-            </View>
+            </View> 
           </ImageBackground>
         </View>
       </Drawer>
