@@ -66,14 +66,13 @@ export const splashStyles = {
   viewRodape: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
 
   imagemRodape: {
     resizeMode: 'contain',
     width: wp('100%'),
     height: wp('27%'),
-
   },
 };
 
@@ -147,106 +146,76 @@ export const loginRedesStyles = {
 export const loginStyles = {
   viewMaior: {
     flex: 1,
+    flexDirection: 'column',
   },
 
   viewLogoIcone: {
-    marginLeft: '20%',
-    marginTop: '20%',
-    position: 'absolute',
+    flex: 1,
+    marginTop: hp('10%'),
+    alignItems: 'center',
   },
 
   imagemLogoIcone: {
-    resizeMode: 'contain',
-    width: 255,
-    height: 210,
+    width: windowW * 0.71,
+    height: windowH * 0.33,
   },
 
-  viewTextoUm: {
-    marginLeft: '30%',
-    marginTop: '79%',
-    position: 'absolute',
-  },
-
-  mensagemTextos: {
+  mensagemTextoUm: {
+    marginTop: hp('2%'),
+    textAlign: 'center',
     color: 'gray',
     fontWeight: 'bold',
+    fontSize: 0.02 * windowH,
   },
 
-  viewTextoDois: {
-    marginLeft: '19%',
-    marginTop: '83%',
-    position: 'absolute',
+  mensagemTextoDois: {
+    textAlign: 'center',
+    color: 'gray',
+    fontWeight: 'bold',
+    fontSize: 0.02 * windowH,
   },
 
-  viewBotaoBUm: {
-    marginLeft: '14%',
-    marginTop: '95%',
-    position: 'absolute',
+  viewBotoes: {
+    flex: 1,
+    alignItems: 'center',
   },
 
-  imagemBotoesB: {
+  inputUm: {
+    fontSize: 0.025 * windowH,
+    textAlign: 'center',
+    borderRadius: 25,
+    backgroundColor: 'white',
+    height: hp('7.5%'),
     width: wp('73%'),
-    height: hp('6.5%'),
   },
 
-  viewIconeUm: {
-    marginLeft: '19%',
-    marginTop: '98.5%',
-    position: 'absolute',
+  inputDois: {
+    fontSize: 0.025 * windowH,
+    marginTop: hp('3%'),
+    textAlign: 'center',
+    borderRadius: 25,
+    backgroundColor: 'white',
+    height: hp('7.5%'),
+    width: wp('73%'),
   },
 
-  imagemIconeUm: {
-    width: 20,
-    height: 23,
-  },
-
-  viewBotaoBDois: {
-    marginLeft: '14%',
-    marginTop: '113%',
-    position: 'absolute',
-  },
-
-  viewIconeDois: {
-    marginLeft: '20%',
-    marginTop: '117.5%',
-    position: 'absolute',
-  },
-
-  imagemIconeDois: {
-    width: wp('3.5%'),
-    height: hp('2%'),
-  },
-
-  viewBotaoEntrar: {
-    marginLeft: '8%',
-    marginTop: '131%',
-    position: 'absolute',
-  },
-
-  botaoEntrar: {
+  botaoContainer: {
     marginLeft: '10%',
     marginRight: '8%',
-    marginTop: '1%',
-    marginBottom: '15%',
+    marginTop: '4%',
+    marginBottom: '3%',
   },
 
-  botaoEntrarStyle: {
+  botaoStyle: {
     backgroundColor: '#9d9d9d',
-    width: '120%',
-    height: '110%',
+    width: wp('73%'),
+    height: hp('8%'),
     borderRadius: 25,
   },
 
-  viewSelo: {
-    marginLeft: wp('43%'),
-    marginRight: wp('15%'),
-    marginTop: hp('87%'),
-    position: 'absolute',
-  },
-
   imagemSelo: {
-    width: 60,
-    height: 60,
+    width: wp('20.5%'),
+    height: hp('11.5%'),
   },
 };
 
