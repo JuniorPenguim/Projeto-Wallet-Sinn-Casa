@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, Image, TouchableWithoutFeedback} from 'react-native';
 import {Content} from 'native-base';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
 
@@ -33,14 +30,13 @@ export default class MenuInterno extends Component {
             <Text style={styleClass.menuInterno.textoMascara}>N</Text>
             <View style={styleClass.menuInterno.viewTextos}>
               <Text style={styleClass.menuInterno.textoNome}>
-                Nome Sobrenome Muito Grande 
+                Nome Sobrenome Muito Grande
               </Text>
               <Text style={styleClass.menuInterno.textoCpf}>
                 000.000.000-00
               </Text>
             </View>
           </View>
-
           <Image
             style={styleClass.menuInterno.imagemLinha}
             source={require('../../imagens/line-div-menu.png')}
@@ -66,7 +62,8 @@ export default class MenuInterno extends Component {
               />
               <Text style={styleClass.menuInterno.textoConta}>Conta</Text>
             </View>
-            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('ScanScanner')}>
+            <TouchableWithoutFeedback
+              onPress={() => NavigationService.simpleNavigate('ScanScanner')}>
               <View style={styleClass.menuInterno.viewContratos}>
                 <Image
                   style={styleClass.menuInterno.imagemContratos}
@@ -77,7 +74,6 @@ export default class MenuInterno extends Component {
                 </Text>
               </View>
             </TouchableWithoutFeedback>
-
             <View style={styleClass.menuInterno.viewColecionaveis}>
               <Image
                 style={styleClass.menuInterno.imagemColecionaveis}
@@ -87,7 +83,6 @@ export default class MenuInterno extends Component {
                 Colecionáveis
               </Text>
             </View>
-
             <View style={styleClass.menuInterno.viewPolitica}>
               <Image
                 style={styleClass.menuInterno.imagemPolitica}

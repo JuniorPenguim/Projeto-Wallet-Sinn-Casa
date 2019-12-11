@@ -4,16 +4,16 @@ import {ImageBackground, Dimensions, Image, Text, View} from 'react-native';
 import * as styleClass from '../constants/StyleClass';
 
 export default class SplashScreen extends Component {
-    async componentDidMount() {
-      setTimeout(function() {
-        NavigationService.simpleNavigate('LoginRedes');
-      }, 5000);
-    }
+  async componentDidMount() {
+    setTimeout(function() {
+      NavigationService.simpleNavigate('LoginRedes');
+    }, 5000);
+  }
 
   render() {
     return (
       <ImageBackground
-        style={{width: windowW, height: windowH}}
+        style={{width: '100%', height: '100%'}}
         resizeMode="cover"
         source={require('../../imagens/splash.png')}>
         <View style={styleClass.splashStyles.viewMaior}>
@@ -37,7 +37,9 @@ export default class SplashScreen extends Component {
             <Text adjustsFontSizeToFit style={styleClass.splashStyles.textoUm}>
               FISCALIZAÇÃO DO SISTEMA EDUCACIONAL
             </Text>
-            <Text adjustsFontSizeToFit style={styleClass.splashStyles.textoDois}>
+            <Text
+              adjustsFontSizeToFit
+              style={styleClass.splashStyles.textoDois}>
               PREFEITURA DO RIO DE JANEIRO
             </Text>
           </View>
@@ -52,6 +54,3 @@ export default class SplashScreen extends Component {
     );
   }
 }
-
-const windowW = Dimensions.get('window').width;
-const windowH = Dimensions.get('window').height;

@@ -3,7 +3,6 @@ import {
   View,
   ImageBackground,
   TouchableWithoutFeedback,
-  Dimensions,
   Text,
   Image,
 } from 'react-native';
@@ -27,7 +26,7 @@ export default class LoginScreen extends Component {
   render() {
     return (
       <ImageBackground
-        style={{width: windowW, height: windowH}}
+        style={{width: '100%', height: '100%'}}
         resizeMode="cover"
         source={require('../../imagens/splash-2.png')}>
         <View style={styleClass.loginRedesStyles.viewMaior}>
@@ -81,6 +80,3 @@ export default class LoginScreen extends Component {
 
   // }
 }
-
-const windowW = Dimensions.get('window').width;
-const windowH = Dimensions.get('window').height;

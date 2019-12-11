@@ -8,7 +8,6 @@ import {Dimensions} from 'react-native';
 const windowW = Dimensions.get('window').width;
 const windowH = Dimensions.get('window').height;
 
-
 export const splashStyles = {
   viewMaior: {
     flex: 1,
@@ -18,12 +17,12 @@ export const splashStyles = {
   },
 
   viewSelo: {
-    flex: 0.5,    
+    flex: 0.5,
   },
 
   imagemSelo: {
-    resizeMode:'contain',    
-    marginTop: hp('4%'),    
+    resizeMode: 'contain',
+    marginTop: hp('4%'),
     width: wp('18%'),
     height: hp('10%'),
   },
@@ -34,7 +33,7 @@ export const splashStyles = {
   },
 
   imagemLogo: {
-    resizeMode:'contain',
+    resizeMode: 'contain',
     marginTop: hp('10%'),
     width: wp('75%'),
     height: hp('10%'),
@@ -52,27 +51,26 @@ export const splashStyles = {
   },
 
   textoUm: {
-    
     marginTop: hp('5%'),
     color: '#FFFF',
     fontWeight: 'bold',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
   },
 
   textoDois: {
     color: '#FFFF',
     fontWeight: 'bold',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
   },
 
   viewRodape: {
-    flex: 1,         
-    flexDirection:'column',
-    justifyContent:'flex-end',   
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
   },
 
-  imagemRodape: {    
-    resizeMode:'contain',
+  imagemRodape: {
+    resizeMode: 'contain',
     width: wp('100%'),
     height: hp('25%'),
   },
@@ -92,9 +90,9 @@ export const loginRedesStyles = {
   },
 
   imagemLogo: {
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: wp('65%'),
-    height: hp('65%'),    
+    height: hp('65%'),
   },
 
   viewTexto: {
@@ -105,7 +103,7 @@ export const loginRedesStyles = {
   mensagemTexto: {
     color: 'gray',
     fontWeight: 'bold',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
   },
 
   viewBotao: {
@@ -114,33 +112,32 @@ export const loginRedesStyles = {
   },
 
   imagemBotao: {
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: wp('70%'),
     height: hp('7%'),
   },
 
   imagemBotaoDois: {
     marginTop: hp('2%'),
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: wp('70%'),
     height: hp('7%'),
   },
 
   imagemBotaoTres: {
     marginTop: hp('2%'),
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: wp('70%'),
     height: hp('7%'),
   },
 
   viewSelo: {
     flex: 0.4,
-    alignItems: 'center',  
-    
+    alignItems: 'center',
   },
 
   imagemSelo: {
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: wp('18%'),
     height: hp('10%'),
   },
@@ -255,12 +252,12 @@ export const loginStyles = {
 export const menuIniciarStyles = {
   viewMaior: {
     flex: 1,
-    flexDirection: 'column',    
+    flexDirection: 'column',
   },
 
-  viewHeadM:{
+  viewHeadM: {
     flex: 1,
-    flexDirection:'column',
+    flexDirection: 'column',
   },
 
   viewHead: {
@@ -275,65 +272,62 @@ export const menuIniciarStyles = {
   imagemLogo: {
     marginTop: hp('5%'),
     marginLeft: wp('4%'),
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: 140,
     height: 21,
   },
 
-  viewMenu: {    
+  viewMenu: {
     marginLeft: wp('40%'),
     marginTop: hp('4%'),
   },
 
   imagemMenu: {
-    resizeMode:'contain',
+    resizeMode: 'contain',
     width: 35,
     height: 30,
-  },  
+  },
 
   imagemLinha: {
     marginTop: hp('3%'),
-    resizeMode:'contain',
-    width: 390,
+    resizeMode: 'contain',
+    width: wp('100%'),
     height: 1,
   },
 
   viewApresentacao: {
-    flex: 5,       
+    flex: 5,
     flexDirection: 'row',
   },
 
   imagemApresentacao: {
-    resizeMode:'contain',    
+    resizeMode: 'contain',
     marginLeft: wp('5%'),
     width: wp('50%'),
     height: hp('50%'),
   },
 
-  viewBotao:{
+  viewBotao: {
     flex: 3,
-    flexDirection:'column',
+    flexDirection: 'column',
     alignItems: 'center',
-    
   },
 
   imagemBotao: {
-    resizeMode:'contain',    
+    resizeMode: 'contain',
     marginTop: hp('20%'),
     width: wp('80%'),
     height: hp('10%'),
   },
 
   viewTextos: {
-    
     position: 'absolute',
-        
   },
 
   textoUm: {
     marginTop: hp('18%'),
     marginLeft: wp('57%'),
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -341,7 +335,7 @@ export const menuIniciarStyles = {
   textoDois: {
     textAlign: 'right',
     marginLeft: wp('57%'),
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -351,61 +345,61 @@ export const menuIniciarStyles = {
     textAlign: 'right',
     marginTop: hp('2%'),
     marginLeft: wp('57%'),
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoTresUm: {
     fontWeight: 'bold',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoBlocoDois: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoCincoUm: {
     fontWeight: 'bold',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoDez: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoBlocoTres: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoQuatorze: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoQuinze: {
     marginTop: hp('0.1%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 
   textoDezesseis: {
     marginTop: hp('3%'),
     textAlign: 'right',
-    fontSize: 0.02*windowH,
+    fontSize: 0.02 * windowH,
     color: 'white',
   },
 };
@@ -413,141 +407,119 @@ export const menuIniciarStyles = {
 export const profileStyles = {
   viewMaior: {
     flex: 1,
+    flexDirection: 'column',
   },
 
-  viewBarra: {
-    marginLeft: wp('85%'),
-    marginTop: hp('4%'),
-    position: 'absolute',
-  },
-
-  imagemBarra: {
-    resizeMode:'contain',
-    width: 35,
-    height: 30,    
-  },
-
-  viewLogo: {
-    marginLeft: wp('10%'),
-    marginTop: hp('4.8%'),
-    position: 'absolute',
+  viewHead: {
+    flexDirection: 'row',
   },
 
   imagemLogo: {
-    resizeMode:'contain',
+    marginTop: hp('5%'),
+    marginLeft: wp('4%'),
+    resizeMode: 'contain',
     width: 140,
     height: 21,
   },
 
-  viewLinha: {
-    marginTop: hp('11%'),
-    marginLeft: wp('3%'),
-    position: 'absolute',
+  viewMenu: {
+    marginLeft: wp('40%'),
+    marginTop: hp('4%'),
+  },
+
+  imagemMenu: {
+    resizeMode: 'contain',
+    width: 35,
+    height: 30,
   },
 
   imagemLinha: {
-    resizeMode:'contain',
-    width: 390,
+    marginTop: hp('3%'),
+    resizeMode: 'contain',
+    width: wp('100%'),
     height: 1,
   },
 
-  viewColuna: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-
-  viewMascara: {
-    marginTop: hp('15%'),
+  viewPerfil: {
+    flex: 4,
     alignItems: 'center',
   },
 
   imagemMascara: {
-    resizeMode:'contain',
-    width: 110,
-    height: 127,
+    resizeMode: 'contain',
+    width: wp('25%'),
+    height: hp('25%'),
   },
 
   textoMascara: {
-    fontSize: 90,
+    marginTop: hp('4%'),
+    fontSize: 0.12 * windowH,
     color: 'white',
     position: 'absolute',
-    textAlign: 'center',
-  },
-
-  viewTexto: {
-    alignItems: 'center',
   },
 
   textoNome: {
-    fontSize: 20,
-    color: 'white',
-    marginTop: hp('2%'),
-    marginLeft: wp('5%'),
-    marginRight: wp('5%'),
+    color: '#FFFF',
     fontWeight: 'bold',
+    fontSize: 0.03 * windowH,
     textAlign: 'center',
+    marginLeft: wp('10%'),
+    marginRight: wp('10%'),
   },
 
   textoCpf: {
-    fontSize: 20,
     color: 'gray',
     fontWeight: 'bold',
-    marginLeft: wp('4%'),
+    fontSize: 0.03 * windowH,
     textAlign: 'center',
   },
 
-  viewChavePublica: {
-    marginLeft: wp('15%'),
-    marginTop: hp('5%'),
+  viewBotoes: {
+    flex: 3,
+    alignItems: 'center',
   },
 
   imagemBotoes: {
-    resizeMode:'contain',
-    width: 300,
-    height: 60,
+    resizeMode: 'contain',
+    width: wp('70%'),
+    height: hp('10%'),
   },
 
   textoChavePublica: {
     marginLeft: wp('19%'),
-    marginTop: hp('2.5%'),
-    fontSize: 18,
+    marginTop: hp('3.1%'),
+    fontSize: 0.025 * windowH,
     color: 'black',
     position: 'absolute',
   },
 
-  viewChavePrivada: {
-    marginLeft: wp('15%'),
-    marginTop: hp('4%'),
-  },
-
   textoChavePrivada: {
     marginLeft: wp('19%'),
-    marginTop: hp('2.5%'),
-    fontSize: 18,
+    marginTop: hp('13.5%'),
+    fontSize: 0.025 * windowH,
     color: 'white',
     position: 'absolute',
   },
 
   viewSwitch: {
-    marginLeft: wp('25%'),
-    marginTop: hp('4%'),
     flexDirection: 'row',
   },
 
   chaveSwtich: {
-    transform: [{scaleX: 2}, {scaleY: 2}],
-    position: 'absolute',
+    marginTop: hp('5%'),
+    transform: [{scaleX: wp('0.6%')}, {scaleY: hp('0.3')}],
   },
 
   textoSwitch: {
-    fontSize: 18,
+    fontSize: 0.025 * windowH,
+    marginTop: hp('5%'),
+    marginLeft: wp('8%'),
     color: 'gray',
-    marginLeft: wp('17%'),
   },
 
   viewSair: {
-    marginLeft: wp('15%'),
-    marginTop: hp('9%'),
+    flex: 1,
+    alignItems: 'center',
   },
 };
 
@@ -566,95 +538,100 @@ export const menuInterno = {
   },
 
   imagemBotao: {
-    marginTop: hp('3%'),
     marginRight: wp('6%'),
-    width: 25,
-    height: 25,
+    resizeMode: 'contain',
+    width: wp('8%'),
+    height: hp('8%'),
   },
 
   viewHead: {
-    marginLeft: wp('6%'),
-    marginTop: hp('3%'),
+    flex: 1,
+    marginLeft: wp('4%'),
   },
 
   imagemMascara: {
-    width: 60,
-    height: 70,
+    marginLeft: wp('4%'),
+    width: wp('20%'),
+    height: hp('20%'),
+    resizeMode: 'contain',
   },
 
   textoMascara: {
-    fontSize: 50,
+    fontSize: 0.07 * windowH,
     color: 'white',
-    marginLeft: wp('3%'),
+    marginLeft: wp('9.5%'),
+    marginTop: hp('5%'),
     position: 'absolute',
   },
 
   viewTextos: {
     flexDirection: 'column',
     position: 'absolute',
-    marginLeft: wp('13%'),
+    marginLeft: wp('22%'),
+    marginTop: hp('3.5%'),
   },
 
   textoNome: {
     marginLeft: wp('7%'),
     marginTop: hp('1%'),
-    fontSize: 17,
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   textoCpf: {
     marginLeft: wp('7%'),
     marginTop: hp('1%'),
-    fontSize: 17,
+    fontSize: 0.023 * windowH,
     color: 'gray',
   },
 
   imagemLinha: {
-    marginLeft: wp('5%'),
-    marginTop: hp('4%'),
-    width: 290,
+    resizeMode: 'contain',
+    width: wp('80%'),
     height: 1,
   },
 
   viewBody: {
+    flex: 1,
     flexDirection: 'column',
   },
 
   viewCarteira: {
-    marginLeft: wp('6%'),
-    marginTop: hp('5%'),
+    marginLeft: wp('5%'),
+    marginTop: hp('2%'),
     flexDirection: 'row',
   },
 
   imagemCarteira: {
     marginLeft: wp('1%'),
-    width: 38,
-    height: 28,
+    width: wp('10%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
   },
 
   textoCarteira: {
     marginLeft: wp('5%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginTop: hp('2.2%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   viewConta: {
-    marginLeft: wp('6%'),
-    marginTop: hp('3%'),
+    marginLeft: wp('4%'),
     flexDirection: 'row',
   },
 
   imagemConta: {
     marginLeft: wp('1.5%'),
-    width: 32.88,
-    height: 30,
+    width: wp('10%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
   },
 
   textoConta: {
     marginLeft: wp('6%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginTop: hp('2.2%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
@@ -663,16 +640,17 @@ export const menuInterno = {
   },
 
   imagemContratos: {
-    width: 28,
-    height: 33,
-    marginLeft: wp('8%'),
-    marginTop: hp('3%'),
+    width: wp('7%'),
+    height: hp('7%'),
+    marginLeft: wp('7%'),
+    marginTop: hp('1%'),
+    resizeMode: 'contain',
   },
 
   textoContratos: {
-    marginLeft: wp('6.5%'),
-    marginTop: hp('4%'),
-    fontSize: 17,
+    marginLeft: wp('8%'),
+    marginTop: hp('3%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
@@ -681,92 +659,94 @@ export const menuInterno = {
   },
 
   imagemColecionaveis: {
-    width: 28,
-    height: 28,
-    marginLeft: wp('8%'),
-    marginTop: hp('3%'),
+    width: wp('8%'),
+    height: hp('8%'),
+    marginLeft: wp('7%'),
+    marginTop: hp('1%'),
+    resizeMode: 'contain',
   },
 
   textoColecionaveis: {
-    marginLeft: wp('6.5%'),
+    marginLeft: wp('7%'),
     marginTop: hp('3.5%'),
-    fontSize: 17,
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   viewPolitica: {
-    marginLeft: wp('5%'),
-    marginTop: hp('3%'),
     flexDirection: 'row',
   },
 
   imagemPolitica: {
-    marginLeft: wp('3.5%'),
-    width: 24.58,
-    height: 31,
+    marginLeft: wp('8%'),
+    width: wp('6%'),
+    height: hp('6%'),
+    resizeMode: 'contain',
   },
 
   textoPolitica: {
-    marginLeft: wp('7%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginLeft: wp('8%'),
+    marginTop: hp('1.5%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   viewTermo: {
-    marginLeft: wp('5%'),
-    marginTop: hp('3%'),
+    marginLeft: wp('4%'),
+    marginTop: hp('1%'),
     flexDirection: 'row',
   },
 
   imagemTermo: {
     marginLeft: wp('3%'),
-    width: 32.88,
-    height: 31.5,
+    width: wp('8%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
   },
 
   textoTermo: {
-    marginLeft: wp('6.2%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginLeft: wp('7%'),
+    marginTop: hp('2.5%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   viewSobre: {
-    marginLeft: wp('5%'),
-    marginTop: hp('3%'),
+    marginLeft: wp('4%'),
+    marginTop: hp('1%'),
     flexDirection: 'row',
   },
 
   imagemSobre: {
     marginLeft: wp('3%'),
-    width: 33.84,
-    height: 33.5,
+    width: wp('8%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
   },
 
   textoSobre: {
-    marginLeft: wp('6.5%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginLeft: wp('7.5%'),
+    marginTop: hp('2.2%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 
   viewSuporte: {
-    marginLeft: wp('5%'),
-    marginTop: hp('3%'),
+    marginLeft: wp('4%'),
     flexDirection: 'row',
   },
 
   imagemSuporte: {
     marginLeft: wp('4%'),
-    width: 29.37,
-    height: 29,
+    width: wp('8%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
   },
 
   textoSuporte: {
-    marginLeft: wp('7%'),
-    marginTop: hp('0.5%'),
-    fontSize: 17,
+    marginLeft: wp('6.5%'),
+    marginTop: hp('2%'),
+    fontSize: 0.023 * windowH,
     color: 'white',
   },
 };

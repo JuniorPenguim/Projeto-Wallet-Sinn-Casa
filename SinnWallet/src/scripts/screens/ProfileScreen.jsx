@@ -6,11 +6,7 @@ import {
   TouchableWithoutFeedback,
   Switch,
 } from 'react-native';
-import {Container, Text, Drawer} from 'native-base';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import {Text, Drawer} from 'native-base';
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
@@ -44,89 +40,78 @@ export default class ProfileScreen extends Component {
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
           <View style={styleClass.profileStyles.viewMaior}>
-            <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-              <View style={styleClass.profileStyles.viewBarra}>
-                <Image
-                  style={styleClass.profileStyles.imagemBarra}
-                  source={require('../../imagens/ico-menu-abrir.png')}
-                />
-              </View>
-            </TouchableWithoutFeedback>
-
-            <View style={styleClass.profileStyles.viewLogo}>
+            <View style={styleClass.profileStyles.viewHead}>
               <Image
                 style={styleClass.profileStyles.imagemLogo}
                 source={require('../../imagens/logo-internas-header.png')}
               />
-            </View>
-
-            <View style={styleClass.profileStyles.viewLinha}>
-              <Image
-                style={styleClass.profileStyles.imagemLinha}
-                source={require('../../imagens/line-div-header.png')}
-              />
-            </View>
-
-            <View style={styleClass.profileStyles.viewColuna}>
-              <View style={styleClass.profileStyles.viewMascara}>
-                <Image
-                  style={styleClass.profileStyles.imagemMascara}
-                  source={require('../../imagens/mascara-foto-usuario.png')}
-                />
-                <Text style={styleClass.profileStyles.textoMascara}>N</Text>
-              </View>
-
-              <View style={styleClass.profileStyles.viewTexto}>
-                <Text style={styleClass.profileStyles.textoNome}>
-                  Nome Extremamente Grande Para Teste de centragem
-                </Text>
-                <Text style={styleClass.profileStyles.textoCpf}>
-                  000.000.000-00
-                </Text>
-              </View>
-
-              <View style={styleClass.profileStyles.viewChavePublica}>
-                <Image
-                  style={styleClass.profileStyles.imagemBotoes}
-                  source={require('../../imagens/bt-limpo-publica.png')}
-                />
-                <Text style={styleClass.profileStyles.textoChavePublica}>
-                  CHAVE PÚBLICA
-                </Text>
-              </View>
-
-              <View style={styleClass.profileStyles.viewChavePrivada}>
-                <Image
-                  style={styleClass.profileStyles.imagemBotoes}
-                  source={require('../../imagens/bt-limpo-privada.png')}
-                />
-                <Text style={styleClass.profileStyles.textoChavePrivada}>
-                  CHAVE PRIVADA
-                </Text>
-              </View>
-
-              <View style={styleClass.profileStyles.viewSwitch}>
-                <Switch
-                  onValueChange={this._handleToggleSwitch}
-                  value={this.state.switchValue}
-                  style={styleClass.profileStyles.chaveSwtich}
-                />
-                <Text style={styleClass.profileStyles.textoSwitch}>
-                  Usar Touch ID
-                </Text>
-              </View>
-
-              <TouchableWithoutFeedback
-                onPress={() => NavigationService.simpleNavigate('Login')}>
-                <View style={styleClass.profileStyles.viewSair}>
+              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                <View style={styleClass.profileStyles.viewMenu}>
                   <Image
-                    style={styleClass.profileStyles.imagemBotoes}
-                    source={require('../../imagens/bt-sair-da-conta.png')}
+                    style={styleClass.profileStyles.imagemMenu}
+                    source={require('../../imagens/ico-menu-abrir.png')}
                   />
                 </View>
               </TouchableWithoutFeedback>
             </View>
+
+            <Image
+              style={styleClass.profileStyles.imagemLinha}
+              source={require('../../imagens/line-div-header.png')}
+            />
           </View>
+
+          <View style={styleClass.profileStyles.viewPerfil}>
+            <Image
+              style={styleClass.profileStyles.imagemMascara}
+              source={require('../../imagens/mascara-foto-usuario.png')}
+            />
+            <Text style={styleClass.profileStyles.textoMascara}>N</Text>
+            <Text style={styleClass.profileStyles.textoNome}>
+              Nome Extremamente Grande Para Teste de Centragem
+            </Text>
+            <Text style={styleClass.profileStyles.textoCpf}>
+              000.000.000-00
+            </Text>
+          </View>
+
+          <View style={styleClass.profileStyles.viewBotoes}>
+            <Image
+              style={styleClass.profileStyles.imagemBotoes}
+              source={require('../../imagens/bt-limpo-publica.png')}
+            />
+            <Text style={styleClass.profileStyles.textoChavePublica}>
+              CHAVE PÚBLICA
+            </Text>
+
+            <Image
+              style={styleClass.profileStyles.imagemBotoes}
+              source={require('../../imagens/bt-limpo-privada.png')}
+            />
+            <Text style={styleClass.profileStyles.textoChavePrivada}>
+              CHAVE PRIVADA
+            </Text>
+
+            <View style={styleClass.profileStyles.viewSwitch}>
+              <Switch
+                onValueChange={this._handleToggleSwitch}
+                value={this.state.switchValue}
+                style={styleClass.profileStyles.chaveSwtich}
+              />
+              <Text style={styleClass.profileStyles.textoSwitch}>
+                Usar Touch ID
+              </Text>
+            </View>
+          </View>
+          <TouchableWithoutFeedback
+            onPress={() => NavigationService.simpleNavigate('LoginRedes')}>
+            <View style={styleClass.profileStyles.viewSair}>
+              <Image
+                style={styleClass.profileStyles.imagemBotoes}
+                source={require('../../imagens/bt-sair-da-conta.png')}
+              />
+            </View>
+          </TouchableWithoutFeedback>
         </ImageBackground>
       </Drawer>
     );

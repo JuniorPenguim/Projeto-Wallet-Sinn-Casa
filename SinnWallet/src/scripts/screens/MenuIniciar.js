@@ -7,10 +7,6 @@ import {
   Text,
 } from 'react-native';
 import {Drawer} from 'native-base';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
@@ -38,12 +34,11 @@ export default class ProfileScreen extends Component {
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
             <View style={styleClass.menuIniciarStyles.viewHeadM}>
-              <View style={styleClass.menuIniciarStyles.viewHead}>         
-
+              <View style={styleClass.menuIniciarStyles.viewHead}>
                 <Image
                   style={styleClass.menuIniciarStyles.imagemLogo}
                   source={require('../../imagens/logo-internas-header.png')}
-                />              
+                />
                 <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
                   <View style={styleClass.menuIniciarStyles.viewMenu}>
                     <Image
@@ -51,15 +46,15 @@ export default class ProfileScreen extends Component {
                       source={require('../../imagens/ico-menu-abrir.png')}
                     />
                   </View>
-                </TouchableWithoutFeedback> 
+                </TouchableWithoutFeedback>
               </View>
 
               <Image
-                  style={styleClass.menuIniciarStyles.imagemLinha}
-                  source={require('../../imagens/line-div-header.png')}
+                style={styleClass.menuIniciarStyles.imagemLinha}
+                source={require('../../imagens/line-div-header.png')}
               />
             </View>
-              
+
             <View style={styleClass.menuIniciarStyles.viewApresentacao}>
               <Image
                 style={styleClass.menuIniciarStyles.imagemApresentacao}
@@ -132,7 +127,7 @@ export default class ProfileScreen extends Component {
               <Text style={styleClass.menuIniciarStyles.textoDezesseis}>
                 Vamos começar?
               </Text>
-            </View> 
+            </View>
           </ImageBackground>
         </View>
       </Drawer>
