@@ -66,13 +66,14 @@ export const splashStyles = {
   viewRodape: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
 
   imagemRodape: {
     resizeMode: 'contain',
     width: wp('100%'),
-    height: hp('25%'),
+    height: wp('27%'),
+
   },
 };
 

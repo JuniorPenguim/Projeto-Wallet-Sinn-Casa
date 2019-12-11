@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import NavigationService from '../../../NavigationService';
-import {ImageBackground, Dimensions, Image, Text, View} from 'react-native';
+import {ImageBackground, Image, Text, View} from 'react-native';
+
+
 import * as styleClass from '../constants/StyleClass';
+import NavigationService from '../../../NavigationService';
 
 export default class SplashScreen extends Component {
-  async componentDidMount() {
-    setTimeout(function() {
-      NavigationService.simpleNavigate('LoginRedes');
-    }, 5000);
-  }
+   async componentDidMount() {
+     setTimeout(function() {
+       NavigationService.simpleNavigate('LoginRedes');
+     }, 5000);
+   }
 
   render() {
     return (

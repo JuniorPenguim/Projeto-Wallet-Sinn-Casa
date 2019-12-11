@@ -6,10 +6,12 @@ import {
   Text,
   Image,
 } from 'react-native';
+import Biometrics from 'react-native-biometrics';
+
 
 import NavigationService from '../../../NavigationService';
-import Biometrics from 'react-native-biometrics';
 import * as styleClass from '../constants/StyleClass';
+
 
 export default class LoginScreen extends Component {
   _idSignIn() {

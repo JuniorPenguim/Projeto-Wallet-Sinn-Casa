@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {createAppContainer, Header} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import {Container} from 'native-base';
+import FlashMessage from 'react-native-flash-message';
+
+
 import NavigationService from './NavigationService';
 import SplashScreen from './src/scripts/screens/SplashScreen';
 import LoginScreen from './src/scripts/screens/LoginScreen';
@@ -10,8 +14,8 @@ import CarteiraScreen from './src/scripts/screens/CarteiraScreen';
 import CapturaScreen from './src/scripts/screens/CapturaScreen';
 import ScanScanner from './src/scripts/screens/QrScanner';
 import MenuIniciar from './src/scripts/screens/MenuIniciar';
-import {Container} from 'native-base';
-import FlashMessage from 'react-native-flash-message';
+
+
 
 const TopLevelNavigator = createStackNavigator(
   {

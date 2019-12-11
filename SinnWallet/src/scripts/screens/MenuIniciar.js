@@ -7,6 +7,8 @@ import {
   Text,
 } from 'react-native';
 import {Drawer} from 'native-base';
+
+
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
