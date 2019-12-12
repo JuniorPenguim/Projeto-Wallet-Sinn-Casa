@@ -3,7 +3,10 @@ import {createAppContainer, Header} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Container} from 'native-base';
 import FlashMessage from 'react-native-flash-message';
+import {Provider} from 'react-redux';
 
+
+import {Store} from './src/store';
 import NavigationService from './NavigationService';
 import SplashScreen from './src/scripts/screens/SplashScreen';
 import LoginScreen from './src/scripts/screens/LoginScreen';
@@ -26,9 +29,9 @@ const TopLevelNavigator = createStackNavigator(
     ScanScanner: {screen: ScanScanner},
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Perfil',
     headerMode: 'none',
-    //transitionConfig: () => fromLeft(1000),
+    
   },
 );
 
@@ -37,16 +40,18 @@ const AppScreens = createAppContainer(TopLevelNavigator);
 export default class SManager extends React.Component {
   render() {
     return (
-      <Container>
-        {
-          <AppScreens
-            ref={navigatorRef => {
-              NavigationService.setTopLevelNavigator(navigatorRef);
-            }}
-          />
-        }
-        <FlashMessage position="top" />
-      </Container>
+      <Provider store={Store}>
+        <Container>
+          {
+            <AppScreens
+              ref={navigatorRef => {
+                NavigationService.setTopLevelNavigator(navigatorRef);
+              }}
+            />
+          }
+          <FlashMessage position="top" />
+        </Container>
+      </Provider>
     );
   }
 }

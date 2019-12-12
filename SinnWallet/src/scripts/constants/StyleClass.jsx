@@ -180,24 +180,42 @@ export const loginStyles = {
     alignItems: 'center',
   },
 
-  inputUm: {
-    fontSize: 0.025 * windowH,
-    textAlign: 'center',
-    borderRadius: 25,
-    backgroundColor: 'white',
-    height: hp('7.5%'),
+  searchSectionUm: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
     width: wp('73%'),
+    height: hp('7.5%'),
+    borderRadius: wp('20%'),
   },
 
-  inputDois: {
-    fontSize: 0.025 * windowH,
-    //marginTop: hp('3%'),
-    textAlign: 'center',
-    borderRadius: 25,
-    backgroundColor: 'white',
-    height: hp('7.5%'),
+  searchSectionDois: {
+    marginTop:hp('3%'),
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
     width: wp('73%'),
+    height: hp('7.5%'),
+    borderRadius: wp('20%'),
   },
+
+  searchIcon: {
+    padding: wp('10%'),
+  },
+
+  input: {
+    textAlign: 'center',
+    fontSize: 0.025 * windowH,
+    paddingTop: hp('0.1%'),
+    paddingRight: wp('1%'),
+    paddingBottom: hp('0.1%'),
+    paddingLeft: 0,
+    backgroundColor: '#fff',
+    color: '#424242',
+    width: wp('60%')
+  },  
 
   botaoContainer: {
     marginLeft: wp('10%'),
@@ -217,6 +235,7 @@ export const loginStyles = {
     width: wp('20.5%'),
     height: hp('11.5%'),
   },
+  
 };
 
 export const menuIniciarStyles = {

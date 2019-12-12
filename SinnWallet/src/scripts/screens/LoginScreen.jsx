@@ -5,7 +5,7 @@ import {
   Dimensions,
   KeyboardAvoidingView,
 } from 'react-native';
-import {Button, Image, Text} from 'react-native-elements';
+import {Button, Image, Text,Icon} from 'react-native-elements';
 import Biometrics from 'react-native-biometrics';
 import {TextInput} from 'react-native-gesture-handler';
 import {
@@ -15,6 +15,7 @@ import {
 
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
+import { Right } from 'native-base';
 
 export default class LoginScreen extends Component {
   _idSignIn() {
@@ -65,41 +66,25 @@ export default class LoginScreen extends Component {
               </Text>
             </View>
             <View style={styleClass.loginStyles.viewBotoes}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  style={{
-                    width: wp('6.5%'),
-                    height: hp('4.1%'),
-                  }}
-                  source={require('../../imagens/ico-email.png')}
-                />
-                <TextInput
-                  placeholder="Entre com seu e-mail"
-                  placeholderTextColor="black"
-                  style={styleClass.loginStyles.inputUm}></TextInput>
+              <View style={styleClass.loginStyles.searchSectionUm}>
+                <Icon style={styleClass.loginStyles.searchIcon} name="email" size={20} color="#000"/>
+                  <TextInput
+                    style={styleClass.loginStyles.input}
+                    placeholder="Entre com seu e-mail"
+                    placeholderTextColor="black"
+                    underlineColorAndroid="transparent"
+                  />
               </View>
-              <View
-                style={{
-                  marginTop: hp('3%'),
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  style={{
-                    width: wp('5%'),
-                    height: hp('3%'),
-                  }}
-                  source={require('../../imagens/ico-password.png')}
-                />
-                <TextInput
-                  placeholder="Digite a sua senha"
-                  placeholderTextColor="black"
-                  style={styleClass.loginStyles.inputDois}></TextInput>
+              <View style={styleClass.loginStyles.searchSectionDois}>
+                <Icon style={styleClass.loginStyles.searchIcon} name="back" size={20} color="#000"/>
+                  <TextInput
+                    style={styleClass.loginStyles.input}
+                    placeholder="Digite a sua senha"
+                    placeholderTextColor="black"
+                    underlineColorAndroid="transparent"
+                  />
               </View>
+              
               <Button
                 title="ENTRAR"
                 onPress={() => NavigationService.simpleNavigate('Iniciar')}

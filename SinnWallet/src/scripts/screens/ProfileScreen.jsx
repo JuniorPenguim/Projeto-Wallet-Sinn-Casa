@@ -7,17 +7,21 @@ import {
   Switch,
 } from 'react-native';
 import {Text, Drawer} from 'native-base';
+import {connect} from 'react-redux';
 
 
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 
-export default class ProfileScreen extends Component {
-  state = {
-    switchValue: false,
-  };
 
+
+
+
+export class ProfileScreen extends Component {
+  state = {
+    switchValue: this.props.counter,
+  };
   _handleToggleSwitch = () =>
     this.setState(state => ({switchValue: !state.switchValue}));
 
@@ -43,6 +47,7 @@ export default class ProfileScreen extends Component {
           source={require('../../imagens/bg-internas.png')}>
           <View style={styleClass.profileStyles.viewMaior}>
             <View style={styleClass.profileStyles.viewHead}>
+              {console.log(this.props)}
               <Image
                 style={styleClass.profileStyles.imagemLogo}
                 source={require('../../imagens/logo-internas-header.png')}
@@ -97,7 +102,7 @@ export default class ProfileScreen extends Component {
             <View style={styleClass.profileStyles.viewSwitch}>
               <Switch
                 onValueChange={this._handleToggleSwitch}
-                value={this.state.switchValue}
+                value={this.props.newValue.newValue}
                 style={styleClass.profileStyles.chaveSwtich}
               />
               <Text style={styleClass.profileStyles.textoSwitch}>
@@ -119,3 +124,9 @@ export default class ProfileScreen extends Component {
     );
   }
 }
+function mapStateToProps(state){
+  return {newValue: state.newValue}
+}
+
+
+export default connect(mapStateToProps)(ProfileScreen);
