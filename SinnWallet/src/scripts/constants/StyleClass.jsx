@@ -191,7 +191,7 @@ export const loginStyles = {
 
   inputDois: {
     fontSize: 0.025 * windowH,
-    marginTop: hp('3%'),
+    //marginTop: hp('3%'),
     textAlign: 'center',
     borderRadius: 25,
     backgroundColor: 'white',
@@ -200,10 +200,10 @@ export const loginStyles = {
   },
 
   botaoContainer: {
-    marginLeft: '10%',
-    marginRight: '8%',
-    marginTop: '4%',
-    marginBottom: '3%',
+    marginLeft: wp('10%'),
+    marginRight: wp('8%'),
+    marginTop: hp('3%'),
+    marginBottom: hp('3%'),
   },
 
   botaoStyle: {
@@ -426,6 +426,7 @@ export const profileStyles = {
     fontSize: 0.12 * windowH,
     color: 'white',
     position: 'absolute',
+    textAlign: 'center',
   },
 
   textoNome: {
@@ -544,6 +545,7 @@ export const menuInterno = {
   textoNome: {
     marginLeft: wp('7%'),
     marginTop: hp('1%'),
+    marginRight: wp('2%'),
     fontSize: 0.023 * windowH,
     color: 'white',
   },

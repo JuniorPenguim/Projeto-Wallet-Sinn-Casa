@@ -57,7 +57,7 @@ export default class LoginScreen extends Component {
                 resizeMode="contain"
                 source={require('../../imagens/logo-icon-login.png')}
               />
-              <Text style={styleClass.loginStyles.texto}>
+              <Text style={styleClass.loginStyles.mensagemTextoUm}>
                 ENTRE COM SEUS DADOS
               </Text>
               <Text style={styleClass.loginStyles.mensagemTextoDois}>
@@ -65,14 +65,41 @@ export default class LoginScreen extends Component {
               </Text>
             </View>
             <View style={styleClass.loginStyles.viewBotoes}>
-              <TextInput
-                placeholder="Entre com seu e-mail"
-                placeholderTextColor="black"
-                style={styleClass.loginStyles.inputUm}></TextInput>
-              <TextInput
-                placeholder="Digite a sua senha"
-                placeholderTextColor="black"
-                style={styleClass.loginStyles.inputDois}></TextInput>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{
+                    width: wp('6.5%'),
+                    height: hp('4.1%'),
+                  }}
+                  source={require('../../imagens/ico-email.png')}
+                />
+                <TextInput
+                  placeholder="Entre com seu e-mail"
+                  placeholderTextColor="black"
+                  style={styleClass.loginStyles.inputUm}></TextInput>
+              </View>
+              <View
+                style={{
+                  marginTop: hp('3%'),
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{
+                    width: wp('5%'),
+                    height: hp('3%'),
+                  }}
+                  source={require('../../imagens/ico-password.png')}
+                />
+                <TextInput
+                  placeholder="Digite a sua senha"
+                  placeholderTextColor="black"
+                  style={styleClass.loginStyles.inputDois}></TextInput>
+              </View>
               <Button
                 title="ENTRAR"
                 onPress={() => NavigationService.simpleNavigate('Iniciar')}
