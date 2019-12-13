@@ -191,7 +191,7 @@ export const loginStyles = {
   },
 
   searchSectionDois: {
-    marginTop:hp('3%'),
+    marginTop: hp('3%'),
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -214,8 +214,8 @@ export const loginStyles = {
     paddingLeft: 0,
     backgroundColor: '#fff',
     color: '#424242',
-    width: wp('60%')
-  },  
+    width: wp('60%'),
+  },
 
   botaoContainer: {
     marginLeft: wp('10%'),
@@ -235,7 +235,6 @@ export const loginStyles = {
     width: wp('20.5%'),
     height: hp('11.5%'),
   },
-  
 };
 
 export const menuIniciarStyles = {
@@ -315,7 +314,8 @@ export const menuIniciarStyles = {
 
   textoUm: {
     marginTop: hp('18%'),
-    marginLeft: wp('57%'),
+    marginLeft: wp('60%'),
+    textAlign: 'right',
     fontSize: 0.02 * windowH,
     color: 'white',
     fontWeight: 'bold',

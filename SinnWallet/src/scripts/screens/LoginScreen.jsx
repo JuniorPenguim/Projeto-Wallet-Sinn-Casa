@@ -5,7 +5,7 @@ import {
   Dimensions,
   KeyboardAvoidingView,
 } from 'react-native';
-import {Button, Image, Text,Icon} from 'react-native-elements';
+import {Button, Image, Text, Icon} from 'react-native-elements';
 import Biometrics from 'react-native-biometrics';
 import {TextInput} from 'react-native-gesture-handler';
 import {
@@ -15,7 +15,6 @@ import {
 
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
-import { Right } from 'native-base';
 
 export default class LoginScreen extends Component {
   _idSignIn() {
@@ -36,21 +35,6 @@ export default class LoginScreen extends Component {
           style={{width: '100%', height: '100%'}}
           resizeMode="cover"
           source={require('../../imagens/splash-2.png')}>
-          {/*      
-            <View style={styleClass.loginStyles.viewIconeUm}>
-              <Image
-                style={styleClass.loginStyles.imagemIconeUm}
-                source={require('../../imagens/ico-email.png')}
-              />
-            </View>         
-
-            <View style={styleClass.loginStyles.viewIconeDois}>
-              <Image
-                style={styleClass.loginStyles.imagemIconeDois}
-                source={require('../../imagens/ico-password.png')}
-              />
-            </View>   */}
-
           <View style={styleClass.loginStyles.viewMaior}>
             <View style={styleClass.loginStyles.viewLogoIcone}>
               <Image
@@ -67,24 +51,34 @@ export default class LoginScreen extends Component {
             </View>
             <View style={styleClass.loginStyles.viewBotoes}>
               <View style={styleClass.loginStyles.searchSectionUm}>
-                <Icon style={styleClass.loginStyles.searchIcon} name="email" size={20} color="#000"/>
-                  <TextInput
-                    style={styleClass.loginStyles.input}
-                    placeholder="Entre com seu e-mail"
-                    placeholderTextColor="black"
-                    underlineColorAndroid="transparent"
-                  />
+                <Icon
+                  style={styleClass.loginStyles.searchIcon}
+                  name="email"
+                  size={20}
+                  color="#000"
+                />
+                <TextInput
+                  style={styleClass.loginStyles.input}
+                  placeholder="Entre com seu e-mail"
+                  placeholderTextColor="black"
+                  underlineColorAndroid="transparent"
+                />
               </View>
               <View style={styleClass.loginStyles.searchSectionDois}>
-                <Icon style={styleClass.loginStyles.searchIcon} name="back" size={20} color="#000"/>
-                  <TextInput
-                    style={styleClass.loginStyles.input}
-                    placeholder="Digite a sua senha"
-                    placeholderTextColor="black"
-                    underlineColorAndroid="transparent"
-                  />
+                <Icon
+                  style={styleClass.loginStyles.searchIcon}
+                  name="email"
+                  size={20}
+                  color="#000"
+                />
+                <TextInput
+                  style={styleClass.loginStyles.input}
+                  placeholder="Digite a sua senha"
+                  placeholderTextColor="black"
+                  underlineColorAndroid="transparent"
+                />
               </View>
-              
+
               <Button
                 title="ENTRAR"
                 onPress={() => NavigationService.simpleNavigate('Iniciar')}

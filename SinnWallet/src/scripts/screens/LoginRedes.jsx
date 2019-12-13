@@ -7,13 +7,12 @@ import {
   Image,
 } from 'react-native';
 import Biometrics from 'react-native-biometrics';
-
+import {connect} from 'react-redux';
 
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
 
-
-export default class LoginScreen extends Component {
+export class LoginScreen extends Component {
   _idSignIn() {
     Biometrics.simplePrompt('Load fingerprint')
       .then(() => {
@@ -76,9 +75,15 @@ export default class LoginScreen extends Component {
     );
   }
 
-  // componentDidMount(){
-
-  //   this._idSignIn();
-
-  // }
+  componentDidMount() {
+    if (this.props.newValue.newValue == true) {
+      this._idSignIn();
+    }
+  }
 }
+
+function mapStateToProps(state) {
+  return {newValue: state.newValue};
+}
+
+export default connect(mapStateToProps)(LoginScreen);

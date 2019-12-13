@@ -9,21 +9,20 @@ import {
 import {Text, Drawer} from 'native-base';
 import {connect} from 'react-redux';
 
-
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
-
-
-
-
+import {clickButton} from '../../actions/index';
 
 export class ProfileScreen extends Component {
   state = {
     switchValue: this.props.counter,
   };
-  _handleToggleSwitch = () =>
-    this.setState(state => ({switchValue: !state.switchValue}));
+  // _handleToggleSwitch = () =>
+  //   this.setState(state => ({switchValue: !state.switchValue}));
+  _handleSwitch(value) {
+    this.props.clickButton(value);
+  }
 
   closeDrawer() {
     this._drawer._root.close();
@@ -101,7 +100,7 @@ export class ProfileScreen extends Component {
 
             <View style={styleClass.profileStyles.viewSwitch}>
               <Switch
-                onValueChange={this._handleToggleSwitch}
+                onValueChange={this._handleSwitch}
                 value={this.props.newValue.newValue}
                 style={styleClass.profileStyles.chaveSwtich}
               />
@@ -124,9 +123,8 @@ export class ProfileScreen extends Component {
     );
   }
 }
-function mapStateToProps(state){
-  return {newValue: state.newValue}
+function mapStateToProps(state) {
+  return {newValue: state.newValue};
 }
-
 
 export default connect(mapStateToProps)(ProfileScreen);

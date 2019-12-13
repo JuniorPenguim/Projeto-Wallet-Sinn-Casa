@@ -5,7 +5,6 @@ import {Container} from 'native-base';
 import FlashMessage from 'react-native-flash-message';
 import {Provider} from 'react-redux';
 
-
 import {Store} from './src/store';
 import NavigationService from './NavigationService';
 import SplashScreen from './src/scripts/screens/SplashScreen';
@@ -29,9 +28,8 @@ const TopLevelNavigator = createStackNavigator(
     ScanScanner: {screen: ScanScanner},
   },
   {
-    initialRouteName: 'Perfil',
+    initialRouteName: 'Splash',
     headerMode: 'none',
-    
   },
 );
 
