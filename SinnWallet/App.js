@@ -15,6 +15,7 @@ import CarteiraScreen from './src/scripts/screens/CarteiraScreen';
 import CapturaScreen from './src/scripts/screens/CapturaScreen';
 import ScanScanner from './src/scripts/screens/QrScanner';
 import MenuIniciar from './src/scripts/screens/MenuIniciar';
+import PoliticaScreen from './src/scripts/screens/PoliticaScreen';
 
 const TopLevelNavigator = createStackNavigator(
   {
@@ -26,9 +27,10 @@ const TopLevelNavigator = createStackNavigator(
     Carteira: {screen: CarteiraScreen},
     Captura: {screen: CapturaScreen},
     ScanScanner: {screen: ScanScanner},
+    Politica: {screen: PoliticaScreen},
   },
   {
-    initialRouteName: 'Splash',
+    initialRouteName: 'Login',
     headerMode: 'none',
   },
 );

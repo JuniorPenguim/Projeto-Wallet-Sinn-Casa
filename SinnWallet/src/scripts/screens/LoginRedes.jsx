@@ -75,11 +75,11 @@ export class LoginScreen extends Component {
     );
   }
 
-  componentDidMount() {
-    if (this.props.newValue.newValue == true) {
-      this._idSignIn();
-    }
-  }
+  // componentDidMount() {
+  //   if (this.props.newValue.newValue == true) {
+  //     this._idSignIn();
+  //   }
+  // }
 }
 
 function mapStateToProps(state) {

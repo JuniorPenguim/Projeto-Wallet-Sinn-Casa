@@ -184,10 +184,10 @@ export const loginStyles = {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     width: wp('73%'),
     height: hp('7.5%'),
-    borderRadius: wp('20%'),
+    borderRadius: 25,
   },
 
   searchSectionDois: {
@@ -198,7 +198,7 @@ export const loginStyles = {
     backgroundColor: '#fff',
     width: wp('73%'),
     height: hp('7.5%'),
-    borderRadius: wp('20%'),
+    borderRadius: 25
   },
 
   searchIcon: {
@@ -209,12 +209,12 @@ export const loginStyles = {
     textAlign: 'center',
     fontSize: 0.025 * windowH,
     paddingTop: hp('0.1%'),
-    paddingRight: wp('1%'),
-    paddingBottom: hp('0.1%'),
-    paddingLeft: 0,
-    backgroundColor: '#fff',
+    paddingLeft: wp('2%'),
+    paddingBottom: hp('0.1%'),    
+    backgroundColor: 'white',
     color: '#424242',
-    width: wp('60%'),
+    height:hp('4%'),
+    width: wp('50%'),
   },
 
   botaoContainer: {
@@ -313,7 +313,7 @@ export const menuIniciarStyles = {
   },
 
   textoUm: {
-    marginTop: hp('18%'),
+    marginTop: hp('19%'),
     marginLeft: wp('60%'),
     textAlign: 'right',
     fontSize: 0.02 * windowH,
@@ -430,22 +430,27 @@ export const profileStyles = {
   },
 
   viewPerfil: {
-    flex: 4,
+    flex: 2,
+    alignItems: 'center',
+    justifyContent:'center',    
+  },
+
+  viewTextos: {    
+    flex: 1.5,
     alignItems: 'center',
   },
 
   imagemMascara: {
     resizeMode: 'contain',
-    width: wp('25%'),
-    height: hp('25%'),
+    width: wp('26%'),
+    height: hp('26%'),
   },
 
-  textoMascara: {
-    marginTop: hp('4%'),
-    fontSize: 0.12 * windowH,
+  textoMascara: {    
+    fontSize: 0.11 * windowH,
     color: 'white',
     position: 'absolute',
-    textAlign: 'center',
+    textAlign: 'center',    
   },
 
   textoNome: {
@@ -465,6 +470,7 @@ export const profileStyles = {
   },
 
   viewBotoes: {
+    
     flex: 3,
     alignItems: 'center',
   },
@@ -497,7 +503,7 @@ export const profileStyles = {
 
   chaveSwtich: {
     marginTop: hp('5%'),
-    transform: [{scaleX: wp('0.6%')}, {scaleY: hp('0.3')}],
+    transform: [{scaleX: 2}, {scaleY: 2}],
   },
 
   textoSwitch: {
@@ -535,12 +541,12 @@ export const menuInterno = {
   },
 
   viewHead: {
-    flex: 1,
-    marginLeft: wp('4%'),
+    flex: 1,    
+    flexDirection:'row',
+    marginLeft:wp('4%')   
   },
 
-  imagemMascara: {
-    marginLeft: wp('4%'),
+  imagemMascara: {    
     width: wp('20%'),
     height: hp('20%'),
     resizeMode: 'contain',
@@ -548,20 +554,18 @@ export const menuInterno = {
 
   textoMascara: {
     fontSize: 0.07 * windowH,
-    color: 'white',
-    marginLeft: wp('9.5%'),
-    marginTop: hp('5%'),
+    color: 'white',       
     position: 'absolute',
   },
 
   viewTextos: {
-    flexDirection: 'column',
-    position: 'absolute',
-    marginLeft: wp('22%'),
+    width: 0,
+    flexGrow: 1,    
+    flexDirection: 'column',    
     marginTop: hp('3.5%'),
   },
 
-  textoNome: {
+  textoNome: {    
     marginLeft: wp('7%'),
     marginTop: hp('1%'),
     marginRight: wp('2%'),

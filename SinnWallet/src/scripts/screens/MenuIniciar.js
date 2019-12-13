@@ -7,6 +7,10 @@ import {
   Text,
 } from 'react-native';
 import {Drawer} from 'native-base';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 
 import NavigationService from '../../../NavigationService';
@@ -35,27 +39,41 @@ export default class ProfileScreen extends Component {
             style={{width: '100%', height: '100%'}}
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
-            <View style={styleClass.menuIniciarStyles.viewHeadM}>
-              <View style={styleClass.menuIniciarStyles.viewHead}>
-                <Image
-                  style={styleClass.menuIniciarStyles.imagemLogo}
-                  source={require('../../imagens/logo-internas-header.png')}
-                />
-                <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                  <View style={styleClass.menuIniciarStyles.viewMenu}>
-                    <Image
-                      style={styleClass.menuIniciarStyles.imagemMenu}
-                      source={require('../../imagens/ico-menu-abrir.png')}
-                    />
-                  </View>
-                </TouchableWithoutFeedback>
-              </View>
-
+            <View style={{width: wp('100%'), height:hp('15%'), alignItems:'center', flexDirection: 'row'}}>              
               <Image
-                style={styleClass.menuIniciarStyles.imagemLinha}
+                style={{                
+                  
+                  marginLeft: wp('4%'),
+                  resizeMode: 'contain',
+                  width: wp('50%'),
+                  height: wp('30%'),
+                  
+                }}
+                source={require('../../imagens/logo-internas-header.png')}
+              />
+              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                <View style={{ flex: 1, marginRight:wp('4%'), alignItems:'flex-end'}}>
+                  <Image
+                    style={{                                        
+                      resizeMode: 'contain',
+                      width: wp('9%'),
+                      height: hp('9%'),
+                    }}
+                    source={require('../../imagens/ico-menu-abrir.png')}
+                  />
+                </View>
+              </TouchableWithoutFeedback>             
+
+            </View>
+            <Image
+                style={{
+                  marginTop:hp('-3%'),                 
+                  resizeMode: 'contain',
+                  width: wp('100%'),
+                  height: hp('1%'),
+                }}
                 source={require('../../imagens/line-div-header.png')}
               />
-            </View>
 
             <View style={styleClass.menuIniciarStyles.viewApresentacao}>
               <Image

@@ -23,11 +23,13 @@ export default class MenuInterno extends Component {
             </TouchableWithoutFeedback>
           </View>
           <View style={styleClass.menuInterno.viewHead}>
+            <View style={{justifyContent:'center', alignItems:'center'}}>
             <Image
               style={styleClass.menuInterno.imagemMascara}
               source={require('../../imagens/mascara-foto-usuario-interna-menu.png')}
             />
             <Text style={styleClass.menuInterno.textoMascara}>N</Text>
+            </View>
             <View style={styleClass.menuInterno.viewTextos}>
               <Text style={styleClass.menuInterno.textoNome}>
                 Nome Sobrenome Muito Grande
@@ -83,15 +85,17 @@ export default class MenuInterno extends Component {
                 Colecionáveis
               </Text>
             </View>
-            <View style={styleClass.menuInterno.viewPolitica}>
-              <Image
-                style={styleClass.menuInterno.imagemPolitica}
-                source={require('../../imagens/ico-menu-politica-privacidade.png')}
-              />
-              <Text style={styleClass.menuInterno.textoPolitica}>
-                Política de Privacidade
-              </Text>
-            </View>
+            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Politica')}> 
+              <View style={styleClass.menuInterno.viewPolitica}>
+                <Image
+                  style={styleClass.menuInterno.imagemPolitica}
+                  source={require('../../imagens/ico-menu-politica-privacidade.png')}
+                />
+                <Text style={styleClass.menuInterno.textoPolitica}>
+                  Política de Privacidade
+                </Text>
+              </View>
+            </TouchableWithoutFeedback>
 
             <View style={styleClass.menuInterno.viewTermo}>
               <Image
