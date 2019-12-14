@@ -16,14 +16,13 @@ import {
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
-import {clickButton} from '../../actions/index';
+import {clickButton} from '../../../src/actions/index';
 
 export class ProfileScreen extends Component {
   state = {
     switchValue: this.props.newValue.newValue,
   };
-  // _handleToggleSwitch = () =>
-  //   this.setState(state => ({switchValue: !state.switchValue}));
+
   _handleSwitch(value) {
     this.props.clickButton(value);
   }
@@ -37,6 +36,9 @@ export class ProfileScreen extends Component {
   }
 
   render() {
+    {
+      console.log(this.props);
+    }
     return (
       <Drawer
         ref={ref => {
@@ -49,42 +51,24 @@ export class ProfileScreen extends Component {
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
           <View style={styleClass.profileStyles.viewMaior}>
-            <View style={{width: wp('100%'), height:hp('15%'), alignItems:'center', flexDirection: 'row'}}>              
-                <Image
-                  style={{                
-                    
-                    marginLeft: wp('4%'),
-                    resizeMode: 'contain',
-                    width: wp('50%'),
-                    height: wp('30%'),
-                    
-                  }}
-                  source={require('../../imagens/logo-internas-header.png')}
-                />
-                <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                  <View style={{ flex: 1, marginRight:wp('4%'), alignItems:'flex-end'}}>
-                    <Image
-                      style={{                                        
-                        resizeMode: 'contain',
-                        width: wp('9%'),
-                        height: hp('9%'),
-                      }}
-                      source={require('../../imagens/ico-menu-abrir.png')}
-                    />
-                  </View>
-                </TouchableWithoutFeedback>             
-
-              </View>
+            <View style={styleClass.profileStyles.viewHead}>
               <Image
-                  style={{
-                    marginTop:hp('-3%'),                 
-                    resizeMode: 'contain',
-                    width: wp('100%'),
-                    height: hp('1%'),
-                  }}
-                  source={require('../../imagens/line-div-header.png')}
-                />         
-
+                style={styleClass.profileStyles.imagemLogo}
+                source={require('../../imagens/logo-internas-header.png')}
+              />
+              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                <View style={styleClass.profileStyles.viewMenu}>
+                  <Image
+                    style={styleClass.profileStyles.imagemMenu}
+                    source={require('../../imagens/ico-menu-abrir.png')}
+                  />
+                </View>
+              </TouchableWithoutFeedback>
+            </View>
+            <Image
+              style={styleClass.profileStyles.imagemLinha}
+              source={require('../../imagens/line-div-header.png')}
+            />
             <View style={styleClass.profileStyles.viewPerfil}>
               <Image
                 style={styleClass.profileStyles.imagemMascara}
@@ -100,7 +84,6 @@ export class ProfileScreen extends Component {
                 000.000.000-00
               </Text>
             </View>
-            
 
             <View style={styleClass.profileStyles.viewBotoes}>
               <Image
@@ -149,4 +132,4 @@ function mapStateToProps(state) {
   return {newValue: state.newValue};
 }
 
-export default connect(mapStateToProps)(ProfileScreen);
+export default connect(mapStateToProps, {clickButton})(ProfileScreen);

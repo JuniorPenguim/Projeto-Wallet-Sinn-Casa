@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-  View,  
+  View,
   Text,
   Image,
   Linking,
@@ -16,10 +16,8 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-
 import SideBar from './MenuInterno';
 import NavigationService from '../../../NavigationService';
-
 
 export default class QRCodeScreen extends Component {
   state = {
@@ -59,112 +57,128 @@ export default class QRCodeScreen extends Component {
           this._drawer = ref;
         }}
         content={<SideBar navigator={this._navigator} />}
-        onClose={() => this.closeDrawer()}>        
-          <ImageBackground
-            style={{width: '100%', height: '100%'}}
-            resizeMode="cover"
-            source={require('../../imagens/bg-internas.png')}>            
-            <View style={{flex:1, flexDirection:'column'}}>
-              
-            <View style={{width: wp('100%'), height:hp('15%'), alignItems:'center', flexDirection: 'row'}}>
-                <TouchableWithoutFeedback
-                  onPress={() => NavigationService.simpleNavigate('Perfil')}>
-                  <Image
-                    style={{                    
-                      resizeMode: 'contain',
-                      marginLeft: wp('2%'),
-                      width: wp('5%'),
-                      height: hp('5%'),
-                    }}
-                    source={require('../../imagens/seta-voltar.png')}
-                  />
-                </TouchableWithoutFeedback>
+        onClose={() => this.closeDrawer()}>
+        <ImageBackground
+          style={{width: '100%', height: '100%'}}
+          resizeMode="cover"
+          source={require('../../imagens/bg-internas.png')}>
+          <View style={{flex: 1, flexDirection: 'column'}}>
+            <View
+              style={{
+                width: wp('100%'),
+                height: hp('15%'),
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}>
+              <TouchableWithoutFeedback
+                onPress={() => NavigationService.simpleNavigate('Perfil')}>
                 <Image
-                  style={{                
-                    
-                    marginLeft: wp('4%'),
+                  style={{
                     resizeMode: 'contain',
-                    width: wp('50%'),
-                    height: wp('30%'),
-                    
+                    marginLeft: wp('2%'),
+                    width: wp('5%'),
+                    height: hp('5%'),
                   }}
-                  source={require('../../imagens/logo-internas-header.png')}
+                  source={require('../../imagens/seta-voltar.png')}
                 />
-                <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                  <View style={{ flex: 1, marginRight:wp('4%'), alignItems:'flex-end'}}>
-                    <Image
-                      style={{                                        
-                        resizeMode: 'contain',
-                        width: wp('9%'),
-                        height: hp('9%'),
-                      }}
-                      source={require('../../imagens/ico-menu-abrir.png')}
-                    />
-                  </View>
-                </TouchableWithoutFeedback>             
-
-              </View>
+              </TouchableWithoutFeedback>
               <Image
-                  style={{           
-                    marginTop:hp('-2%'),      
-                    resizeMode: 'contain',
-                    width: wp('100%'),
-                    height: hp('1%'),
-                  }}
-                  source={require('../../imagens/line-div-header.png')}
-              />               
-  
-
-                <Text
+                style={{
+                  marginLeft: wp('4%'),
+                  resizeMode: 'contain',
+                  width: wp('50%'),
+                  height: wp('30%'),
+                }}
+                source={require('../../imagens/logo-internas-header.png')}
+              />
+              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                <View
                   style={{
-                    fontSize: 0.03 * windowH,
-                    color: 'gray',                    
-                    marginLeft: wp('4%'),
-                    
-                    }}>Minha Sinn.id</Text>
+                    flex: 1,
+                    marginRight: wp('4%'),
+                    alignItems: 'flex-end',
+                  }}>
+                  <Image
+                    style={{
+                      resizeMode: 'contain',
+                      width: wp('9%'),
+                      height: hp('9%'),
+                    }}
+                    source={require('../../imagens/ico-menu-abrir.png')}
+                  />
+                </View>
+              </TouchableWithoutFeedback>
+            </View>
+            <Image
+              style={{
+                marginTop: hp('-2%'),
+                resizeMode: 'contain',
+                width: wp('100%'),
+                height: hp('1%'),
+              }}
+              source={require('../../imagens/line-div-header.png')}
+            />
 
-                <Text
-                  style={{
-                    marginTop: hp('1%'),
-                    marginLeft: wp('4%'),
-                    fontSize: 0.025 * windowH,
-                    color: 'white',
-                  }}>Esta é a sua{' '}<Text style={{ffontSize: 0.025 * windowH, fontWeight: 'bold'}}>CHAVE PRIVADA,{' '}</Text>não a</Text>
-                <Text style={{marginLeft: wp('4%'), fontSize: 0.025 * windowH, color: 'white'}}>entregue ou mostre para desconhecidos</Text>
-                <Text style={{marginLeft: wp('4%'), fontSize: 0.025 * windowH, color: 'white'}}>e em ambientes cuja rede não seja segura</Text> 
-               
+            <Text
+              style={{
+                fontSize: 0.03 * windowH,
+                color: 'gray',
+                marginLeft: wp('4%'),
+              }}>
+              Minha Sinn.id
+            </Text>
 
-              
-              <View style={{ width:wp('100%'), height:hp('68%'), }}>
-                 <QRCodeScanner
-                  onRead={e => alert(e.data)}
-                  showMarker={true}
-                  checkAndroid6Permissions={true}
-                  ref={elem => {
-                    this.scanner = elem;
-                  }}          
-                  cameraStyle={styles.cameraContainer}
-                />               
-              </View>  
-   
-              </View>
-          </ImageBackground>       
+            <Text
+              style={{
+                marginTop: hp('1%'),
+                marginLeft: wp('4%'),
+                fontSize: 0.025 * windowH,
+                color: 'white',
+              }}>
+              Esta é a sua{' '}
+              <Text style={{ffontSize: 0.025 * windowH, fontWeight: 'bold'}}>
+                CHAVE PRIVADA,{' '}
+              </Text>
+              não a
+            </Text>
+            <Text
+              style={{
+                marginLeft: wp('4%'),
+                fontSize: 0.025 * windowH,
+                color: 'white',
+              }}>
+              entregue ou mostre para desconhecidos
+            </Text>
+            <Text
+              style={{
+                marginLeft: wp('4%'),
+                fontSize: 0.025 * windowH,
+                color: 'white',
+              }}>
+              e em ambientes cuja rede não seja segura
+            </Text>
+
+            <View
+              style={{
+                width: wp('100%'),
+                height: hp('68%'),
+                overflow: 'hidden',
+              }}>
+              <QRCodeScanner
+                onRead={e => alert(e.data)}
+                showMarker={true}
+                checkAndroid6Permissions={true}
+                ref={elem => {
+                  this.scanner = elem;
+                }}
+              />
+            </View>
+          </View>
+        </ImageBackground>
       </Drawer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  
-  cameraContainer: {
-    height:hp('50%'),
-    width:hp('56%'),
-    paddingTop:hp('20%'),
-    paddingBottom:hp('10%'),
-    //marginLeft:wp('4%'),    
-    //marginBottom:hp('1%')
-  },
-});
 
 const windowW = Dimensions.get('window').width;
 const windowH = Dimensions.get('window').height;

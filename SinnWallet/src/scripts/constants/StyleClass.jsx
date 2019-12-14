@@ -198,7 +198,7 @@ export const loginStyles = {
     backgroundColor: '#fff',
     width: wp('73%'),
     height: hp('7.5%'),
-    borderRadius: 25
+    borderRadius: 25,
   },
 
   searchIcon: {
@@ -210,10 +210,10 @@ export const loginStyles = {
     fontSize: 0.025 * windowH,
     paddingTop: hp('0.1%'),
     paddingLeft: wp('2%'),
-    paddingBottom: hp('0.1%'),    
+    paddingBottom: hp('0.1%'),
     backgroundColor: 'white',
     color: '#424242',
-    height:hp('4%'),
+    height: hp('4%'),
     width: wp('50%'),
   },
 
@@ -243,44 +243,37 @@ export const menuIniciarStyles = {
     flexDirection: 'column',
   },
 
-  viewHeadM: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-
   viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
     flexDirection: 'row',
   },
 
-  viewLogo: {
-    marginLeft: wp('5%'),
-    marginTop: hp('4.8%'),
-  },
-
   imagemLogo: {
-    marginTop: hp('5%'),
     marginLeft: wp('4%'),
     resizeMode: 'contain',
-    width: 140,
-    height: 21,
+    width: wp('50%'),
+    height: wp('30%'),
   },
 
   viewMenu: {
-    marginLeft: wp('40%'),
-    marginTop: hp('4%'),
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
   },
 
   imagemMenu: {
     resizeMode: 'contain',
-    width: 35,
-    height: 30,
+    width: wp('9%'),
+    height: hp('9%'),
   },
 
   imagemLinha: {
-    marginTop: hp('3%'),
+    marginTop: hp('-3%'),
     resizeMode: 'contain',
     width: wp('100%'),
-    height: 1,
+    height: hp('1%'),
   },
 
   viewApresentacao: {
@@ -400,42 +393,45 @@ export const profileStyles = {
   },
 
   viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
     flexDirection: 'row',
   },
 
   imagemLogo: {
-    marginTop: hp('5%'),
     marginLeft: wp('4%'),
     resizeMode: 'contain',
-    width: 140,
-    height: 21,
+    width: wp('50%'),
+    height: wp('30%'),
   },
 
   viewMenu: {
-    marginLeft: wp('40%'),
-    marginTop: hp('4%'),
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
   },
 
   imagemMenu: {
     resizeMode: 'contain',
-    width: 35,
-    height: 30,
+    width: wp('9%'),
+    height: hp('9%'),
   },
 
   imagemLinha: {
-    marginTop: hp('3%'),
+    marginTop: hp('-3%'),
     resizeMode: 'contain',
     width: wp('100%'),
-    height: 1,
+    height: hp('1%'),
   },
 
   viewPerfil: {
     flex: 2,
     alignItems: 'center',
-    justifyContent:'center',    
+    justifyContent: 'center',
   },
 
-  viewTextos: {    
+  viewTextos: {
     flex: 1.5,
     alignItems: 'center',
   },
@@ -446,11 +442,11 @@ export const profileStyles = {
     height: hp('26%'),
   },
 
-  textoMascara: {    
+  textoMascara: {
     fontSize: 0.11 * windowH,
     color: 'white',
     position: 'absolute',
-    textAlign: 'center',    
+    textAlign: 'center',
   },
 
   textoNome: {
@@ -470,7 +466,6 @@ export const profileStyles = {
   },
 
   viewBotoes: {
-    
     flex: 3,
     alignItems: 'center',
   },
@@ -541,12 +536,12 @@ export const menuInterno = {
   },
 
   viewHead: {
-    flex: 1,    
-    flexDirection:'row',
-    marginLeft:wp('4%')   
+    flex: 1,
+    flexDirection: 'row',
+    marginLeft: wp('4%'),
   },
 
-  imagemMascara: {    
+  imagemMascara: {
     width: wp('20%'),
     height: hp('20%'),
     resizeMode: 'contain',
@@ -554,18 +549,18 @@ export const menuInterno = {
 
   textoMascara: {
     fontSize: 0.07 * windowH,
-    color: 'white',       
+    color: 'white',
     position: 'absolute',
   },
 
   viewTextos: {
     width: 0,
-    flexGrow: 1,    
-    flexDirection: 'column',    
+    flexGrow: 1,
+    flexDirection: 'column',
     marginTop: hp('3.5%'),
   },
 
-  textoNome: {    
+  textoNome: {
     marginLeft: wp('7%'),
     marginTop: hp('1%'),
     marginRight: wp('2%'),
@@ -743,5 +738,90 @@ export const menuInterno = {
     marginTop: hp('2%'),
     fontSize: 0.023 * windowH,
     color: 'white',
+  },
+};
+
+export const CarteiraStyles = {
+  viewMaior: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+
+  viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+  imagemSeta: {
+    resizeMode: 'contain',
+    marginLeft: wp('2%'),
+    width: wp('5%'),
+    height: hp('5%'),
+  },
+
+  imagemLogo: {
+    marginLeft: wp('4%'),
+    resizeMode: 'contain',
+    width: wp('50%'),
+    height: wp('30%'),
+  },
+
+  viewMenu: {
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
+  },
+
+  imagemMenu: {
+    resizeMode: 'contain',
+    width: wp('9%'),
+    height: hp('9%'),
+  },
+
+  imagemLinha: {
+    marginTop: hp('-3%'),
+    resizeMode: 'contain',
+    width: wp('100%'),
+    height: hp('1%'),
+  },
+
+  textoCarteira: {
+    fontSize: 0.03 * windowH,
+    color: 'gray',
+    marginLeft: wp('6%'),
+    marginTop: hp('2%'),
+  },
+
+  viewDocumentos: {
+    flex: 2.8,
+  },
+
+  viewBottom: {
+    flex: 1.1,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+  },
+
+  textoBottom: {
+    textAlign: 'left',
+    fontSize: 0.03 * windowH,
+    color: 'white',
+    marginLeft: wp('6%'),
+    marginRight: wp('8%'),
+    marginTop: hp('2%'),
+  },
+
+  textoBottomUm: {
+    fontWeight: 'bold',
+  },
+
+  imagemDocumento: {
+    alignSelf: 'center',
+    resizeMode: 'contain',
+    marginTop: hp('2%'),
+    width: wp('70%'),
+    height: hp('10%'),
   },
 };

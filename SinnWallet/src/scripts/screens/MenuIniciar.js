@@ -12,7 +12,6 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
@@ -39,42 +38,24 @@ export default class ProfileScreen extends Component {
             style={{width: '100%', height: '100%'}}
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
-            <View style={{width: wp('100%'), height:hp('15%'), alignItems:'center', flexDirection: 'row'}}>              
+            <View style={styleClass.menuIniciarStyles.viewHead}>
               <Image
-                style={{                
-                  
-                  marginLeft: wp('4%'),
-                  resizeMode: 'contain',
-                  width: wp('50%'),
-                  height: wp('30%'),
-                  
-                }}
+                style={styleClass.menuIniciarStyles.imagemLogo}
                 source={require('../../imagens/logo-internas-header.png')}
               />
               <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                <View style={{ flex: 1, marginRight:wp('4%'), alignItems:'flex-end'}}>
+                <View style={styleClass.menuIniciarStyles.viewMenu}>
                   <Image
-                    style={{                                        
-                      resizeMode: 'contain',
-                      width: wp('9%'),
-                      height: hp('9%'),
-                    }}
+                    style={styleClass.menuIniciarStyles.imagemMenu}
                     source={require('../../imagens/ico-menu-abrir.png')}
                   />
                 </View>
-              </TouchableWithoutFeedback>             
-
+              </TouchableWithoutFeedback>
             </View>
             <Image
-                style={{
-                  marginTop:hp('-3%'),                 
-                  resizeMode: 'contain',
-                  width: wp('100%'),
-                  height: hp('1%'),
-                }}
-                source={require('../../imagens/line-div-header.png')}
-              />
-
+              style={styleClass.menuIniciarStyles.imagemLinha}
+              source={require('../../imagens/line-div-header.png')}
+            />
             <View style={styleClass.menuIniciarStyles.viewApresentacao}>
               <Image
                 style={styleClass.menuIniciarStyles.imagemApresentacao}

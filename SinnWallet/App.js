@@ -30,7 +30,7 @@ const TopLevelNavigator = createStackNavigator(
     Politica: {screen: PoliticaScreen},
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'Carteira',
     headerMode: 'none',
   },
 );

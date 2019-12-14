@@ -53,8 +53,9 @@ export default class LoginScreen extends Component {
               <View style={styleClass.loginStyles.searchSectionUm}>
                 <Icon
                   style={styleClass.loginStyles.searchIcon}
-                  name="email"
-                  size={20}
+                  name="at"
+                  type="font-awesome"
+                  size={hp('4%')}
                   color="#000"
                 />
                 <TextInput
@@ -67,8 +68,9 @@ export default class LoginScreen extends Component {
               <View style={styleClass.loginStyles.searchSectionDois}>
                 <Icon
                   style={styleClass.loginStyles.searchIcon}
-                  name="email"
-                  size={20}
+                  name="asterisk"
+                  type="font-awesome"
+                  size={hp('4%')}
                   color="#000"
                 />
                 <TextInput
@@ -76,6 +78,7 @@ export default class LoginScreen extends Component {
                   placeholder="Digite a sua senha"
                   placeholderTextColor="black"
                   underlineColorAndroid="transparent"
+                  secureTextEntry
                 />
               </View>
 

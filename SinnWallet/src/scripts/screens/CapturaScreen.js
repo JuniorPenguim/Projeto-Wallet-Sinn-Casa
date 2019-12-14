@@ -48,58 +48,72 @@ export default class SplashScreen extends Component {
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
           <View style={{flex: 1, flexDirection: 'column'}}>
-            <View style={{width: wp('100%'), height:hp('15%'), alignItems:'center', flexDirection: 'row'}}>
-                  <TouchableWithoutFeedback
-                    onPress={() => NavigationService.simpleNavigate('Carteira')}>
-                    <Image
-                      style={{                    
-                        resizeMode: 'contain',
-                        marginLeft: wp('2%'),
-                        width: wp('5%'),
-                        height: hp('5%'),
-                      }}
-                      source={require('../../imagens/seta-voltar.png')}
-                    />
-                  </TouchableWithoutFeedback>
+            <View
+              style={{
+                width: wp('100%'),
+                height: hp('15%'),
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}>
+              <TouchableWithoutFeedback
+                onPress={() => NavigationService.simpleNavigate('Carteira')}>
+                <Image
+                  style={{
+                    resizeMode: 'contain',
+                    marginLeft: wp('2%'),
+                    width: wp('5%'),
+                    height: hp('5%'),
+                  }}
+                  source={require('../../imagens/seta-voltar.png')}
+                />
+              </TouchableWithoutFeedback>
+              <Image
+                style={{
+                  marginLeft: wp('4%'),
+                  resizeMode: 'contain',
+                  width: wp('50%'),
+                  height: wp('30%'),
+                }}
+                source={require('../../imagens/logo-internas-header.png')}
+              />
+              <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
+                <View
+                  style={{
+                    flex: 1,
+                    marginRight: wp('4%'),
+                    alignItems: 'flex-end',
+                  }}>
                   <Image
-                    style={{                
-                      
-                      marginLeft: wp('4%'),
+                    style={{
                       resizeMode: 'contain',
-                      width: wp('50%'),
-                      height: wp('30%'),
-                      
+                      width: wp('9%'),
+                      height: hp('9%'),
                     }}
-                    source={require('../../imagens/logo-internas-header.png')}
+                    source={require('../../imagens/ico-menu-abrir.png')}
                   />
-                  <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                    <View style={{ flex: 1, marginRight:wp('4%'), alignItems:'flex-end'}}>
-                      <Image
-                        style={{                                        
-                          resizeMode: 'contain',
-                          width: wp('9%'),
-                          height: hp('9%'),
-                        }}
-                        source={require('../../imagens/ico-menu-abrir.png')}
-                      />
-                    </View>
-                  </TouchableWithoutFeedback>             
-
+                </View>
+              </TouchableWithoutFeedback>
             </View>
             <Image
-              style={{           
-                marginTop:hp('-2%'),      
+              style={{
+                marginTop: hp('-2%'),
                 resizeMode: 'contain',
                 width: wp('100%'),
                 height: hp('1%'),
               }}
               source={require('../../imagens/line-div-header.png')}
-                />
+            />
 
-            <View style={{backgroundColor:'white', marginTop:hp('1%'), width:wp('100%'), height:hp('70%')}}>
-              {/* <RNCamera
+            <View
+              style={{
+                marginTop: hp('1%'),
+                width: wp('100%'),
+                height: hp('70%'),
+                overflow: 'hidden',
+              }}>
+              <RNCamera
                 width={wp('100%')}
-                height={hp('32%')}
+                height={hp('70%')}
                 ref={camera => {
                   this.camera = camera;
                 }}
@@ -111,14 +125,14 @@ export default class SplashScreen extends Component {
                 permissionDialogMessage={
                   'We need your permission to use your camera phone'
                 }
-              /> */}
-            </View>  
+              />
+            </View>
 
-            {/* <View
+            <View
               style={{
                 position: 'absolute',
                 marginLeft: wp('2%'),
-                marginTop: hp('17%'),
+                marginTop: hp('17.5%'),
               }}>
               <Image
                 style={{
@@ -127,14 +141,13 @@ export default class SplashScreen extends Component {
                 }}
                 source={require('../../imagens/mascara-captura-foto-documento.png')}
               />
-            </View> */}
+            </View>
 
-             <TouchableWithoutFeedback
+            <TouchableWithoutFeedback
               onPress={this.takePicture}
               style={styles.capture}>
               <View
                 style={{
-                  
                   alignItems: 'center',
                   justifyContent: 'flex-end',
                 }}>
@@ -147,7 +160,7 @@ export default class SplashScreen extends Component {
                   source={require('../../imagens/bt-capturar-documento.png')}
                 />
               </View>
-            </TouchableWithoutFeedback> 
+            </TouchableWithoutFeedback>
           </View>
         </ImageBackground>
       </Drawer>
