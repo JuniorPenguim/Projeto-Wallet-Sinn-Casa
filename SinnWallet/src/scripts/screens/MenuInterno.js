@@ -5,10 +5,6 @@ import {Content} from 'native-base';
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
 
-//import ProfileScreen, * as profileScreen from '../screens/ProfileScreen';
-//import {Avatar} from 'react-native-elements';
-//import NavigationService from '../../../NavigationService';
-
 export default class MenuInterno extends Component {
   render() {
     return (
@@ -23,12 +19,12 @@ export default class MenuInterno extends Component {
             </TouchableWithoutFeedback>
           </View>
           <View style={styleClass.menuInterno.viewHead}>
-            <View style={{justifyContent:'center', alignItems:'center'}}>
-            <Image
-              style={styleClass.menuInterno.imagemMascara}
-              source={require('../../imagens/mascara-foto-usuario-interna-menu.png')}
-            />
-            <Text style={styleClass.menuInterno.textoMascara}>N</Text>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <Image
+                style={styleClass.menuInterno.imagemMascara}
+                source={require('../../imagens/mascara-foto-usuario-interna-menu.png')}
+              />
+              <Text style={styleClass.menuInterno.textoMascara}>N</Text>
             </View>
             <View style={styleClass.menuInterno.viewTextos}>
               <Text style={styleClass.menuInterno.textoNome}>
@@ -85,7 +81,8 @@ export default class MenuInterno extends Component {
                 Colecionáveis
               </Text>
             </View>
-            <TouchableWithoutFeedback onPress={() => NavigationService.simpleNavigate('Politica')}> 
+            <TouchableWithoutFeedback
+              onPress={() => NavigationService.simpleNavigate('Politica')}>
               <View style={styleClass.menuInterno.viewPolitica}>
                 <Image
                   style={styleClass.menuInterno.imagemPolitica}

@@ -8,10 +8,6 @@ import {
 } from 'react-native';
 import {Text, Drawer} from 'native-base';
 import {connect} from 'react-redux';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
 
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';

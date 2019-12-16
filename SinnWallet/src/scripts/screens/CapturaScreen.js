@@ -4,8 +4,6 @@ import {
   Image,
   TouchableWithoutFeedback,
   ImageBackground,
-  Dimensions,
-  StyleSheet,
 } from 'react-native';
 import {Drawer} from 'native-base';
 import {RNCamera} from 'react-native-camera';
@@ -14,6 +12,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import * as styleClass from '../constants/StyleClass';
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 
@@ -47,70 +46,34 @@ export default class SplashScreen extends Component {
           style={{width: '100%', height: '100%'}}
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
-          <View style={{flex: 1, flexDirection: 'column'}}>
-            <View
-              style={{
-                width: wp('100%'),
-                height: hp('15%'),
-                alignItems: 'center',
-                flexDirection: 'row',
-              }}>
+          <View style={styleClass.capturaStyles.viewMaior}>
+            <View style={styleClass.capturaStyles.viewHead}>
               <TouchableWithoutFeedback
                 onPress={() => NavigationService.simpleNavigate('Carteira')}>
                 <Image
-                  style={{
-                    resizeMode: 'contain',
-                    marginLeft: wp('2%'),
-                    width: wp('5%'),
-                    height: hp('5%'),
-                  }}
+                  style={styleClass.capturaStyles.imagemSeta}
                   source={require('../../imagens/seta-voltar.png')}
                 />
               </TouchableWithoutFeedback>
               <Image
-                style={{
-                  marginLeft: wp('4%'),
-                  resizeMode: 'contain',
-                  width: wp('50%'),
-                  height: wp('30%'),
-                }}
+                style={styleClass.capturaStyles.imagemLogo}
                 source={require('../../imagens/logo-internas-header.png')}
               />
               <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                <View
-                  style={{
-                    flex: 1,
-                    marginRight: wp('4%'),
-                    alignItems: 'flex-end',
-                  }}>
+                <View style={styleClass.capturaStyles.viewMenu}>
                   <Image
-                    style={{
-                      resizeMode: 'contain',
-                      width: wp('9%'),
-                      height: hp('9%'),
-                    }}
+                    style={styleClass.capturaStyles.imagemMenu}
                     source={require('../../imagens/ico-menu-abrir.png')}
                   />
                 </View>
               </TouchableWithoutFeedback>
             </View>
             <Image
-              style={{
-                marginTop: hp('-2%'),
-                resizeMode: 'contain',
-                width: wp('100%'),
-                height: hp('1%'),
-              }}
+              style={styleClass.capturaStyles.imagemLinha}
               source={require('../../imagens/line-div-header.png')}
             />
 
-            <View
-              style={{
-                marginTop: hp('1%'),
-                width: wp('100%'),
-                height: hp('70%'),
-                overflow: 'hidden',
-              }}>
+            <View style={styleClass.capturaStyles.viewCamera}>
               <RNCamera
                 width={wp('100%')}
                 height={hp('70%')}
@@ -128,35 +91,19 @@ export default class SplashScreen extends Component {
               />
             </View>
 
-            <View
-              style={{
-                position: 'absolute',
-                marginLeft: wp('2%'),
-                marginTop: hp('17.5%'),
-              }}>
+            <View style={styleClass.capturaStyles.viewMascara}>
               <Image
-                style={{
-                  width: wp('95%'),
-                  height: hp('65%'),
-                }}
+                style={styleClass.capturaStyles.imagemMascara}
                 source={require('../../imagens/mascara-captura-foto-documento.png')}
               />
             </View>
 
             <TouchableWithoutFeedback
               onPress={this.takePicture}
-              style={styles.capture}>
-              <View
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
-                }}>
+              style={styleClass.capturaStyles.estiloCaptura}>
+              <View style={styleClass.capturaStyles.viewCaptura}>
                 <Image
-                  style={{
-                    resizeMode: 'contain',
-                    width: wp('70%'),
-                    height: hp('10%'),
-                  }}
+                  style={styleClass.capturaStyles.imagemCaptura}
                   source={require('../../imagens/bt-capturar-documento.png')}
                 />
               </View>
@@ -167,36 +114,3 @@ export default class SplashScreen extends Component {
     );
   }
 }
-
-const windowW = Dimensions.get('window').width;
-const windowH = Dimensions.get('window').height;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'black',
-  },
-  preview: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  buttonContainer: {
-    flex: 0,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    paddingHorizontal: 20,
-    alignSelf: 'center',
-    margin: 20,
-  },
-  buttonText: {
-    fontSize: 14,
-  },
-});

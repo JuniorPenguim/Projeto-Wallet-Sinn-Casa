@@ -4,7 +4,6 @@ import {
   Image,
   TouchableWithoutFeedback,
   ImageBackground,
-  Dimensions,
 } from 'react-native';
 import {Text} from 'react-native-elements';
 import {Container, Drawer} from 'native-base';
@@ -35,40 +34,40 @@ export default class SplashScreen extends Component {
             style={{width: '100%', height: '100%'}}
             resizeMode="cover"
             source={require('../../imagens/bg-internas.png')}>
-            <View style={styleClass.CarteiraStyles.viewMaior}>
-              <View style={styleClass.CarteiraStyles.viewHead}>
+            <View style={styleClass.carteiraStyles.viewMaior}>
+              <View style={styleClass.carteiraStyles.viewHead}>
                 <TouchableWithoutFeedback
                   onPress={() => NavigationService.simpleNavigate('Perfil')}>
                   <Image
-                    style={styleClass.CarteiraStyles.imagemSeta}
+                    style={styleClass.carteiraStyles.imagemSeta}
                     source={require('../../imagens/seta-voltar.png')}
                   />
                 </TouchableWithoutFeedback>
                 <Image
-                  style={styleClass.CarteiraStyles.imagemLogo}
+                  style={styleClass.carteiraStyles.imagemLogo}
                   source={require('../../imagens/logo-internas-header.png')}
                 />
                 <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                  <View style={styleClass.CarteiraStyles.viewMenu}>
+                  <View style={styleClass.carteiraStyles.viewMenu}>
                     <Image
-                      style={styleClass.CarteiraStyles.imagemMenu}
+                      style={styleClass.carteiraStyles.imagemMenu}
                       source={require('../../imagens/ico-menu-abrir.png')}
                     />
                   </View>
                 </TouchableWithoutFeedback>
               </View>
               <Image
-                style={styleClass.CarteiraStyles.imagemLinha}
+                style={styleClass.carteiraStyles.imagemLinha}
                 source={require('../../imagens/line-div-header.png')}
               />
-              <Text style={styleClass.CarteiraStyles.textoCarteira}>
+              <Text style={styleClass.carteiraStyles.textoCarteira}>
                 Minha carteira
               </Text>
-              <View style={styleClass.CarteiraStyles.viewDocumentos}></View>
-              <View style={styleClass.CarteiraStyles.viewBottom}>
-                <Text style={styleClass.CarteiraStyles.textoBottom}>
+              <View style={styleClass.carteiraStyles.viewDocumentos}></View>
+              <View style={styleClass.carteiraStyles.viewBottom}>
+                <Text style={styleClass.carteiraStyles.textoBottom}>
                   Adicione um novo documento digital à sua{' '}
-                  <Text style={styleClass.CarteiraStyles.textoBottomUm}>
+                  <Text style={styleClass.carteiraStyles.textoBottomUm}>
                     wallet
                   </Text>
                 </Text>
@@ -76,7 +75,7 @@ export default class SplashScreen extends Component {
                 <TouchableWithoutFeedback
                   onPress={() => NavigationService.simpleNavigate('Captura')}>
                   <Image
-                    style={styleClass.CarteiraStyles.imagemDocumento}
+                    style={styleClass.carteiraStyles.imagemDocumento}
                     source={require('../../imagens/bt-novo-documento.png')}
                   />
                 </TouchableWithoutFeedback>

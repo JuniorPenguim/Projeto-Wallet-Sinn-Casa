@@ -3,45 +3,17 @@ import {
   View,
   Text,
   Image,
-  Linking,
-  Dimensions,
-  StyleSheet,
   ImageBackground,
   TouchableWithoutFeedback,
 } from 'react-native';
 import {Drawer} from 'native-base';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
 
+import * as styleClass from '../constants/StyleClass';
 import SideBar from './MenuInterno';
 import NavigationService from '../../../NavigationService';
 
 export default class QRCodeScreen extends Component {
-  state = {
-    modalVisible: false,
-    success: null,
-    url: '',
-  };
-
-  openLink = () => {
-    Linking.openURL(this.state.url).catch(err =>
-      alert('An error occured', err),
-    );
-    this.setState({success: false});
-  };
-
-  handleButton = () => {
-    this.setState({modalVisible: !this.state.modalVisible, success: false});
-    this.scanner.reactivate();
-  };
-
-  onSuccess = async e => {
-    await this.setState({success: true, modalVisible: true, url: e.data});
-  };
-
   closeDrawer() {
     this._drawer._root.close();
   }
@@ -62,108 +34,50 @@ export default class QRCodeScreen extends Component {
           style={{width: '100%', height: '100%'}}
           resizeMode="cover"
           source={require('../../imagens/bg-internas.png')}>
-          <View style={{flex: 1, flexDirection: 'column'}}>
-            <View
-              style={{
-                width: wp('100%'),
-                height: hp('15%'),
-                alignItems: 'center',
-                flexDirection: 'row',
-              }}>
+          <View style={styleClass.qrStyles.viewMaior}>
+            <View style={styleClass.qrStyles.viewHead}>
               <TouchableWithoutFeedback
                 onPress={() => NavigationService.simpleNavigate('Perfil')}>
                 <Image
-                  style={{
-                    resizeMode: 'contain',
-                    marginLeft: wp('2%'),
-                    width: wp('5%'),
-                    height: hp('5%'),
-                  }}
+                  style={styleClass.qrStyles.imagemSeta}
                   source={require('../../imagens/seta-voltar.png')}
                 />
               </TouchableWithoutFeedback>
               <Image
-                style={{
-                  marginLeft: wp('4%'),
-                  resizeMode: 'contain',
-                  width: wp('50%'),
-                  height: wp('30%'),
-                }}
+                style={styleClass.qrStyles.imagemLogo}
                 source={require('../../imagens/logo-internas-header.png')}
               />
               <TouchableWithoutFeedback onPress={() => this.openDrawer()}>
-                <View
-                  style={{
-                    flex: 1,
-                    marginRight: wp('4%'),
-                    alignItems: 'flex-end',
-                  }}>
+                <View style={styleClass.qrStyles.viewMenu}>
                   <Image
-                    style={{
-                      resizeMode: 'contain',
-                      width: wp('9%'),
-                      height: hp('9%'),
-                    }}
+                    style={styleClass.qrStyles.imagemMenu}
                     source={require('../../imagens/ico-menu-abrir.png')}
                   />
                 </View>
               </TouchableWithoutFeedback>
             </View>
             <Image
-              style={{
-                marginTop: hp('-2%'),
-                resizeMode: 'contain',
-                width: wp('100%'),
-                height: hp('1%'),
-              }}
+              style={styleClass.qrStyles.imagemLinha}
               source={require('../../imagens/line-div-header.png')}
             />
 
-            <Text
-              style={{
-                fontSize: 0.03 * windowH,
-                color: 'gray',
-                marginLeft: wp('4%'),
-              }}>
-              Minha Sinn.id
-            </Text>
+            <Text style={styleClass.qrStyles.textoUm}>Minha Sinn.id</Text>
 
-            <Text
-              style={{
-                marginTop: hp('1%'),
-                marginLeft: wp('4%'),
-                fontSize: 0.025 * windowH,
-                color: 'white',
-              }}>
+            <Text style={styleClass.qrStyles.textoDois}>
               Esta é a sua{' '}
-              <Text style={{ffontSize: 0.025 * windowH, fontWeight: 'bold'}}>
+              <Text style={styleClass.qrStyles.textoDoisUm}>
                 CHAVE PRIVADA,{' '}
               </Text>
               não a
             </Text>
-            <Text
-              style={{
-                marginLeft: wp('4%'),
-                fontSize: 0.025 * windowH,
-                color: 'white',
-              }}>
+            <Text style={styleClass.qrStyles.textoTres}>
               entregue ou mostre para desconhecidos
             </Text>
-            <Text
-              style={{
-                marginLeft: wp('4%'),
-                fontSize: 0.025 * windowH,
-                color: 'white',
-              }}>
+            <Text style={styleClass.qrStyles.textoQuatro}>
               e em ambientes cuja rede não seja segura
             </Text>
 
-            <View
-              style={{
-                width: wp('100%'),
-                height: hp('68%'),
-                overflow: 'hidden',
-              }}>
+            <View style={styleClass.qrStyles.viewQr}>
               <QRCodeScanner
                 onRead={e => alert(e.data)}
                 showMarker={true}
@@ -179,6 +93,3 @@ export default class QRCodeScreen extends Component {
     );
   }
 }
-
-const windowW = Dimensions.get('window').width;
-const windowH = Dimensions.get('window').height;

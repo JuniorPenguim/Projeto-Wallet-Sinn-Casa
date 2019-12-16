@@ -100,6 +100,3 @@ export default class LoginScreen extends Component {
     );
   }
 }
-
-const windowW = Dimensions.get('window').width;
-const windowH = Dimensions.get('window').height;

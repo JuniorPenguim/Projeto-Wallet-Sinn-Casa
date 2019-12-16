@@ -741,7 +741,7 @@ export const menuInterno = {
   },
 };
 
-export const CarteiraStyles = {
+export const carteiraStyles = {
   viewMaior: {
     flex: 1,
     flexDirection: 'column',
@@ -823,5 +823,257 @@ export const CarteiraStyles = {
     marginTop: hp('2%'),
     width: wp('70%'),
     height: hp('10%'),
+  },
+};
+
+export const capturaStyles = {
+  viewMaior: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+
+  viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+  imagemSeta: {
+    resizeMode: 'contain',
+    marginLeft: wp('2%'),
+    width: wp('5%'),
+    height: hp('5%'),
+  },
+
+  imagemLogo: {
+    marginLeft: wp('4%'),
+    resizeMode: 'contain',
+    width: wp('50%'),
+    height: wp('30%'),
+  },
+
+  viewMenu: {
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
+  },
+
+  imagemMenu: {
+    resizeMode: 'contain',
+    width: wp('9%'),
+    height: hp('9%'),
+  },
+
+  imagemLinha: {
+    marginTop: hp('-3%'),
+    resizeMode: 'contain',
+    width: wp('100%'),
+    height: hp('1%'),
+  },
+
+  viewCamera: {
+    marginTop: hp('1%'),
+    width: wp('100%'),
+    height: hp('70%'),
+    overflow: 'hidden',
+  },
+
+  viewMascara: {
+    position: 'absolute',
+    marginLeft: wp('2%'),
+    marginTop: hp('17.5%'),
+  },
+
+  imagemMascara: {
+    width: wp('95%'),
+    height: hp('65%'),
+  },
+
+  viewCaptura: {
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+
+  imagemCaptura: {
+    resizeMode: 'contain',
+    width: wp('70%'),
+    height: hp('10%'),
+  },
+
+  estiloCaptura: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    padding: 15,
+    paddingHorizontal: 20,
+    alignSelf: 'center',
+    margin: 20,
+  },
+};
+
+export const qrStyles = {
+  viewMaior: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+
+  viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+  imagemSeta: {
+    resizeMode: 'contain',
+    marginLeft: wp('2%'),
+    width: wp('5%'),
+    height: hp('5%'),
+  },
+
+  imagemLogo: {
+    marginLeft: wp('4%'),
+    resizeMode: 'contain',
+    width: wp('50%'),
+    height: wp('30%'),
+  },
+
+  viewMenu: {
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
+  },
+
+  imagemMenu: {
+    resizeMode: 'contain',
+    width: wp('9%'),
+    height: hp('9%'),
+  },
+
+  imagemLinha: {
+    marginTop: hp('-3%'),
+    resizeMode: 'contain',
+    width: wp('100%'),
+    height: hp('1%'),
+  },
+
+  textoUm: {
+    fontSize: 0.03 * windowH,
+    color: 'gray',
+    marginLeft: wp('4%'),
+  },
+
+  textoDois: {
+    marginTop: hp('1%'),
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  textoDoisUm: {
+    fontSize: 0.025 * windowH,
+    fontWeight: 'bold',
+  },
+
+  textoTres: {
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  textoQuatro: {
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  viewQr: {
+    width: wp('100%'),
+    height: hp('68%'),
+    overflow: 'hidden',
+  },
+};
+
+export const politicaStyles = {
+  viewMaior: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+
+  viewHead: {
+    width: wp('100%'),
+    height: hp('15%'),
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+  imagemSeta: {
+    resizeMode: 'contain',
+    marginLeft: wp('2%'),
+    width: wp('5%'),
+    height: hp('5%'),
+  },
+
+  imagemLogo: {
+    marginLeft: wp('4%'),
+    resizeMode: 'contain',
+    width: wp('50%'),
+    height: wp('30%'),
+  },
+
+  viewMenu: {
+    flex: 1,
+    marginRight: wp('4%'),
+    alignItems: 'flex-end',
+  },
+
+  imagemMenu: {
+    resizeMode: 'contain',
+    width: wp('9%'),
+    height: hp('9%'),
+  },
+
+  imagemLinha: {
+    marginTop: hp('-3%'),
+    resizeMode: 'contain',
+    width: wp('100%'),
+    height: hp('1%'),
+  },
+
+  textoUm: {
+    fontSize: 0.03 * windowH,
+    color: 'gray',
+    marginLeft: wp('4%'),
+  },
+
+  textoDois: {
+    marginTop: hp('1%'),
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  textoDoisUm: {
+    fontSize: 0.025 * windowH,
+    fontWeight: 'bold',
+  },
+
+  textoTres: {
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  textoQuatro: {
+    marginLeft: wp('4%'),
+    fontSize: 0.025 * windowH,
+    color: 'white',
+  },
+
+  viewQr: {
+    width: wp('100%'),
+    height: hp('68%'),
+    overflow: 'hidden',
   },
 };

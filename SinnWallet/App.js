@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {createAppContainer, Header} from 'react-navigation';
+import React from 'react';
+import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Container} from 'native-base';
 import FlashMessage from 'react-native-flash-message';
@@ -30,7 +30,7 @@ const TopLevelNavigator = createStackNavigator(
     Politica: {screen: PoliticaScreen},
   },
   {
-    initialRouteName: 'Carteira',
+    initialRouteName: 'Splash',
     headerMode: 'none',
   },
 );
