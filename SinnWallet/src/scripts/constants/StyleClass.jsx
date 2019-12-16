@@ -872,22 +872,28 @@ export const capturaStyles = {
     height: hp('1%'),
   },
 
+  textoUm:{
+    marginLeft:wp('3%'),
+    fontSize: 0.03 * windowH,
+    color:'gray',
+  },
+
   viewCamera: {
     marginTop: hp('1%'),
     width: wp('100%'),
     height: hp('70%'),
     overflow: 'hidden',
-  },
-
-  viewMascara: {
-    position: 'absolute',
-    marginLeft: wp('2%'),
-    marginTop: hp('17.5%'),
-  },
+    backgroundColor:'yellow',
+  },  
 
   imagemMascara: {
+    //backgroundColor:'yellow',
+    resizeMode:'contain',
+    marginLeft:wp('2%'),
+    marginRight:wp('2%'),
+    //marginTop:hp('1.5%'),
     width: wp('95%'),
-    height: hp('65%'),
+    height: hp('70%'),
   },
 
   viewCaptura: {
@@ -990,7 +996,7 @@ export const qrStyles = {
 
   viewQr: {
     width: wp('100%'),
-    height: hp('68%'),
+    height: hp('65%'),
     overflow: 'hidden',
   },
 };

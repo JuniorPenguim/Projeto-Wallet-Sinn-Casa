@@ -74,7 +74,10 @@ export default class QRCodeScreen extends Component {
               entregue ou mostre para desconhecidos
             </Text>
             <Text style={styleClass.qrStyles.textoQuatro}>
-              e em ambientes cuja rede não seja segura
+              e em ambientes cuja rede não seja 
+            </Text>
+            <Text style={styleClass.qrStyles.textoQuatro}>
+              segura.
             </Text>
 
             <View style={styleClass.qrStyles.viewQr}>

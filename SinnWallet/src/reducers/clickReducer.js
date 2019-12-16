@@ -6,7 +6,7 @@ export const clickReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'CLICK_UPDATE_VALUE':
       return {
-        newValue: action.newValue,
+       ...state, newValue: action.action,
       };
     default:
       return state;

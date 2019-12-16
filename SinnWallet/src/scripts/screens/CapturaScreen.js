@@ -4,6 +4,7 @@ import {
   Image,
   TouchableWithoutFeedback,
   ImageBackground,
+  Text,
 } from 'react-native';
 import {Drawer} from 'native-base';
 import {RNCamera} from 'react-native-camera';
@@ -73,6 +74,8 @@ export default class SplashScreen extends Component {
               source={require('../../imagens/line-div-header.png')}
             />
 
+            <Text style={styleClass.capturaStyles.textoUm}>Adicionar documento</Text> 
+
             <View style={styleClass.capturaStyles.viewCamera}>
               <RNCamera
                 width={wp('100%')}
@@ -89,14 +92,12 @@ export default class SplashScreen extends Component {
                   'We need your permission to use your camera phone'
                 }
               />
-            </View>
 
-            <View style={styleClass.capturaStyles.viewMascara}>
               <Image
                 style={styleClass.capturaStyles.imagemMascara}
                 source={require('../../imagens/mascara-captura-foto-documento.png')}
               />
-            </View>
+            </View>           
 
             <TouchableWithoutFeedback
               onPress={this.takePicture}

@@ -5,6 +5,7 @@ import {
   Image,
   TouchableWithoutFeedback,
   Switch,
+  AsyncStorage,
 } from 'react-native';
 import {Text, Drawer} from 'native-base';
 import {connect} from 'react-redux';
@@ -12,29 +13,39 @@ import {connect} from 'react-redux';
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
-import {clickButton} from '../../../src/actions/index';
+import {clickButton} from '../../actions/index';
 
-export class ProfileScreen extends Component {
-  state = {
-    switchValue: this.props.newValue.newValue,
-  };
-
-  _handleSwitch(value) {
-    this.props.clickButton(value);
-  }
+export class ProfileScreen extends Component {  
 
   closeDrawer() {
     this._drawer._root.close();
   }
-
   openDrawer() {
     this._drawer._root.open();
   }
+  mudaSwitch(e){
+    this.props.clickButton(e);
+  }
+
+  // _storeData = async (valorSwitchSalvo) => {
+  //   try {
+  //     const valorSwitch = JSON.stringify(valorSwitchSalvo);
+  //     await AsyncStorage.setItem('@ValorSwitch: switch', valorSwitch);
+  //   } catch (error) {
+  //     // Error saving data
+  //   }
+  // };
+
+  _storeData = async () => {
+    try {      
+      await AsyncStorage.setItem("@biometry_switch", this.props.newValue.newValue);
+    } catch (error) {
+      // Error saving data
+    }
+  };
 
   render() {
-    {
-      console.log(this.props);
-    }
+    //{console.log(this.props.newValue.newValue)}
     return (
       <Drawer
         ref={ref => {
@@ -60,6 +71,7 @@ export class ProfileScreen extends Component {
                   />
                 </View>
               </TouchableWithoutFeedback>
+              
             </View>
             <Image
               style={styleClass.profileStyles.imagemLinha}
@@ -100,8 +112,8 @@ export class ProfileScreen extends Component {
 
               <View style={styleClass.profileStyles.viewSwitch}>
                 <Switch
-                  onValueChange={this._handleSwitch}
-                  value={this.state.switchValue}
+                  onValueChange={(e)=>this.mudaSwitch(e)}
+                  value={this.props.newValue.newValue}
                   style={styleClass.profileStyles.chaveSwtich}
                 />
                 <Text style={styleClass.profileStyles.textoSwitch}>

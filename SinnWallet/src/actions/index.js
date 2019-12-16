@@ -1,4 +1,7 @@
-export const clickButton = value => ({
-  type: 'CLICK_UPDATE_VALUE',
-  newValue: value,
-});
+export function clickButton(value) {
+  
+  return {
+    type: 'CLICK_UPDATE_VALUE',
+    action: value
+  }
+}

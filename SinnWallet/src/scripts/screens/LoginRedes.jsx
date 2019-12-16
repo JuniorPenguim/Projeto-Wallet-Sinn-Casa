@@ -5,6 +5,7 @@ import {
   TouchableWithoutFeedback,
   Text,
   Image,
+  AsyncStorage
 } from 'react-native';
 import Biometrics from 'react-native-biometrics';
 import {connect} from 'react-redux';
@@ -22,7 +23,7 @@ export class LoginScreen extends Component {
       .catch(error => {
         console.log(error);
       });
-  }
+  }  
 
   render() {
     return (
@@ -75,11 +76,24 @@ export class LoginScreen extends Component {
     );
   }
 
-  // componentDidMount() {
-  //   if (this.props.newValue.newValue == true) {
-  //     this._idSignIn();
-  //   }
-  // }
+    async componentDidMount() {    
+
+      // if (valorSwitch == true) {
+      //   this._idSignIn();
+      // }
+
+      let valorSwitch = false;
+
+      try {      
+        valorSwitch = await AsyncStorage.getItem("@biometry_switch");
+        if(valorSwitch != null && valorSwitch == true){
+          this._idSignIn();
+        }
+      } catch (error) {
+        // Error saving data
+      }
+
+    }
 }
 
 function mapStateToProps(state) {
