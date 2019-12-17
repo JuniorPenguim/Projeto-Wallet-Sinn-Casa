@@ -12,7 +12,7 @@ import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 
-export default class ProfileScreen extends Component {
+export default class MenuIniciar extends Component {
   closeDrawer() {
     this._drawer._root.close();
   }

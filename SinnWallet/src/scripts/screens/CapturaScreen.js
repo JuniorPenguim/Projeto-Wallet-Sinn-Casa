@@ -17,7 +17,7 @@ import * as styleClass from '../constants/StyleClass';
 import NavigationService from '../../../NavigationService';
 import SideBar from './MenuInterno';
 
-export default class SplashScreen extends Component {
+export default class CapturaScreen extends Component {
   takePicture = async () => {
     if (this.camera) {
       const options = {quality: 0.5, base64: true};

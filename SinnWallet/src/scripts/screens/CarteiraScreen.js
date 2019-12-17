@@ -12,7 +12,7 @@ import SideBar from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 import NavigationService from '../../../NavigationService';
 
-export default class SplashScreen extends Component {
+export default class CarteiraScreen extends Component {
   closeDrawer() {
     this._drawer._root.close();
   }

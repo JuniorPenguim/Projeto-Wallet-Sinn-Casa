@@ -13,7 +13,8 @@ import {connect} from 'react-redux';
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
 
-export class LoginScreen extends Component {
+
+export class LoginRedesScreen extends Component {
   _idSignIn() {
     Biometrics.simplePrompt('Load fingerprint')
       .then(() => {
@@ -23,7 +24,9 @@ export class LoginScreen extends Component {
       .catch(error => {
         console.log(error);
       });
-  }  
+  }      
+
+  
 
   render() {
     return (
@@ -76,23 +79,19 @@ export class LoginScreen extends Component {
     );
   }
 
-    async componentDidMount() {    
 
-      // if (valorSwitch == true) {
-      //   this._idSignIn();
-      // }
 
-      let valorSwitch = false;
+    componentDidMount() {    
 
       try {      
-        valorSwitch = await AsyncStorage.getItem("@biometry_switch");
+        valorSwitch = AsyncStorage.getItem("@biometry_switch");
         if(valorSwitch != null && valorSwitch == true){
           this._idSignIn();
         }
       } catch (error) {
         // Error saving data
-      }
-
+      }      
+      
     }
 }
 
@@ -100,4 +99,6 @@ function mapStateToProps(state) {
   return {newValue: state.newValue};
 }
 
-export default connect(mapStateToProps)(LoginScreen);
+export default connect(mapStateToProps)(LoginRedesScreen);
+
+

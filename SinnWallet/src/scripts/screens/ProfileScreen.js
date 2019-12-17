@@ -17,6 +17,15 @@ import {clickButton} from '../../actions/index';
 
 export class ProfileScreen extends Component {  
 
+  // state = {
+  //   switchValue: false,
+  // };
+
+  // _handleToggleSwitch = () => {
+  //   this.setState(state => ({switchValue: !state.switchValue}));
+  //   this._storeData();    
+  // }
+
   closeDrawer() {
     this._drawer._root.close();
   }
@@ -24,25 +33,31 @@ export class ProfileScreen extends Component {
     this._drawer._root.open();
   }
   mudaSwitch(e){
-    this.props.clickButton(e);
-  }
+    this.props.clickButton(e); //chamada de função do redux
+    this._storeData(); //chamada de função para guardar dado do switch com redux
+  } 
+  
+  //tentativa abaixo de função carregar com valor do estate, ao invés de usar redux (Carol)
 
-  // _storeData = async (valorSwitchSalvo) => {
-  //   try {
-  //     const valorSwitch = JSON.stringify(valorSwitchSalvo);
-  //     await AsyncStorage.setItem('@ValorSwitch: switch', valorSwitch);
-  //   } catch (error) {
-  //     // Error saving data
-  //   }
-  // };
+  //  _storeData = async () => {     
+  //    try {
+  //      console.log(this.state.switchValue)
+  //      const valorSwitch = JSON.stringify(this.state.switchValue);      
+  //      await AsyncStorage.setItem('@biometry_switch', valorSwitch);
+  //      //console.log((await AsyncStorage.getItem('@biometry_switch')).toString());
+  //    } catch (error) {
+  //      // Error saving data
+  //    }
+  //  };
 
-  _storeData = async () => {
-    try {      
-      await AsyncStorage.setItem("@biometry_switch", this.props.newValue.newValue);
-    } catch (error) {
-      // Error saving data
-    }
-  };
+
+   _storeData = async () => {
+     try {            
+       AsyncStorage.setItem('@biometry_switch', JSON.stringify(this.props.newValue.newValue)).then(console.log(AsyncStorage.getItem('@biometry_switch')));       
+     } catch (error) {
+       // Error saving data
+     }
+   };
 
   render() {
     //{console.log(this.props.newValue.newValue)}

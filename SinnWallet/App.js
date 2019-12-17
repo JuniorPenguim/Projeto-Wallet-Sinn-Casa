@@ -9,28 +9,28 @@ import {Store} from './src/store';
 import NavigationService from './NavigationService';
 import SplashScreen from './src/scripts/screens/SplashScreen';
 import LoginScreen from './src/scripts/screens/LoginScreen';
-import LoginRedes from './src/scripts/screens/LoginRedes';
+import LoginRedesScreen from './src/scripts/screens/LoginRedes';
 import ProfileScreen from './src/scripts/screens/ProfileScreen';
 import CarteiraScreen from './src/scripts/screens/CarteiraScreen';
 import CapturaScreen from './src/scripts/screens/CapturaScreen';
-import ScanScanner from './src/scripts/screens/QrScanner';
+import QRCodeScreen from './src/scripts/screens/QrScanner';
 import MenuIniciar from './src/scripts/screens/MenuIniciar';
 import PoliticaScreen from './src/scripts/screens/PoliticaScreen';
 
 const TopLevelNavigator = createStackNavigator(
   {
     Splash: {screen: SplashScreen},
-    LoginRedes: {screen: LoginRedes},
+    LoginRedes: {screen: LoginRedesScreen},
     Login: {screen: LoginScreen},
     Iniciar: {screen: MenuIniciar},
     Perfil: {screen: ProfileScreen},
     Carteira: {screen: CarteiraScreen},
     Captura: {screen: CapturaScreen},
-    ScanScanner: {screen: ScanScanner},
+    ScanScanner: {screen: QRCodeScreen},
     Politica: {screen: PoliticaScreen},
   },
   {
-    initialRouteName: 'Splash',
+    initialRouteName: 'Perfil',
     headerMode: 'none',
   },
 );
