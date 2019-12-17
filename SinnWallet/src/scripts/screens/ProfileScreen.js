@@ -34,7 +34,8 @@ export class ProfileScreen extends Component {
   }
   mudaSwitch(e){
     this.props.clickButton(e); //chamada de função do redux
-    this._storeData(); //chamada de função para guardar dado do switch com redux
+    this._storeData(e); //chamada de função para guardar dado do switch com redux
+    console.log("props global ", this.props.newValue.newValue)
   } 
   
   //tentativa abaixo de função carregar com valor do estate, ao invés de usar redux (Carol)
@@ -51,13 +52,20 @@ export class ProfileScreen extends Component {
   //  };
 
 
-   _storeData = async () => {
-     try {            
-       AsyncStorage.setItem('@biometry_switch', JSON.stringify(this.props.newValue.newValue)).then(console.log(AsyncStorage.getItem('@biometry_switch')));       
-     } catch (error) {
-       // Error saving data
-     }
-   };
+  _storeData = valorSwitchSalvo => {
+    try {
+        
+        const valorSwitch = JSON.stringify(valorSwitchSalvo)
+        AsyncStorage.setItem('@biometry_switch', valorSwitch).then(() => {
+            AsyncStorage.getItem('@biometry_switch').then(response => {
+                console.log("response do switch", response)
+                
+            })
+        })
+    } catch (error) {
+        // Error saving data
+    }
+  } 
 
   render() {
     //{console.log(this.props.newValue.newValue)}

@@ -30,7 +30,7 @@ const TopLevelNavigator = createStackNavigator(
     Politica: {screen: PoliticaScreen},
   },
   {
-    initialRouteName: 'Perfil',
+    initialRouteName: 'Splash',
     headerMode: 'none',
   },
 );

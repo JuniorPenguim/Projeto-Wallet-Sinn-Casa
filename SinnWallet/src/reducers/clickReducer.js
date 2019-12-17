@@ -1,6 +1,9 @@
+import {AsyncStorage} from 'react-native';
+
 const initialState = {
-  newValue: false,
+  newValue: false
 };
+
 
 export const clickReducer = (state = initialState, action) => {
   switch (action.type) {

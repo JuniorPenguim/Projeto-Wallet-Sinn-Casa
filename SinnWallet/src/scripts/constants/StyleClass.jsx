@@ -883,15 +883,13 @@ export const capturaStyles = {
     width: wp('100%'),
     height: hp('70%'),
     overflow: 'hidden',
-    backgroundColor:'yellow',
+    
   },  
 
-  imagemMascara: {
-    //backgroundColor:'yellow',
+  imagemMascara: {    
     resizeMode:'contain',
     marginLeft:wp('2%'),
-    marginRight:wp('2%'),
-    //marginTop:hp('1.5%'),
+    marginRight:wp('2%'),    
     width: wp('95%'),
     height: hp('70%'),
   },

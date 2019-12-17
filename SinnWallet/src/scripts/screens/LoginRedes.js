@@ -12,6 +12,7 @@ import {connect} from 'react-redux';
 
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
+import { clickButton } from '../../actions';
 
 
 export class LoginRedesScreen extends Component {
@@ -84,10 +85,14 @@ export class LoginRedesScreen extends Component {
     componentDidMount() {    
 
       try {      
-        valorSwitch = AsyncStorage.getItem("@biometry_switch");
-        if(valorSwitch != null && valorSwitch == true){
+        AsyncStorage.getItem("@biometry_switch").then(response => {
+          this.props.clickButton(response)
+          if(response != null && response == true){
+          console.log("entrou aq")
           this._idSignIn();
-        }
+        }});
+                
+        
       } catch (error) {
         // Error saving data
       }      
@@ -99,6 +104,6 @@ function mapStateToProps(state) {
   return {newValue: state.newValue};
 }
 
-export default connect(mapStateToProps)(LoginRedesScreen);
+export default connect(mapStateToProps, {clickButton})(LoginRedesScreen);
 
 
