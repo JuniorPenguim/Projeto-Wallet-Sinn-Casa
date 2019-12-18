@@ -10,13 +10,12 @@ import {Drawer} from 'native-base';
 
 import * as styleClass from '../constants/StyleClass';
 import NavigationService from '../../../NavigationService';
-import SideBar from './MenuInterno';
+import MenuInterno from './MenuInterno';
 
 export default class PoliticaScreen extends Component {
-  closeDrawer() {
+  closeDrawer = () => {
     this._drawer._root.close();
-  }
-
+  };
   openDrawer() {
     this._drawer._root.open();
   }
@@ -27,7 +26,12 @@ export default class PoliticaScreen extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={
+          <MenuInterno
+            navigator={this._navigator}
+            closeDrawer={this.closeDrawer}
+          />
+        }
         onClose={() => this.closeDrawer()}>
         <ImageBackground
           style={{width: '100%', height: '100%'}}

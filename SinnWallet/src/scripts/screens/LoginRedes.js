@@ -5,15 +5,14 @@ import {
   TouchableWithoutFeedback,
   Text,
   Image,
-  AsyncStorage
+  AsyncStorage,
 } from 'react-native';
 import Biometrics from 'react-native-biometrics';
 import {connect} from 'react-redux';
 
 import NavigationService from '../../../NavigationService';
 import * as styleClass from '../constants/StyleClass';
-import { clickButton } from '../../actions';
-
+import {clickButton} from '../../actions';
 
 export class LoginRedesScreen extends Component {
   _idSignIn() {
@@ -25,9 +24,7 @@ export class LoginRedesScreen extends Component {
       .catch(error => {
         console.log(error);
       });
-  }      
-
-  
+  }
 
   render() {
     return (
@@ -80,24 +77,21 @@ export class LoginRedesScreen extends Component {
     );
   }
 
+  // componentDidMount() {
+  //   try {
+  //     AsyncStorage.getItem('@biometry_switch').then(response => {
+  //       this.props.clickButton(response);
+  //       console.log('props', this.props.newValue.newValue);
+  //       console.log('response do did', response);
 
-
-    componentDidMount() {    
-
-      try {      
-        AsyncStorage.getItem("@biometry_switch").then(response => {
-          this.props.clickButton(response)
-          if(response != null && response == true){
-          console.log("entrou aq")
-          this._idSignIn();
-        }});
-                
-        
-      } catch (error) {
-        // Error saving data
-      }      
-      
-    }
+  //       if (this.props.newValue.newValue === 'true') {
+  //         this._idSignIn();
+  //       }
+  //     });
+  //   } catch (error) {
+  //     // Error saving data
+  //   }
+  // }
 }
 
 function mapStateToProps(state) {
@@ -105,5 +99,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {clickButton})(LoginRedesScreen);
-
-

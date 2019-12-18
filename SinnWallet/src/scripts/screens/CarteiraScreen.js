@@ -8,14 +8,14 @@ import {
 import {Text} from 'react-native-elements';
 import {Container, Drawer} from 'native-base';
 
-import SideBar from './MenuInterno';
+import MenuInterno from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 import NavigationService from '../../../NavigationService';
 
 export default class CarteiraScreen extends Component {
-  closeDrawer() {
+  closeDrawer = () => {
     this._drawer._root.close();
-  }
+  };
 
   openDrawer() {
     this._drawer._root.open();
@@ -27,7 +27,12 @@ export default class CarteiraScreen extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={
+          <MenuInterno
+            navigator={this._navigator}
+            closeDrawer={this.closeDrawer}
+          />
+        }
         onClose={() => this.closeDrawer()}>
         <Container>
           <ImageBackground

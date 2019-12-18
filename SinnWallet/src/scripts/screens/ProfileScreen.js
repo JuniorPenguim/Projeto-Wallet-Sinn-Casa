@@ -11,70 +11,59 @@ import {Text, Drawer} from 'native-base';
 import {connect} from 'react-redux';
 
 import NavigationService from '../../../NavigationService';
-import SideBar from './MenuInterno';
+import MenuInterno from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 import {clickButton} from '../../actions/index';
 
-export class ProfileScreen extends Component {  
-
+export class ProfileScreen extends Component {
   // state = {
   //   switchValue: false,
   // };
 
   // _handleToggleSwitch = () => {
   //   this.setState(state => ({switchValue: !state.switchValue}));
-  //   this._storeData();    
+  //   this._storeData();
   // }
 
-  closeDrawer() {
+  closeDrawer = () => {
     this._drawer._root.close();
-  }
+  };
   openDrawer() {
     this._drawer._root.open();
   }
-  mudaSwitch(e){
-    this.props.clickButton(e); //chamada de função do redux
+  mudaSwitch(e) {
+    this.props.clickButton(String(e)); //chamada de função do redux
     this._storeData(e); //chamada de função para guardar dado do switch com redux
-    console.log("props global ", this.props.newValue.newValue)
-  } 
-  
-  //tentativa abaixo de função carregar com valor do estate, ao invés de usar redux (Carol)
-
-  //  _storeData = async () => {     
-  //    try {
-  //      console.log(this.state.switchValue)
-  //      const valorSwitch = JSON.stringify(this.state.switchValue);      
-  //      await AsyncStorage.setItem('@biometry_switch', valorSwitch);
-  //      //console.log((await AsyncStorage.getItem('@biometry_switch')).toString());
-  //    } catch (error) {
-  //      // Error saving data
-  //    }
-  //  };
-
+  }
 
   _storeData = valorSwitchSalvo => {
     try {
-        
-        const valorSwitch = JSON.stringify(valorSwitchSalvo)
-        AsyncStorage.setItem('@biometry_switch', valorSwitch).then(() => {
-            AsyncStorage.getItem('@biometry_switch').then(response => {
-                console.log("response do switch", response)
-                
-            })
-        })
+      const valorSwitch = JSON.stringify(valorSwitchSalvo);
+      AsyncStorage.setItem('@biometry_switch', valorSwitch).then(() => {
+        AsyncStorage.getItem('@biometry_switch').then(response => {
+          console.log('response do storage', response);
+        });
+      });
     } catch (error) {
-        // Error saving data
+      // Error saving data
     }
-  } 
+  };
 
   render() {
-    //{console.log(this.props.newValue.newValue)}
+    {
+      console.log(this.props.newValue.newValue);
+    }
     return (
       <Drawer
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={
+          <MenuInterno
+            navigator={this._navigator}
+            closeDrawer={this.closeDrawer}
+          />
+        }
         onClose={() => this.closeDrawer()}>
         <ImageBackground
           style={{width: '100%', height: '100%'}}
@@ -94,7 +83,6 @@ export class ProfileScreen extends Component {
                   />
                 </View>
               </TouchableWithoutFeedback>
-              
             </View>
             <Image
               style={styleClass.profileStyles.imagemLinha}
@@ -135,8 +123,8 @@ export class ProfileScreen extends Component {
 
               <View style={styleClass.profileStyles.viewSwitch}>
                 <Switch
-                  onValueChange={(e)=>this.mudaSwitch(e)}
-                  value={this.props.newValue.newValue}
+                  onValueChange={e => this.mudaSwitch(e)}
+                  value={this.props.newValue.newValue === 'true'}
                   style={styleClass.profileStyles.chaveSwtich}
                 />
                 <Text style={styleClass.profileStyles.textoSwitch}>

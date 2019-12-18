@@ -10,14 +10,13 @@ import {Drawer} from 'native-base';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 import * as styleClass from '../constants/StyleClass';
-import SideBar from './MenuInterno';
+import MenuInterno from './MenuInterno';
 import NavigationService from '../../../NavigationService';
 
 export default class QRCodeScreen extends Component {
-  closeDrawer() {
+  closeDrawer = () => {
     this._drawer._root.close();
-  }
-
+  };
   openDrawer() {
     this._drawer._root.open();
   }
@@ -28,7 +27,12 @@ export default class QRCodeScreen extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={
+          <MenuInterno
+            navigator={this._navigator}
+            closeDrawer={this.closeDrawer}
+          />
+        }
         onClose={() => this.closeDrawer()}>
         <ImageBackground
           style={{width: '100%', height: '100%'}}
@@ -74,11 +78,9 @@ export default class QRCodeScreen extends Component {
               entregue ou mostre para desconhecidos
             </Text>
             <Text style={styleClass.qrStyles.textoQuatro}>
-              e em ambientes cuja rede não seja 
+              e em ambientes cuja rede não seja
             </Text>
-            <Text style={styleClass.qrStyles.textoQuatro}>
-              segura.
-            </Text>
+            <Text style={styleClass.qrStyles.textoQuatro}>segura.</Text>
 
             <View style={styleClass.qrStyles.viewQr}>
               <QRCodeScanner

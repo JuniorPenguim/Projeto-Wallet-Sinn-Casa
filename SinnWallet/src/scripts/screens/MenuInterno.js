@@ -11,7 +11,7 @@ export default class MenuInterno extends Component {
       <Content style={styleClass.menuInterno.container}>
         <View style={styleClass.menuInterno.viewMaior}>
           <View style={styleClass.menuInterno.viewBotao}>
-            <TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={this.props.closeDrawer}>
               <Image
                 style={styleClass.menuInterno.imagemBotao}
                 source={require('../../imagens/ico-menu-fechar.png')}

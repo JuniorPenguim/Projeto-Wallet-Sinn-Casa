@@ -9,13 +9,13 @@ import {
 import {Drawer} from 'native-base';
 
 import NavigationService from '../../../NavigationService';
-import SideBar from './MenuInterno';
+import MenuInterno from './MenuInterno';
 import * as styleClass from '../constants/StyleClass';
 
 export default class MenuIniciar extends Component {
-  closeDrawer() {
+  closeDrawer = () => {
     this._drawer._root.close();
-  }
+  };
 
   openDrawer() {
     this._drawer._root.open();
@@ -27,7 +27,12 @@ export default class MenuIniciar extends Component {
         ref={ref => {
           this._drawer = ref;
         }}
-        content={<SideBar navigator={this._navigator} />}
+        content={
+          <MenuInterno
+            navigator={this._navigator}
+            closeDrawer={this.closeDrawer}
+          />
+        }
         onClose={() => this.closeDrawer()}>
         <View style={styleClass.menuIniciarStyles.viewMaior}>
           <ImageBackground
