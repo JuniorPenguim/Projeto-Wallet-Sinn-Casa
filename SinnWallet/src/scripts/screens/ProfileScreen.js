@@ -41,7 +41,7 @@ export class ProfileScreen extends Component {
       const valorSwitch = JSON.stringify(valorSwitchSalvo);
       AsyncStorage.setItem('@biometry_switch', valorSwitch).then(() => {
         AsyncStorage.getItem('@biometry_switch').then(response => {
-          console.log('response do storage', response);
+          //console.log('response do storage', response);
         });
       });
     } catch (error) {
@@ -51,7 +51,7 @@ export class ProfileScreen extends Component {
 
   render() {
     {
-      console.log(this.props.newValue.newValue);
+      //console.log(this.props.newValue.newValue);
     }
     return (
       <Drawer

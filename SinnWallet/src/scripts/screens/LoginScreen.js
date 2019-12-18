@@ -20,11 +20,11 @@ export default class LoginScreen extends Component {
   _idSignIn() {
     Biometrics.simplePrompt('Load fingerprint')
       .then(() => {
-        console.log('successful fingerprint provided');
+        //console.log('successful fingerprint provided');
         NavigationService.simpleNavigate('Perfil');
       })
       .catch(error => {
-        console.log(error);
+        //console.log(error);
       });
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import {Animated} from 'react-native';
 import {Container} from 'native-base';
 import FlashMessage from 'react-native-flash-message';
 import {Provider} from 'react-redux';
@@ -16,6 +17,7 @@ import CapturaScreen from './src/scripts/screens/CapturaScreen';
 import QRCodeScreen from './src/scripts/screens/QrScanner';
 import MenuIniciar from './src/scripts/screens/MenuIniciar';
 import PoliticaScreen from './src/scripts/screens/PoliticaScreen';
+import SobreScreen from './src/scripts/screens/SobreScreen';
 
 const TopLevelNavigator = createStackNavigator(
   {
@@ -28,12 +30,21 @@ const TopLevelNavigator = createStackNavigator(
     Captura: {screen: CapturaScreen},
     ScanScanner: {screen: QRCodeScreen},
     Politica: {screen: PoliticaScreen},
+    Sobre: {screen: SobreScreen}
   },
   {
     initialRouteName: 'Splash',
     headerMode: 'none',
+    // transitionConfig: () => ({
+    //   transitionSpec: {
+    //     timing: Animated.timing,
+    //   },
+    //   screenInterpolator: () => {},
+    // }),
   },
 );
+
+
 
 const AppScreens = createAppContainer(TopLevelNavigator);
 

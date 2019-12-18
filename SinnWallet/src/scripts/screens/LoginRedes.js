@@ -18,11 +18,11 @@ export class LoginRedesScreen extends Component {
   _idSignIn() {
     Biometrics.simplePrompt('Load fingerprint')
       .then(() => {
-        console.log('successful fingerprint provided');
+        //console.log('successful fingerprint provided');
         NavigationService.simpleNavigate('Perfil');
       })
       .catch(error => {
-        console.log(error);
+        //console.log(error);
       });
   }
 
@@ -77,21 +77,21 @@ export class LoginRedesScreen extends Component {
     );
   }
 
-  // componentDidMount() {
-  //   try {
-  //     AsyncStorage.getItem('@biometry_switch').then(response => {
-  //       this.props.clickButton(response);
-  //       console.log('props', this.props.newValue.newValue);
-  //       console.log('response do did', response);
+   componentDidMount() {
+     try {
+       AsyncStorage.getItem('@biometry_switch').then(response => {
+         this.props.clickButton(response);
+         //console.log('props', this.props.newValue.newValue);
+         //console.log('response do did', response);
 
-  //       if (this.props.newValue.newValue === 'true') {
-  //         this._idSignIn();
-  //       }
-  //     });
-  //   } catch (error) {
-  //     // Error saving data
-  //   }
-  // }
+         if (this.props.newValue.newValue === 'true') {
+           this._idSignIn();
+         }
+       });
+     } catch (error) {
+       // Error saving data
+     }
+  }
 }
 
 function mapStateToProps(state) {

@@ -156,8 +156,10 @@ export const loginStyles = {
   },
 
   imagemLogoIcone: {
-    width: windowW * 0.71,
-    height: windowH * 0.33,
+    //width: windowW * 0.71,
+    //height: windowH * 0.33,
+    width: wp('71%'), 
+    height: hp('33%'),    
   },
 
   mensagemTextoUm: {
@@ -739,6 +741,26 @@ export const menuInterno = {
     fontSize: 0.023 * windowH,
     color: 'white',
   },
+
+  viewAutenticacao: {
+    marginLeft: wp('4%'),
+    flexDirection: 'row',
+  },
+
+  imagemAutenticacao: {
+    marginLeft: wp('4%'),
+    width: wp('8%'),
+    height: hp('8%'),
+    resizeMode: 'contain',
+  },
+
+  textoAutenticacao: {
+    marginLeft: wp('6.5%'),
+    marginTop: hp('2%'),
+    fontSize: 0.023 * windowH,
+    color: 'white',
+  },
+
 };
 
 export const carteiraStyles = {
