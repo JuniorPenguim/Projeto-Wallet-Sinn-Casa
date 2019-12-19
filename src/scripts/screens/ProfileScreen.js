@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import NavigationService from '../../../NavigationService'
 import MenuInterno from './MenuInterno'
 import * as styleClass from '../constants/StyleClass'
-import { clickButton } from '../../actions/index'
+import { actions } from '../../store/ducks/mainDuck'
 
 export class ProfileScreen extends Component {
     closeDrawer = () => {
@@ -16,7 +16,7 @@ export class ProfileScreen extends Component {
         this._drawer._root.open()
     }
     mudaSwitch(e) {
-        this.props.clickButton(String(e)) //chamada de função do redux
+        this.props.setSwitch(String(e)) //chamada de função do redux
         this._storeData(e) //chamada de função para guardar dado do switch com redux
     }
 
@@ -34,9 +34,6 @@ export class ProfileScreen extends Component {
     }
 
     render() {
-        {
-            //console.log(this.props.newValue.newValue);
-        }
         return (
             <Drawer
                 ref={ref => {
@@ -99,7 +96,7 @@ export class ProfileScreen extends Component {
                             <View style={styleClass.profileStyles.viewSwitch}>
                                 <Switch
                                     onValueChange={e => this.mudaSwitch(e)}
-                                    value={this.props.newValue.newValue === 'true'}
+                                    value={this.props.switchValue === 'true'}
                                     style={styleClass.profileStyles.chaveSwtich}
                                 />
                                 <Text style={styleClass.profileStyles.textoSwitch}>Usar Touch ID</Text>
@@ -119,11 +116,14 @@ export class ProfileScreen extends Component {
         )
     }
 }
+
+const { setSwitch } = actions
+
 function mapStateToProps(state) {
-    return { newValue: state.newValue }
+    return { switchValue: state.switchValue }
 }
 
 export default connect(
     mapStateToProps,
-    { clickButton }
+    { setSwitch }
 )(ProfileScreen)

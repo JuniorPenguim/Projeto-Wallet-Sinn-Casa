@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import NavigationService from '../../../NavigationService'
 import * as styleClass from '../constants/StyleClass'
-import { clickButton } from '../../actions'
+import { actions } from '../../store/ducks/mainDuck'
 
 export class LoginRedesScreen extends Component {
     _idSignIn() {
@@ -23,8 +23,7 @@ export class LoginRedesScreen extends Component {
         Biometrics.isSensorAvailable().then(resultObject => {
             const available = resultObject
 
-            console.log()
-            if (available && this.props.newValue.newValue === 'true') {
+            if (available && this.props.switchValue === 'true') {
                 this._idSignIn()
             }
         })
@@ -82,7 +81,7 @@ export class LoginRedesScreen extends Component {
     componentDidMount() {
         try {
             AsyncStorage.getItem('@biometry_switch').then(response => {
-                this.props.clickButton(response)
+                this.props.setSwitch(response)
                 this.existeLeitor()
             })
         } catch (error) {
@@ -91,11 +90,13 @@ export class LoginRedesScreen extends Component {
     }
 }
 
+const { setSwitch } = actions
+
 function mapStateToProps(state) {
-    return { newValue: state.newValue }
+    return { switchValue: state.switchValue }
 }
 
 export default connect(
     mapStateToProps,
-    { clickButton }
+    { setSwitch }
 )(LoginRedesScreen)

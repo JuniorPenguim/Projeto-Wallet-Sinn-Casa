@@ -45,7 +45,7 @@ const TopLevelNavigator = createStackNavigator(
 
 const AppScreens = createAppContainer(TopLevelNavigator)
 
-export default class SManager extends React.Component {
+export default class App extends React.Component {
     render() {
         return (
             <Provider store={Store}>
