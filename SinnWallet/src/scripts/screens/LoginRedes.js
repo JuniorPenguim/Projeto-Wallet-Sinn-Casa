@@ -26,6 +26,17 @@ export class LoginRedesScreen extends Component {
       });
   }
 
+  existeLeitor() {
+    Biometrics.isSensorAvailable().then(resultObject => {
+      const available = resultObject;
+
+      console.log();
+      if (available && this.props.newValue.newValue === 'true') {
+        this._idSignIn();
+      }
+    });
+  }
+
   render() {
     return (
       <ImageBackground
@@ -77,20 +88,15 @@ export class LoginRedesScreen extends Component {
     );
   }
 
-   componentDidMount() {
-     try {
-       AsyncStorage.getItem('@biometry_switch').then(response => {
-         this.props.clickButton(response);
-         //console.log('props', this.props.newValue.newValue);
-         //console.log('response do did', response);
-
-         if (this.props.newValue.newValue === 'true') {
-           this._idSignIn();
-         }
-       });
-     } catch (error) {
-       // Error saving data
-     }
+  componentDidMount() {
+    try {
+      AsyncStorage.getItem('@biometry_switch').then(response => {
+        this.props.clickButton(response);
+        this.existeLeitor();
+      });
+    } catch (error) {
+      // Error saving data
+    }
   }
 }
 

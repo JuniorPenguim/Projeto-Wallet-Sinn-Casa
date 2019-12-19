@@ -30,7 +30,7 @@ const TopLevelNavigator = createStackNavigator(
     Captura: {screen: CapturaScreen},
     ScanScanner: {screen: QRCodeScreen},
     Politica: {screen: PoliticaScreen},
-    Sobre: {screen: SobreScreen}
+    Sobre: {screen: SobreScreen},
   },
   {
     initialRouteName: 'Splash',
@@ -43,8 +43,6 @@ const TopLevelNavigator = createStackNavigator(
     // }),
   },
 );
-
-
 
 const AppScreens = createAppContainer(TopLevelNavigator);
 

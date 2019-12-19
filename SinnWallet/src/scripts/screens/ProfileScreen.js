@@ -16,15 +16,6 @@ import * as styleClass from '../constants/StyleClass';
 import {clickButton} from '../../actions/index';
 
 export class ProfileScreen extends Component {
-  // state = {
-  //   switchValue: false,
-  // };
-
-  // _handleToggleSwitch = () => {
-  //   this.setState(state => ({switchValue: !state.switchValue}));
-  //   this._storeData();
-  // }
-
   closeDrawer = () => {
     this._drawer._root.close();
   };

@@ -158,8 +158,8 @@ export const loginStyles = {
   imagemLogoIcone: {
     //width: windowW * 0.71,
     //height: windowH * 0.33,
-    width: wp('71%'), 
-    height: hp('33%'),    
+    width: wp('71%'),
+    height: hp('33%'),
   },
 
   mensagemTextoUm: {
@@ -760,7 +760,6 @@ export const menuInterno = {
     fontSize: 0.023 * windowH,
     color: 'white',
   },
-
 };
 
 export const carteiraStyles = {
@@ -894,10 +893,10 @@ export const capturaStyles = {
     height: hp('1%'),
   },
 
-  textoUm:{
-    marginLeft:wp('3%'),
+  textoUm: {
+    marginLeft: wp('3%'),
     fontSize: 0.03 * windowH,
-    color:'gray',
+    color: 'gray',
   },
 
   viewCamera: {
@@ -905,13 +904,12 @@ export const capturaStyles = {
     width: wp('100%'),
     height: hp('70%'),
     overflow: 'hidden',
-    
-  },  
+  },
 
-  imagemMascara: {    
-    resizeMode:'contain',
-    marginLeft:wp('2%'),
-    marginRight:wp('2%'),    
+  imagemMascara: {
+    resizeMode: 'contain',
+    marginLeft: wp('2%'),
+    marginRight: wp('2%'),
     width: wp('95%'),
     height: hp('70%'),
   },
@@ -1016,7 +1014,7 @@ export const qrStyles = {
 
   viewQr: {
     width: wp('100%'),
-    height: hp('65%'),
+    height: hp('55%'),
     overflow: 'hidden',
   },
 };

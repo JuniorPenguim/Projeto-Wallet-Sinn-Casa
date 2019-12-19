@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 import {Drawer} from 'native-base';
 import QRCodeScanner from 'react-native-qrcode-scanner';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 import * as styleClass from '../constants/StyleClass';
 import MenuInterno from './MenuInterno';
@@ -90,6 +94,16 @@ export default class QRCodeScreen extends Component {
                 ref={elem => {
                   this.scanner = elem;
                 }}
+              />
+            </View>
+            <View style={{alignItems: 'center', justifyContent: 'flex-end'}}>
+              <Image
+                style={{
+                  resizeMode: 'contain',
+                  width: wp('70%'),
+                  height: hp('10%'),
+                }}
+                source={require('../../imagens/bt-abrir-chave-publica.png')}
               />
             </View>
           </View>
