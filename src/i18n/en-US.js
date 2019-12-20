@@ -1,0 +1,43 @@
+const en = {
+    splashUm: 'EDUCACIONAL SYSTEM FISCALIZATION',
+    splashDois: "RIO DE JANEIRO'S CITY HALL",
+    loginRedesOla: 'HELLO, MAKE YOUR ACCESS LOGIN: ',
+    loginRedesFacebook:'Login with Facebook',
+    loginRedesGmail:'Login with Gmail',
+    loginRedesEmail:'Login with E-mail',
+    loginUm: 'ENTER WITH YOUT DATA',
+    loginDois: 'TO MAKE YOUR ACESS LOGIN:',
+    loginEmail: 'Type your e-mail',
+    loginSenha: 'Type your password',
+    loginEntrar: 'ENTER',
+    iniciarBotao: 'BEGIN',
+    perfilPublica:'PUBLIC KEY',
+    perfilPrivada:'PRIVATE KEY',
+    perfilSwitch:'Use Touch ID',
+    perfilSair:'EXIT ACCOUNT',
+    internoCarteira:'Wallet',
+    internoConta:'Account',
+    internoContratos:'Contracts',
+    internoColecionaveis:'Collectibles',
+    internoPolitica:'Privacy policy',
+    internoTermo:'Statement of responsability',
+    internoSobre:'About',
+    internoSuporte:'Support',
+    internoAutenticacao:'Authentication',
+    carteiraUm: 'My wallet',
+    carteiraDois: 'Add a new digital document to your',
+    carteiraDoisUm: 'wallet',
+    carteiraNovoDoc: 'NEW DOCUMENT',
+    capturaUm: 'Add document',
+    capturaDoc:'CAPTURE DOCUMENT',
+    scannerUm:'My Sinn.id',
+    scannerDois:'This is your',
+    scannerDoisUm:'PRIVATE KEY',
+    scannerTres:"do not deliver or show it to strangers and in environments whose network isn't safe",
+    scannerChave: 'OPEN PUBLIC KEY',
+    
+
+ 
+};
+  
+export default en;

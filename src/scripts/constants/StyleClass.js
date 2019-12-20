@@ -104,28 +104,54 @@ export const loginRedesStyles = {
     },
 
     viewBotao: {
-        flex: 0.8,
-        alignItems: 'center'
+        flex: 0.8
     },
 
     imagemBotao: {
         resizeMode: 'contain',
+        alignSelf: 'center',
         width: wp('70%'),
         height: hp('7%')
+    },
+
+    textoFacebook: {
+        marginTop: hp('2%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'white',
+        fontSize: 0.024 * windowH
     },
 
     imagemBotaoDois: {
         marginTop: hp('2%'),
         resizeMode: 'contain',
+        alignSelf: 'center',
         width: wp('70%'),
         height: hp('7%')
+    },
+
+    textoGmail: {
+        marginTop: hp('10.6%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'red',
+        fontSize: 0.024 * windowH
     },
 
     imagemBotaoTres: {
         marginTop: hp('2%'),
         resizeMode: 'contain',
+        alignSelf: 'center',
         width: wp('70%'),
         height: hp('7%')
+    },
+
+    textoEmail: {
+        marginTop: hp('3.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'white',
+        fontSize: 0.024 * windowH
     },
 
     viewSelo: {
@@ -238,7 +264,6 @@ export const loginStyles = {
 
 export const menuIniciarStyles = {
     viewMaior: {
-        flex: 1,
         flexDirection: 'column'
     },
 
@@ -276,112 +301,40 @@ export const menuIniciarStyles = {
     },
 
     viewApresentacao: {
-        flex: 5,
         flexDirection: 'row'
     },
 
     imagemApresentacao: {
-        resizeMode: 'contain',
+        resizeMode: 'stretch',
+        marginTop: hp('1%'),
         marginLeft: wp('5%'),
-        width: wp('50%'),
-        height: hp('50%')
+        marginRight: wp('5%'),
+        width: wp('85%'),
+        height: hp('65%')
     },
 
     viewBotao: {
-        flex: 3,
+        backgroundColor: 'green',
         flexDirection: 'column',
+        justifyContent: 'flex-end',
         alignItems: 'center'
     },
 
     imagemBotao: {
         resizeMode: 'contain',
-        marginTop: hp('20%'),
+        alignSelf: 'center',
+        marginTop: hp('4%'),
         width: wp('80%'),
         height: hp('10%')
     },
 
-    viewTextos: {
-        position: 'absolute'
-    },
-
-    textoUm: {
-        marginTop: hp('19%'),
-        marginLeft: wp('60%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
+    textoBotao: {
+        marginTop: hp('7.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
         color: 'white',
-        fontWeight: 'bold'
-    },
-
-    textoDois: {
-        textAlign: 'right',
-        marginLeft: wp('57%'),
-        fontSize: 0.02 * windowH,
-        color: 'white',
-        fontWeight: 'bold'
-    },
-
-    textoTres: {
-        marginTop: hp('0.1%'),
-        textAlign: 'right',
-        marginTop: hp('2%'),
-        marginLeft: wp('57%'),
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoTresUm: {
-        fontWeight: 'bold',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoBlocoDois: {
-        marginTop: hp('0.1%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoCincoUm: {
-        fontWeight: 'bold',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoDez: {
-        marginTop: hp('3%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoBlocoTres: {
-        marginTop: hp('0.1%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoQuatorze: {
-        marginTop: hp('3%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoQuinze: {
-        marginTop: hp('0.1%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
-    },
-
-    textoDezesseis: {
-        marginTop: hp('3%'),
-        textAlign: 'right',
-        fontSize: 0.02 * windowH,
-        color: 'white'
+        fontSize: 0.024 * windowH,
+        alignSelf: 'center'
     }
 }
 
@@ -510,6 +463,15 @@ export const profileStyles = {
     viewSair: {
         flex: 1,
         alignItems: 'center'
+    },
+
+    textoSair: {
+        marginTop: hp('3.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'white',
+        fontSize: 0.024 * windowH,
+        alignSelf: 'center'
     }
 }
 
@@ -818,8 +780,7 @@ export const carteiraStyles = {
 
     viewBottom: {
         flex: 1.1,
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        justifyContent: 'flex-start'
     },
 
     textoBottom: {
@@ -841,6 +802,15 @@ export const carteiraStyles = {
         marginTop: hp('2%'),
         width: wp('70%'),
         height: hp('10%')
+    },
+
+    textoDocumento: {
+        marginTop: hp('5.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'black',
+        fontSize: 0.024 * windowH,
+        alignSelf: 'center'
     }
 }
 
@@ -912,8 +882,7 @@ export const capturaStyles = {
     },
 
     viewCaptura: {
-        alignItems: 'center',
-        justifyContent: 'flex-end'
+        alignItems: 'center'
     },
 
     imagemCaptura: {
@@ -930,6 +899,15 @@ export const capturaStyles = {
         paddingHorizontal: 20,
         alignSelf: 'center',
         margin: 20
+    },
+
+    textoCaptura: {
+        marginTop: hp('3.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'black',
+        fontSize: 0.024 * windowH,
+        alignSelf: 'center'
     }
 }
 
@@ -1013,6 +991,21 @@ export const qrStyles = {
         width: wp('100%'),
         height: hp('55%'),
         overflow: 'hidden'
+    },
+
+    imagemBotao: {
+        resizeMode: 'contain',
+        width: wp('70%'),
+        height: hp('10%')
+    },
+
+    textoBotao: {
+        marginTop: hp('3.5%'),
+        marginLeft: wp('30%'),
+        position: 'absolute',
+        color: 'black',
+        fontSize: 0.024 * windowH,
+        alignSelf: 'center'
     }
 }
 
