@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { ImageBackground, Image, Text, View } from 'react-native'
+import styled from 'styled-components'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 import * as styleClass from '../constants/StyleClass'
 import NavigationService from '../../../NavigationService'
@@ -20,8 +22,8 @@ export default class SplashScreen extends Component {
             >
                 <View style={styleClass.splashStyles.viewMaior}>
                     <View style={styleClass.splashStyles.viewSelo}>
-                        <Image
-                            style={styleClass.splashStyles.imagemSelo}
+                        <Selo
+                            resizeMode="contain"
                             source={require('../../imagens/logo-sinn-selo.png')}
                         />
                     </View>
@@ -54,3 +56,9 @@ export default class SplashScreen extends Component {
         )
     }
 }
+
+const Selo = styled.Image`
+    margin-top: ${hp('4%')};
+    width: ${wp('18%')};
+    height: ${hp('10%')};    
+`
