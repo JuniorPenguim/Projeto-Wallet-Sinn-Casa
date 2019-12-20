@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/flavio-linux/test-android/AgoraVai/SinnWallet/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "/home/flavio-linux/Projeto-Wallet-Sinn-Casa/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
                     "source": "/home/flavio-linux/.gradle/caches/transforms-2/files-2.1/ae71f7f743f95b4060ab46bcacc81e93/res/values-zh-rHK/values.xml",

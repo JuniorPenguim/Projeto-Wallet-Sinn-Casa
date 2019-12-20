@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import com.sinnwallet.BuildConfig;
 import com.sinnwallet.R;
 
+// @react-native-community/async-storage
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // react-native-biometrics
 import com.rnbiometrics.ReactNativeBiometricsPackage;
 // react-native-camera
@@ -73,6 +75,7 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new AsyncStoragePackage(),
       new ReactNativeBiometricsPackage(),
       new RNCameraPackage(),
       new RNGestureHandlerPackage(),

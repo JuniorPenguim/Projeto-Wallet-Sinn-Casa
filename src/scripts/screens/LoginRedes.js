@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, ImageBackground, TouchableWithoutFeedback, Text, Image, AsyncStorage } from 'react-native'
+import { View, ImageBackground, TouchableWithoutFeedback, Text, Image } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 import Biometrics from 'react-native-biometrics'
 import { connect } from 'react-redux'
 
@@ -96,7 +97,4 @@ function mapStateToProps(state) {
     return { switchValue: state.switchValue }
 }
 
-export default connect(
-    mapStateToProps,
-    { setSwitch }
-)(LoginRedesScreen)
+export default connect(mapStateToProps, { setSwitch })(LoginRedesScreen)

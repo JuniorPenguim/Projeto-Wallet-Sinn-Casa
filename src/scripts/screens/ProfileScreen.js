@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, ImageBackground, Image, TouchableWithoutFeedback, Switch, AsyncStorage } from 'react-native'
+import { View, ImageBackground, Image, TouchableWithoutFeedback, Switch } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 import { Text, Drawer } from 'native-base'
 import { connect } from 'react-redux'
 
@@ -24,9 +25,7 @@ export class ProfileScreen extends Component {
         try {
             const valorSwitch = JSON.stringify(valorSwitchSalvo)
             AsyncStorage.setItem('@biometry_switch', valorSwitch).then(() => {
-                AsyncStorage.getItem('@biometry_switch').then(response => {
-                    //console.log('response do storage', response);
-                })
+                AsyncStorage.getItem('@biometry_switch').then(response => {})
             })
         } catch (error) {
             // Error saving data
@@ -123,7 +122,4 @@ function mapStateToProps(state) {
     return { switchValue: state.switchValue }
 }
 
-export default connect(
-    mapStateToProps,
-    { setSwitch }
-)(ProfileScreen)
+export default connect(mapStateToProps, { setSwitch })(ProfileScreen)
