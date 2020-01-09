@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Image, TouchableWithoutFeedback, ImageBackground, Text, Dimensions } from 'react-native'
+import { View, Image, TouchableWithoutFeedback, ImageBackground, Text, Dimensions, BackHandler } from 'react-native'
 import { Drawer } from 'native-base'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
@@ -123,6 +123,15 @@ export default class PoliticaScreen extends Component {
             </Drawer>
         )
     }
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', function() {
+  
+          NavigationService.simpleNavigate('Perfil')
+          
+        });
+        
+      }
 }
 
 const windowW = Dimensions.get('window').width

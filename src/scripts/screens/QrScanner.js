@@ -4,7 +4,8 @@ import {
   Text,
   Image,
   ImageBackground,
-  TouchableWithoutFeedback,  
+  TouchableWithoutFeedback,
+  BackHandler,  
 } from 'react-native';
 import {Drawer} from 'native-base';
 import QRCodeScanner from 'react-native-qrcode-scanner';
@@ -98,5 +99,14 @@ export default class QRCodeScreen extends Component {
         </ImageBackground>
       </Drawer>
     );
+  }
+
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', function() {
+
+      NavigationService.simpleNavigate('Perfil')
+      
+    });
+    
   }
 }

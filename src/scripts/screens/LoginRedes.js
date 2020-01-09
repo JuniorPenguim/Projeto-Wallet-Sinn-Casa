@@ -4,7 +4,8 @@ import {
   ImageBackground,
   TouchableWithoutFeedback,
   Text,
-  Image,   
+  Image,
+  BackHandler   
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage'
 import Biometrics from 'react-native-biometrics';
@@ -107,6 +108,12 @@ export class LoginRedesScreen extends Component {
     } catch (error) {
         // Error saving data
     }
+    BackHandler.addEventListener('hardwareBackPress', function() {
+      // this.onMainScreen and this.goBack are just examples, you need to use your own implementation here
+      // Typically you would use the navigator here to go to the last state.  
+      
+      return true;
+    });
 }
 }
 

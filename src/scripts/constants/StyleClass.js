@@ -169,7 +169,7 @@ export const loginRedesStyles = {
 export const loginStyles = {
     viewMaior: {
         flex: 1,
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
 
     viewLogoIcone: {
@@ -178,9 +178,7 @@ export const loginStyles = {
         alignItems: 'center'
     },
 
-    imagemLogoIcone: {
-        //width: windowW * 0.71,
-        //height: windowH * 0.33,
+    imagemLogoIcone: {       
         width: wp('71%'),
         height: hp('33%')
     },
@@ -230,8 +228,7 @@ export const loginStyles = {
         padding: wp('10%')
     },
 
-    input: {
-        textAlign: 'center',
+    input: {        
         fontSize: 0.025 * windowH,
         paddingTop: hp('0.1%'),
         paddingLeft: wp('2%'),
