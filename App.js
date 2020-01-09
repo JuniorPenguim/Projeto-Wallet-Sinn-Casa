@@ -34,8 +34,13 @@ const TopLevelNavigator = createStackNavigator(
     },
     {
         initialRouteName: 'Splash',
-        headerMode: 'none',
-        
+        headerMode: 'none',       
+         transitionConfig: () => ({
+             transitionSpec: {
+               duration: 0,
+             },
+           })
+
         
     }
 )

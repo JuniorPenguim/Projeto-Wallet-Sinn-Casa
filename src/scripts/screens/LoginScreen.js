@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { ImageBackground, View, ScrollView, ToastAndroid } from 'react-native'
-import { Button, Image, Text, Icon } from 'react-native-elements'
+import { ImageBackground, View, ScrollView, Image} from 'react-native'
+import { Button, Text, Icon } from 'react-native-elements'
 import Biometrics from 'react-native-biometrics'
 import { TextInput } from 'react-native-gesture-handler'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
-import { Header } from 'react-navigation-stack'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import * as axios from 'axios'
 import { Toast, Root } from "native-base"
@@ -22,11 +21,11 @@ export default class LoginScreen extends Component {
     _idSignIn() {
         Biometrics.simplePrompt('Load fingerprint')
             .then(() => {
-                //console.log('successful fingerprint provided');
+                
                 NavigationService.simpleNavigate('Perfil')
             })
             .catch(error => {
-                //console.log(error);
+                
             })
     }
 
