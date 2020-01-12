@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { ImageBackground, View, ScrollView, Image} from 'react-native'
+import { ImageBackground, View, ScrollView, Image, KeyboardAvoidingView, Dimensions, StyleSheet } from 'react-native'
 import { Button, Text, Icon } from 'react-native-elements'
 import Biometrics from 'react-native-biometrics'
 import { TextInput } from 'react-native-gesture-handler'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import * as axios from 'axios'
-import { Toast, Root } from "native-base"
+import { Toast, Root } from 'native-base'
 
 import NavigationService from '../../../NavigationService'
 import * as styleClass from '../constants/StyleClass'
@@ -21,31 +21,25 @@ export default class LoginScreen extends Component {
     _idSignIn() {
         Biometrics.simplePrompt('Load fingerprint')
             .then(() => {
-                
                 NavigationService.simpleNavigate('Perfil')
             })
-            .catch(error => {
-                
-            })
+            .catch(error => {})
     }
 
     loga(usuario, senha) {
         //console.log(usuario, senha)
 
         let collection = {}
-        collection.email = this.state.email,
-        collection.password = this.state.senha
-
+        ;(collection.email = this.state.email), (collection.password = this.state.senha)
 
         if (this.state.email.length === 0 || this.state.senha.length === 0) {
             Toast.show({
                 text: 'Por favor, preencha os campos corretamente',
-                buttonText: "Ok",                
+                buttonText: 'Ok',
                 type: 'warning',
                 duration: 3000
             })
-
-        } 
+        }
 
         const data = {
             login: this.state.email,
@@ -59,21 +53,20 @@ export default class LoginScreen extends Component {
             .catch(function(error) {
                 console.log(error)
             })
-            
     }
-    
 
     render() {
         return (
             <Root>
-            <ImageBackground
-                style={{ width: '100%', height: '100%' }}
-                resizeMode="cover"
-                source={require('../../imagens/splash-2.png')}
-            >
-                {/* <KeyboardAwareScrollView scrollEnabled={true} ref={'scroll'}> */}
-                <View style={styleClass.loginStyles.viewMaior}>
-                    <View style={styleClass.loginStyles.viewLogoIcone}>
+                <ImageBackground
+                    style={{ width: '100%', height: '100%' }}
+                    resizeMode="cover"
+                    source={require('../../imagens/splash-2.png')}
+                >
+                    <KeyboardAvoidingView
+                        style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+                        behavior="padding"
+                    >
                         <Image
                             style={styleClass.loginStyles.imagemLogoIcone}
                             resizeMode="contain"
@@ -81,8 +74,6 @@ export default class LoginScreen extends Component {
                         />
                         <Text style={styleClass.loginStyles.mensagemTextoUm}>{translate('loginUm')}</Text>
                         <Text style={styleClass.loginStyles.mensagemTextoDois}>{translate('loginDois')}</Text>
-                    </View>
-                    <View style={styleClass.loginStyles.viewBotoes}>
                         <View style={styleClass.loginStyles.searchSectionUm}>
                             <Icon
                                 style={styleClass.loginStyles.searchIcon}
@@ -125,15 +116,14 @@ export default class LoginScreen extends Component {
                             containerStyle={styleClass.loginStyles.botaoContainer}
                             buttonStyle={styleClass.loginStyles.botaoStyle}
                         />
+
                         <Image
                             style={styleClass.loginStyles.imagemSelo}
                             resizeMode="contain"
                             source={require('../../imagens/logo-sinn-selo.png')}
                         />
-                    </View>
-                </View>
-                {/* </KeyboardAwareScrollView> */}
-            </ImageBackground>
+                    </KeyboardAvoidingView>
+                </ImageBackground>
             </Root>
         )
     }

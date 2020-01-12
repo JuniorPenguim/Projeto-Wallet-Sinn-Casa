@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { View, Image, TouchableWithoutFeedback, ImageBackground, Text, BackHandler} from 'react-native'
-import CameraRoll from "@react-native-community/cameraroll";
+import { View, Image, TouchableWithoutFeedback, ImageBackground, Text, BackHandler } from 'react-native'
+import CameraRoll from '@react-native-community/cameraroll'
 import { Drawer } from 'native-base'
 import { RNCamera } from 'react-native-camera'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
@@ -11,24 +11,21 @@ import MenuInterno from './MenuInterno'
 import { translate } from '../../i18n'
 
 export default class CapturaScreen extends Component {
-    
-
     takePicture = async () => {
         try {
             if (this.camera) {
                 const options = {
-                   quality: 0.5,
-                   base64: true,
-                   forceUpOrientation: true,
-                   fixOrientation: true,
-                };
+                    quality: 0.5,
+                    base64: true,
+                    forceUpOrientation: true,
+                    fixOrientation: true
+                }
                 const data = await this.camera.takePictureAsync(options)
 
-                await CameraRoll.saveToCameraRoll(data.uri);
+                await CameraRoll.saveToCameraRoll(data.uri)
             }
-        } catch(err){
-            
-          alert(err);
+        } catch (err) {
+            alert(err)
         }
     }
 
@@ -92,8 +89,6 @@ export default class CapturaScreen extends Component {
                                 type={RNCamera.Constants.Type.back}
                                 autoFocus={RNCamera.Constants.AutoFocus.on}
                                 flashMode={RNCamera.Constants.FlashMode.off}
-                                permissionDialogTitle={'Permission to use camera'}
-                                permissionDialogMessage={'We need your permission to use your camera phone'}
                             />
 
                             <Image
@@ -122,11 +117,7 @@ export default class CapturaScreen extends Component {
 
     componentDidMount() {
         BackHandler.addEventListener('hardwareBackPress', function() {
-  
-          NavigationService.simpleNavigate('Perfil')
-          
-        });
-        
-      }
+            NavigationService.simpleNavigate('Perfil')
+        })
+    }
 }
-

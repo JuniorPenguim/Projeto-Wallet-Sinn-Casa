@@ -5,7 +5,6 @@ import { Container } from 'native-base'
 import FlashMessage from 'react-native-flash-message'
 import { Provider } from 'react-redux'
 
-
 import { Store } from './src/store'
 import NavigationService from './NavigationService'
 import SplashScreen from './src/scripts/screens/SplashScreen'
@@ -33,15 +32,13 @@ const TopLevelNavigator = createStackNavigator(
         Sobre: { screen: SobreScreen }
     },
     {
-        initialRouteName: 'Splash',
-        headerMode: 'none',       
-         transitionConfig: () => ({
-             transitionSpec: {
-               duration: 0,
-             },
-           })
-
-        
+        initialRouteName: 'Login',
+        headerMode: 'none',
+        transitionConfig: () => ({
+            transitionSpec: {
+                duration: 0
+            }
+        })
     }
 )
 
