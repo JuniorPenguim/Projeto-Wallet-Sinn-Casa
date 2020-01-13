@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
-import { View, Image, TouchableWithoutFeedback, ImageBackground, Text, BackHandler } from 'react-native'
+import {
+    View,
+    Image,
+    TouchableWithoutFeedback,
+    ImageBackground,
+    Text,
+    BackHandler,
+    PermissionsAndroid
+} from 'react-native'
 import CameraRoll from '@react-native-community/cameraroll'
 import { Drawer } from 'native-base'
 import { RNCamera } from 'react-native-camera'
@@ -22,11 +30,28 @@ export default class CapturaScreen extends Component {
                 }
                 const data = await this.camera.takePictureAsync(options)
 
-                await CameraRoll.saveToCameraRoll(data.uri)
+                this.savePicture(data)
             }
         } catch (err) {
             alert(err)
         }
+    }
+
+    checkAndroidPermission = async () => {
+        try {
+            const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
+            await PermissionsAndroid.request(permission)
+            Promise.resolve()
+        } catch (error) {
+            Promise.reject(error)
+        }
+    }
+
+    savePicture = async data => {
+        if (Platform.OS === 'android') {
+            await this.checkAndroidPermission()
+        }
+        CameraRoll.saveToCameraRoll(data.uri)
     }
 
     closeDrawer = () => {
