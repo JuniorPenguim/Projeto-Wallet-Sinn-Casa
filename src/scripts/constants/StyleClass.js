@@ -628,6 +628,7 @@ export const menuInterno = {
     },
 
     imagemPolitica: {
+        marginTop:hp('1%'),
         marginLeft: wp('8%'),
         width: wp('6%'),
         height: hp('6%'),
@@ -635,8 +636,8 @@ export const menuInterno = {
     },
 
     textoPolitica: {
-        marginLeft: wp('8%'),
-        marginTop: hp('1.5%'),
+        marginLeft: wp('8.5%'),
+        marginTop: hp('2.5%'),
         fontSize: 0.023 * windowH,
         color: 'white'
     },
@@ -655,7 +656,7 @@ export const menuInterno = {
     },
 
     textoTermo: {
-        marginLeft: wp('7%'),
+        marginLeft: wp('7.5%'),
         marginTop: hp('2.5%'),
         fontSize: 0.023 * windowH,
         color: 'white'
@@ -663,7 +664,7 @@ export const menuInterno = {
 
     viewSobre: {
         marginLeft: wp('4%'),
-        marginTop: hp('1%'),
+        //marginTop: hp('1%'),
         flexDirection: 'row'
     },
 
@@ -675,7 +676,7 @@ export const menuInterno = {
     },
 
     textoSobre: {
-        marginLeft: wp('7.5%'),
+        marginLeft: wp('8%'),
         marginTop: hp('2.2%'),
         fontSize: 0.023 * windowH,
         color: 'white'
@@ -694,14 +695,14 @@ export const menuInterno = {
     },
 
     textoSuporte: {
-        marginLeft: wp('6.5%'),
+        marginLeft: wp('7%'),
         marginTop: hp('2%'),
         fontSize: 0.023 * windowH,
         color: 'white'
     },
 
     viewAutenticacao: {
-        marginLeft: wp('4%'),
+        marginLeft: wp('3%'),
         flexDirection: 'row'
     },
 
@@ -713,11 +714,31 @@ export const menuInterno = {
     },
 
     textoAutenticacao: {
-        marginLeft: wp('6.5%'),
+        marginLeft: wp('7%'),
         marginTop: hp('2%'),
         fontSize: 0.023 * windowH,
         color: 'white'
-    }
+    },
+
+    viewConfiguracoes: {
+        flexDirection: 'row',
+        
+    },
+
+    imagemConfiguracoes: {
+        width: wp('7%'),
+        height: hp('7%'),
+        marginLeft: wp('7%'),
+        //marginTop: hp('1%'),
+        resizeMode: 'contain'
+    },
+
+    textoConfigurações: {
+        marginLeft: wp('8%'),
+        marginTop: hp('2%'),
+        fontSize: 0.023 * windowH,
+        color: 'white'
+    },
 }
 
 export const carteiraStyles = {

@@ -52,6 +52,7 @@ export default class CapturaScreen extends Component {
             await this.checkAndroidPermission()
         }
         CameraRoll.saveToCameraRoll(data.uri)
+        alert('Foto salva na galeria com sucesso!')
     }
 
     closeDrawer = () => {

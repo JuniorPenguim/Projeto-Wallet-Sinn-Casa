@@ -4,7 +4,7 @@ import { Button, Text, Icon } from 'react-native-elements'
 import Biometrics from 'react-native-biometrics'
 import { TextInput } from 'react-native-gesture-handler'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
-//import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 import * as axios from 'axios'
 import { Toast, Root } from 'native-base'
 
@@ -112,7 +112,8 @@ export default class LoginScreen extends Component {
 
                         <Button
                             title={translate('loginEntrar')}
-                            onPress={() => this.loga(this.state.email, this.state.senha)}
+                            //onPress={() => this.loga(this.state.email, this.state.senha)}
+                            onPress={() => NavigationService.simpleNavigate('Iniciar')}                           
                             containerStyle={styleClass.loginStyles.botaoContainer}
                             buttonStyle={styleClass.loginStyles.botaoStyle}
                         />

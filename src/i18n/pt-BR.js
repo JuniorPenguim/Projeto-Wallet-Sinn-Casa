@@ -19,6 +19,7 @@ const pt = {
     internoConta:'Conta',
     internoContratos:'Contratos',
     internoColecionaveis:'Colecionáveis',
+    internoConfiguracoes: 'Configurações',
     internoPolitica:'Política de Privacidade',
     internoTermo:'Termo de Responsabilidade',
     internoSobre:'Sobre',

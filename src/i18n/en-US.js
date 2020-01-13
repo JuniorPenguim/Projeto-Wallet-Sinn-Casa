@@ -19,6 +19,7 @@ const en = {
     internoConta:'Account',
     internoContratos:'Contracts',
     internoColecionaveis:'Collectibles',
+    internoConfiguracoes: 'Settings',
     internoPolitica:'Privacy policy',
     internoTermo:'Statement of responsability',
     internoSobre:'About',
