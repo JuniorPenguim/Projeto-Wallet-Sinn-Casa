@@ -22,7 +22,7 @@ export default class MenuInterno extends Component {
     dropDown() {
         return (
             <Icon
-                containerStyle={{ flex: 1, justifyContent: 'center' }}
+                containerStyle={{ flex: 1, marginTop:hp('1.5%') }}
                 name="chevron-down"
                 type="font-awesome"
                 size={hp('4%')}
@@ -34,7 +34,7 @@ export default class MenuInterno extends Component {
     dropUp() {
         return (
             <Icon
-                containerStyle={{ flex: 1, justifyContent: 'center' }}
+                containerStyle={{ flex: 1, marginTop:hp('1.5%') }}
                 name="chevron-up"
                 type="font-awesome"
                 size={hp('4%')}
@@ -174,7 +174,7 @@ export default class MenuInterno extends Component {
                                     <View style={styleClass.menuInterno.viewConfiguracoes}>
                                         <Image
                                             style={styleClass.menuInterno.imagemConfiguracoes}
-                                            source={require('../../imagens/ico-menu-contratos.png')}
+                                            source={require('../../imagens/ico-menu-configuracoes.png')}
                                         />
                                         <Text style={styleClass.menuInterno.textoConfigurações}>
                                             {translate('internoConfiguracoes')}

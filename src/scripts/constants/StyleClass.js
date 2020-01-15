@@ -721,20 +721,21 @@ export const menuInterno = {
     },
 
     viewConfiguracoes: {
+        
         flexDirection: 'row',
         
     },
 
     imagemConfiguracoes: {
-        width: wp('7%'),
-        height: hp('7%'),
+        width: wp('9%'),
+        height: hp('9%'),
         marginLeft: wp('7%'),
         //marginTop: hp('1%'),
         resizeMode: 'contain'
     },
 
     textoConfigurações: {
-        marginLeft: wp('8%'),
+        marginLeft: wp('6%'),
         marginTop: hp('2%'),
         fontSize: 0.023 * windowH,
         color: 'white'

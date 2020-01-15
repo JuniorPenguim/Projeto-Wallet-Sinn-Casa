@@ -80,12 +80,15 @@ export default class QRCodeScreen extends Component {
 
             <View style={styleClass.qrStyles.viewQr}>
               <QRCodeScanner
-                onRead={e => alert(e.data)}
+                onRead={e => alert('Sua chave privada: ' + e.data)}
                 showMarker={true}
                 checkAndroid6Permissions={true}
                 ref={elem => {
                   this.scanner = elem;
                 }}
+                ref={(node) => { this.scanner = node }}
+                reactivateTimeout={5000}
+                reactivate = {true} 
               />
             </View>
             <View style={{alignItems: 'center'}}>

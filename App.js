@@ -32,13 +32,9 @@ const TopLevelNavigator = createStackNavigator(
         Sobre: { screen: SobreScreen }
     },
     {
-        initialRouteName: 'Splash',
+        initialRouteName: 'Perfil',
         headerMode: 'none',
-        transitionConfig: () => ({
-            transitionSpec: {
-                duration: 0
-            }
-        })
+        
     }
 )
 
